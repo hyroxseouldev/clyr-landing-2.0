@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile design QA comparison</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #1b1d22; color: white; font: 600 12px system-ui, sans-serif; }
+      .labels { position: fixed; inset: 0 0 auto; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; text-align: center; pointer-events: none; }
+      .labels span { padding: 8px; background: rgba(0,0,0,.8); }
+      .comparison { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 2px; }
+      img { display: block; width: 100%; height: auto; }
+    </style>
+  </head>
+  <body>
+    <div class="labels"><span>원본 모바일</span><span>구현 모바일</span></div>
+    <main class="comparison">
+      <img src="/qa/source-mobile.png" alt="원본 모바일 캡처" />
+      <img src="/qa/implementation-mobile.png" alt="로컬 모바일 구현 캡처" />
+    </main>
+  </body>
+</html>

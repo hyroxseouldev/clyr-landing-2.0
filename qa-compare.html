@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design QA comparison</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #1b1d22; color: white; font: 600 14px system-ui, sans-serif; }
+      .labels { position: fixed; inset: 0 0 auto; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; text-align: center; pointer-events: none; }
+      .labels span { padding: 10px; background: rgba(0,0,0,.8); }
+      .comparison { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 2px; }
+      img { display: block; width: 100%; height: auto; }
+    </style>
+  </head>
+  <body>
+    <div class="labels"><span>원본</span><span>구현</span></div>
+    <main class="comparison">
+      <img src="/qa/source-desktop.png" alt="원본 사이트 캡처" />
+      <img src="/qa/implementation-desktop.png" alt="로컬 구현 캡처" />
+    </main>
+  </body>
+</html>
