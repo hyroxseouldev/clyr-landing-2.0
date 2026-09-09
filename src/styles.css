@@ -26,9 +26,11 @@ button, input, textarea { font: inherit; }
 
 .site-header { position: fixed; inset: 0 0 auto; z-index: 50; height: 65px; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(8,9,12,.72); backdrop-filter: blur(14px); }
 .header-inner { min-height: 65px; padding-block: 0; }
+.header-inner .navbar-start { width: auto; min-width: 0; flex: 1 1 auto; }
+.header-inner .navbar-end { width: auto; flex: 0 0 auto; margin-left: auto; }
 .brand-lockup { display: inline-flex; align-items: center; gap: 10px; color: var(--fg); font-size: 14px; font-weight: 700; white-space: nowrap; }
 .navbar-start a { min-height: 44px; display: flex; align-items: center; }
-.desktop-nav { display: flex; align-items: center; gap: 28px; width: auto; }
+.desktop-nav { display: flex; align-items: center; gap: 28px; }
 .desktop-nav > a:not(.contact-pill) { color: rgba(242,243,245,.5); font: 500 11px/1 "JetBrains Mono", monospace; letter-spacing: .16em; transition: color .2s; }
 .desktop-nav > a:hover { color: var(--fg); }
 .contact-pill { display: inline-flex; align-items: center; justify-content: center; min-height: 30px; padding: 9px 16px; border-radius: 999px; background: var(--accent); color: white; font-size: 12px; font-weight: 700; }
@@ -182,8 +184,7 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 @media (max-width: 639px) {
   .shell { padding-inline: 32px; }
   .desktop-nav { display: none; }
-  .header-inner .navbar-start { width: auto; min-width: 0; flex: 1 1 auto; }
-  .mobile-actions { display: flex; width: auto; flex: 0 0 auto; margin-left: auto; align-items: center; gap: 12px; }
+  .mobile-actions { display: flex; align-items: center; gap: 12px; }
   .menu-button { min-height: 44px; width: 44px; height: 44px; border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.03); color: var(--fg); }
   .mobile-menu { position: absolute; inset: 65px 0 auto; display: grid; padding: 14px 32px 22px; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(8,9,12,.96); backdrop-filter: blur(14px); }
   .mobile-menu a { padding: 14px 0; color: rgba(242,243,245,.72); font: 500 11px/1 "JetBrains Mono",monospace; letter-spacing: .16em; }
