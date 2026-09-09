@@ -83,9 +83,35 @@ function Projects() {
 
 const inquiryTypes = ["아이디어 프로토타입", "웹·앱 만들기", "AI 자동화", "사이드 프로젝트", "커피챗·기타"];
 function Contact() {
-  const [inquiry, setInquiry] = useState(inquiryTypes[0]); const [copied, setCopied] = useState(false); const [sent, setSent] = useState(false);
+  const [inquiry, setInquiry] = useState(inquiryTypes[0]);
+  const [copied, setCopied] = useState(false);
+  const [formState, setFormState] = useState({ status: "idle", message: "" });
   const copyEmail = async () => { await navigator.clipboard?.writeText(contactEmail); setCopied(true); window.setTimeout(() => setCopied(false), 1600); };
-  return <section id="contact" className="contact-section"><div className="contact-orb" /><div className="shell contact-shell"><div className="contact-heading"><SectionIntro number="05" label="LET'S BUILD" title="같이 만들어볼까요?" /></div><div className="contact-grid"><form className="contact-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}><div className="form-row"><label>NAME<input className="input" name="name" placeholder="어떻게 불러드릴까요?" /></label><label>EMAIL<input className="input" name="email" type="email" placeholder="you@company.com" /></label></div><label>PROJECT<input className="input" name="company" placeholder="만들고 싶은 프로젝트 이름" /></label><fieldset><legend>BUILD TYPE</legend><div className="inquiry-pills">{inquiryTypes.map((type) => <button type="button" className={`btn inquiry-pill ${inquiry === type ? "selected" : ""}`} aria-pressed={inquiry === type} onClick={() => setInquiry(type)} key={type}>{type}</button>)}</div></fieldset><label>YOUR IDEA<textarea className="textarea" name="message" rows="5" placeholder="아직 선명하지 않아도 괜찮아요. 만들고 싶은 것을 편하게 들려주세요." /></label><button className="btn submit-btn" type="submit"><Send size={16} /> {sent ? "아이디어가 준비되었습니다" : "아이디어 보내기"}</button></form><aside className="direct-card"><p className="eyebrow">SAY HELLO</p><button className="email-copy" onClick={copyEmail}>{contactEmail} {copied ? <Check size={18} /> : <Copy size={18} />}</button><p className="copy-caption">{copied ? "COPIED" : "CLICK TO COPY"}</p><p>완성된 기획도, 한 줄짜리 아이디어도 좋습니다. 클리어데브와 첫 번째 빌드를 시작해보세요.</p><p className="eyebrow channel-title">FIND ME ONLINE</p><div className="channel-links"><a href={githubUrl} target="_blank" rel="noreferrer"><FaGithub />GITHUB</a><a href={`mailto:${contactEmail}`}><Mail />EMAIL</a></div></aside></div></div></section>;
+  const submitContact = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
+    setFormState({ status: "submitting", message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, inquiry, submissionId: crypto.randomUUID() }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.message || "전송하지 못했습니다. 잠시 후 다시 시도해주세요.");
+
+      form.reset();
+      setInquiry(inquiryTypes[0]);
+      setFormState({ status: "success", message: "문의가 전송되었습니다. 곧 확인할게요!" });
+    } catch (error) {
+      setFormState({ status: "error", message: error.message });
+    }
+  };
+
+  const isSubmitting = formState.status === "submitting";
+  return <section id="contact" className="contact-section"><div className="contact-orb" /><div className="shell contact-shell"><div className="contact-heading"><SectionIntro number="05" label="LET'S BUILD" title="같이 만들어볼까요?" /></div><div className="contact-grid"><form className="contact-form" onSubmit={submitContact}><div className="form-honeypot" aria-hidden="true"><label>WEBSITE<input name="website" tabIndex="-1" autoComplete="off" /></label></div><div className="form-row"><label>NAME<input className="input" name="name" placeholder="어떻게 불러드릴까요?" required maxLength="80" /></label><label>EMAIL<input className="input" name="email" type="email" placeholder="you@company.com" required maxLength="254" /></label></div><label>PROJECT<input className="input" name="project" placeholder="만들고 싶은 프로젝트 이름" maxLength="120" /></label><fieldset><legend>BUILD TYPE</legend><div className="inquiry-pills">{inquiryTypes.map((type) => <button type="button" className={`btn inquiry-pill ${inquiry === type ? "selected" : ""}`} aria-pressed={inquiry === type} onClick={() => setInquiry(type)} key={type}>{type}</button>)}</div></fieldset><label>YOUR IDEA<textarea className="textarea" name="message" rows="5" placeholder="아직 선명하지 않아도 괜찮아요. 만들고 싶은 것을 편하게 들려주세요." required minLength="10" maxLength="3000" /></label><button className="btn submit-btn" type="submit" disabled={isSubmitting}>{isSubmitting ? <span className="loading loading-spinner loading-sm" aria-hidden="true" /> : <Send size={16} />} {isSubmitting ? "전송 중..." : "아이디어 보내기"}</button>{formState.message ? <div className={`alert alert-soft form-status ${formState.status === "success" ? "alert-success" : "alert-error"}`} role="alert">{formState.status === "success" ? <Check size={17} /> : <X size={17} />}<span>{formState.message}</span></div> : null}</form><aside className="direct-card"><p className="eyebrow">SAY HELLO</p><button className="email-copy" onClick={copyEmail}>{contactEmail} {copied ? <Check size={18} /> : <Copy size={18} />}</button><p className="copy-caption">{copied ? "COPIED" : "CLICK TO COPY"}</p><p>완성된 기획도, 한 줄짜리 아이디어도 좋습니다. 클리어데브와 첫 번째 빌드를 시작해보세요.</p><p className="eyebrow channel-title">FIND ME ONLINE</p><div className="channel-links"><a href={githubUrl} target="_blank" rel="noreferrer"><FaGithub />GITHUB</a><a href={`mailto:${contactEmail}`}><Mail />EMAIL</a></div></aside></div></div></section>;
 }
 
 function Footer() {

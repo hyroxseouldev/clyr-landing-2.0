@@ -141,6 +141,7 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 .contact-heading { margin-bottom: 60px; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
 .contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .contact-form label, .contact-form legend { color: rgba(242,243,245,.55); font: 500 10px/1 "JetBrains Mono", monospace; letter-spacing: .16em; }
 .contact-form .input, .contact-form .textarea { display: block; width: 100%; height: auto; margin-top: 10px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.11); border-radius: 10px; background: rgba(255,255,255,.03); color: var(--fg); font-family: system-ui,"Apple SD Gothic Neo",sans-serif; font-size: 15px; line-height: 1.4; outline: none; }
@@ -152,6 +153,10 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 .inquiry-pill { min-height: 44px; padding: 13px 15px; border: 1px solid rgba(255,255,255,.11); border-radius: 999px; background: rgba(255,255,255,.03); color: rgba(242,243,245,.6); font-size: 13.5px; font-weight: 600; }
 .inquiry-pill.selected { border-color: rgba(74,111,212,.6); background: rgba(74,111,212,.14); color: #ddd6fe; }
 .submit-btn { min-height: 52px; padding: 17px; font-size: 15px; }
+.submit-btn:disabled { opacity: .72; cursor: wait; transform: none; box-shadow: none; }
+.form-status { grid-template-columns: auto 1fr; min-height: 52px; border: 1px solid currentColor; border-radius: 10px; background: rgba(255,255,255,.035); font-size: 14px; line-height: 1.5; }
+.form-status.alert-success { color: var(--color-success); }
+.form-status.alert-error { color: var(--color-error); }
 .direct-card { min-height: 360px; padding: 32px; border: 1px solid rgba(255,255,255,.08); border-radius: 18px; background: rgba(255,255,255,.035); }
 .email-copy { display: inline-flex; align-items: center; gap: 12px; margin: 10px 0 -10px; padding: 10px 0; border: 0; background: linear-gradient(100deg,#8faaf2,#22d3ee); background-clip: text; color: transparent; font-size: clamp(22px,2.6vw,32px); font-weight: 700; line-height: 1.1; letter-spacing: -.02em; cursor: pointer; }
 .copy-caption { margin: 18px 0 0; color: rgba(242,243,245,.42); font: 500 10px/1 "JetBrains Mono", monospace; letter-spacing: .16em; }

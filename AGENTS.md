@@ -20,3 +20,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Use `vividxxxxx@gmail.com` as the portfolio contact email and `https://github.com/hyroxseouldev` as the only visible social profile. Show GitHub and email under `FIND ME ONLINE` and in the footer; keep all former CodeFactory social links hidden.
 - Do not display the former supplied `logo.svg`; it is not the portfolio owner's logo. Use the text-only `클리어데브` brand lockup until the user supplies a replacement logo.
 - Keep the header as a simple responsive flex row: the text-only brand grows on the left and desktop/mobile actions stay content-sized and right-aligned within symmetric shell gutters.
+- The contact form sends validated inquiries to `vividxxxxx@gmail.com` through a Vercel Function and Resend, with loading, success, failure, and honeypot states. Keep `RESEND_API_KEY` server-only.
