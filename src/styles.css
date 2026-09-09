@@ -249,3 +249,72 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 .menu-button { border-radius: 999px; }
 .inquiry-pill { height: auto; white-space: normal; }
 .email-copy { height: auto; white-space: normal; }
+
+/* Responsive audit: consistent gutters, content-led spacing and readable details. */
+section[id] { scroll-margin-top: 90px; }
+html { color-scheme: dark; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; padding: 14px 20px; border-radius: 8px; background: var(--fg); color: var(--bg); }
+.skip-link:focus { top: 12px; }
+.stat-head strong { font-variant-numeric: tabular-nums; }
+.hero-section { padding-inline: 0; min-height: min(900px, 100svh); }
+h1, h2, h3, .hero-copy, .section-copy { word-break: keep-all; overflow-wrap: break-word; }
+.cyan-dot { flex-shrink: 0; }
+.hero-eyebrow { line-height: 1.6; }
+.work-section, .content-section { padding-top: clamp(88px, 8vw, 120px); }
+#work, #numbers, #services, #books { min-height: 0; }
+.contact-section { min-height: 0; padding: 120px 0; }
+.contact-shell { padding-inline: 32px; }
+.contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 40px; }
+.contact-form, .form-row > label { min-width: 0; }
+.contact-form .contact-input, .contact-form .contact-textarea { font-size: 16px; letter-spacing: normal; }
+.direct-card { min-height: 0; }
+.email-copy { max-width: 100%; font-size: clamp(20px, 2.1vw, 28px); overflow-wrap: anywhere; }
+.email-copy svg { color: var(--cyan); flex-shrink: 0; }
+.project-body { flex: 1; }
+.project-heading { flex-wrap: wrap; row-gap: 10px; }
+.project-heading > p, .project-status, .project-meta dt, .tech-list span { font-size: 10px; line-height: 1.4; }
+.project-meta > div { grid-template-columns: 40px minmax(0, 1fr); gap: 8px; }
+.project-meta dd { font-size: 13px; }
+.store-link { min-height: 44px; height: auto; font-size: 12px; }
+.eyebrow, .section-copy, .stat-head span, .service-eyebrow, .service-item p:last-child,
+.project-heading > p, .project-meta dt, .project-description, .store-upcoming,
+.contact-form label, .contact-form legend, .copy-caption, .direct-card > p:not(.eyebrow,.copy-caption),
+.site-footer h3, .site-footer nav a, .copyright { color: rgba(242,243,245,.66); }
+.stat-head span, .service-eyebrow { font-size: 11px; line-height: 1.5; }
+.desktop-nav > a:not(.contact-pill) { display: flex; align-items: center; min-height: 44px; color: rgba(242,243,245,.66); }
+.contact-pill, .mobile-menu a { min-height: 44px; }
+.footer-layout { min-height: 400px; padding-bottom: 100px; }
+.site-footer { min-height: 0; }
+.copyright { bottom: 40px; right: 32px; line-height: 1.8; }
+.project-entry { display: flex; min-width: 0; }
+.project-entry > .project-card { width: 100%; }
+.hero-inner > .hero-reveal { max-width: 1160px; }
+@media (min-width: 640px) and (max-width: 1199px) {
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 959px) {
+  .services-layout { display: block; }
+  .services-summary { position: static; }
+  .service-list { margin-top: 44px; }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+@media (max-width: 639px) {
+  .hero-section { min-height: 740px; padding: 130px 0 90px; }
+  h1 { font-size: clamp(32px, 9vw, 38px); line-height: 1.22; }
+  .hero-copy { color: rgba(242,243,245,.66); }
+  .hero-actions { flex-direction: row; flex-wrap: wrap; }
+  .primary-btn, .ghost-btn { padding-inline: 24px; }
+  .marquee-track { gap: 12px; }
+  .partner { padding-inline: 12px; }
+  .project-grid { margin-top: 44px; }
+  .contact-section { padding: 88px 0; }
+  .contact-heading { margin-bottom: 40px; }
+  .direct-card { display: block; padding: 24px; }
+  .email-copy { font-size: clamp(18px, 5.2vw, 24px); }
+  .footer-layout { min-height: 0; gap: 32px 24px; padding-bottom: 120px; }
+  .service-eyebrow { letter-spacing: .08em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .project-card:hover, .primary-btn:hover, .submit-btn:hover { transform: none; }
+}
