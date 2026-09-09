@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, ArrowUpRight, Check, Code2, Copy, GraduationCap, Mail, Menu, Send, Video, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Code2, Copy, Globe2, GraduationCap, Mail, Menu, Send, Video, X } from "lucide-react";
 import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa6";
 
 const navItems = [
@@ -48,6 +48,17 @@ const projects = [
     tech: ["Next.js", "Neon", "Drizzle", "Better Auth"],
     links: [],
     development: true,
+  },
+  {
+    name: "KKOL STUDIO",
+    image: "/assets/projects/kkol-studio-projects.png",
+    alt: "KKOL STUDIO 프로젝트 아카이브 웹사이트",
+    description: "공간과 브랜드의 이야기를 이미지 중심으로 탐색할 수 있도록 구성한 디자인 스튜디오 프로젝트 아카이브입니다.",
+    role: "웹사이트 개발 · CMS 연동 · 반응형 구현 · 배포",
+    tech: ["Next.js", "Tailwind CSS", "Cloudinary", "Vercel"],
+    links: [
+      { label: "Website", href: "https://www.kkol-studio.com/projects", Icon: Globe2 },
+    ],
   },
 ];
 function SectionIntro({ number, label, title, description }) {

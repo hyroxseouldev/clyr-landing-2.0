@@ -94,7 +94,7 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 .service-item p:last-child { margin: 17px 0 0; color: rgba(242,243,245,.52); font-size: 14px; line-height: 1.7; }
 .service-arrow { align-self: center; color: rgba(242,243,245,.42); }
 
-.project-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin-top: 70px; }
+.project-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; margin-top: 70px; }
 .project-card { min-width: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: rgba(255,255,255,.024); transition: transform .3s cubic-bezier(.22,.8,.2,1),border-color .3s,box-shadow .3s; }
 .project-card:hover { transform: translateY(-8px); border-color: rgba(74,111,212,.42); box-shadow: 0 26px 60px -30px rgba(74,111,212,.85); }
 .project-visual { aspect-ratio: 1/1; margin: 18px 18px 0; overflow: hidden; border-radius: 10px; background: #101217; }
@@ -185,6 +185,10 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 @keyframes orb-b { 0%,100% { transform: translate(5%,3%) scale(1.08); } 50% { transform: translate(-7%,-6%) scale(.95); } }
 
 @media (min-width: 1600px) { .hero-section { min-height: 1318px; } }
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
 
 @media (max-width: 639px) {
   .shell { padding-inline: 32px; }
