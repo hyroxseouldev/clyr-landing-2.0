@@ -182,7 +182,8 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 @media (max-width: 639px) {
   .shell { padding-inline: 32px; }
   .desktop-nav { display: none; }
-  .mobile-actions { display: flex; width: auto; align-items: center; gap: 12px; }
+  .header-inner .navbar-start { width: auto; min-width: 0; flex: 1 1 auto; }
+  .mobile-actions { display: flex; width: auto; flex: 0 0 auto; margin-left: auto; align-items: center; gap: 12px; }
   .menu-button { min-height: 44px; width: 44px; height: 44px; border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.03); color: var(--fg); }
   .mobile-menu { position: absolute; inset: 65px 0 auto; display: grid; padding: 14px 32px 22px; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(8,9,12,.96); backdrop-filter: blur(14px); }
   .mobile-menu a { padding: 14px 0; color: rgba(242,243,245,.72); font: 500 11px/1 "JetBrains Mono",monospace; letter-spacing: .16em; }
