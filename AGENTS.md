@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- Use shadcn/ui components in `src/components/ui` with Tailwind CSS; daisyUI has been removed. Preserve the established custom portfolio styling when updating these components.
+
 - The portfolio owner name is `클리어데브` (`CLYRDEV`).
 - Preserve the current cards, imagery, interactions, density, and visual styling unless the user explicitly requests otherwise. The former YouTube/build-log section has been intentionally removed.
 - Content should read as a personal vibe-coding and AI product-builder portfolio. Prefer confident, curious, builder-oriented language without inventing career claims, clients, or performance statistics.
