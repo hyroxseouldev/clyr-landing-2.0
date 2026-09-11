@@ -3,8 +3,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert } from "@/components/ui/alert";
-import { useEffect, useState } from "react";
-import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { LazyMotion, animate, domAnimation, m, useInView, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Check, Code2, Copy, LoaderCircle, Globe2, GraduationCap, Mail, Menu, Send, Video, X } from "lucide-react";
 import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa6";
 
@@ -123,9 +123,31 @@ function Work() {
   return <section id="work" className="work-section"><div className="shell"><SectionIntro number="01" label="COLLABORATIONS" title="협업 브랜드" description="프로덕트 개발, 교육과 콘텐츠 협업으로 함께한 브랜드" /></div><div className="marquee-wrap" aria-label="협업 브랜드 목록"><div className="marquee-track">{partners.map(([asset, name]) => <div className="partner" key={name}><img src={`/assets/logos/${asset}`} alt={name} /><span>{name}</span></div>)}</div></div></section>;
 }
 
+function CountUp({ value }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.5 });
+  const reducedMotion = useReducedMotion();
+  const target = Number.parseInt(value, 10);
+  const suffix = value.endsWith("+") ? "+" : "";
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!inView || reducedMotion) return;
+    const controls = animate(0, target, {
+      duration: 1.4,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (latest) => setDisplay(Math.floor(latest)),
+      onComplete: () => setDisplay(target),
+    });
+    return () => controls.stop();
+  }, [inView, reducedMotion, target]);
+
+  return <strong ref={ref}><span className="sr-only">{value}</span><span aria-hidden="true">{reducedMotion ? target : display}{suffix}</span></strong>;
+}
+
 function Numbers() {
-  const stats = [["ACTIVE MEMBERS", "200+", "students"], ["LIVE SERVICES", "5", "subscribers"], ["PUBLISHED APPS", "3", "brands"], ["MONTHLY UPDATES", "10+", "books"]];
-  return <section id="numbers" className="content-section shell"><SectionIntro number="02" label="BY THE NUMBERS" title="실제로 만들고 운영하는 것들" /><div className="stats-list">{stats.map(([label, value, cls]) => <div className={`stat-row ${cls}`} key={label}><div className="stat-head"><span>{label}</span><strong>{value}</strong></div><div className="stat-line"><i /></div></div>)}</div></section>;
+  const stats = [["ACTIVE MEMBERS", "300+", "students"], ["LIVE SERVICES", "7", "subscribers"], ["PUBLISHED APPS", "4", "brands"], ["MONTHLY UPDATES", "50+", "books"]];
+  return <section id="numbers" className="content-section shell"><SectionIntro number="02" label="BY THE NUMBERS" title="실제로 만들고 운영하는 것들" /><div className="stats-list">{stats.map(([label, value, cls]) => <div className={`stat-row ${cls}`} key={label}><div className="stat-head"><span>{label}</span><CountUp value={value} /></div><div className="stat-line"><i /></div></div>)}</div></section>;
 }
 
 function Services() {

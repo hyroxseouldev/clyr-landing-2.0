@@ -1,0 +1,39 @@
+.cloudboard-policy { min-height: 100svh; background: var(--bg); color: var(--fg); font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
+.policy-header, .policy-footer, .policy-document { width: min(100% - 48px, 800px); margin-inline: auto; }
+.policy-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 24px; border-bottom: 1px solid #ffffff1c; }
+.policy-header > a:first-child { font-weight: 700; }
+.policy-header span { color: #a2a9b8; font-size: 14px; margin-left: 8px; }
+.policy-header > a:last-child { color: #a2a9b8; font-size: 14px; }
+.policy-document { padding-block: 64px; }
+.policy-kicker { color: var(--link); font: 500 12px/1.6 "JetBrains Mono", monospace; letter-spacing: .12em; }
+.cloudboard-policy h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.3; margin: 16px 0 32px; letter-spacing: -.03em; text-wrap: initial; }
+.cloudboard-policy h2 { font-size: 22px; line-height: 1.4; margin: 0 0 18px; font-weight: 650; }
+.policy-document p, .policy-document li, .policy-data dd { color: #c0c5cf; }
+.policy-document p { margin-block: 14px; }
+.policy-document .policy-lead { font-size: 18px; }
+.policy-document a, .policy-footer a { color: var(--link); text-decoration: underline; text-underline-offset: 4px; }
+.policy-section { padding-top: 32px; margin-top: 32px; border-top: 1px solid #ffffff1c; }
+.policy-section ul, .policy-section ol { padding-left: 24px; list-style: disc; }
+.policy-section ol { list-style: decimal; }
+.policy-section li { margin-block: 8px; }
+.policy-review { padding: 20px 24px; border: 1px solid #caa85d66; border-radius: 12px; background: #caa85d0d; margin-bottom: 32px; }
+.policy-review strong { color: #ead09c; }
+.policy-review p { margin-bottom: 0; font-size: 14px; }
+.policy-document .policy-review-note { font-size: 14px; color: #e0c899; border-left: 2px solid #caa85d; padding-left: 14px; }
+.policy-dates { display: flex; flex-wrap: wrap; gap: 12px 32px; color: #a2a9b8; font-size: 14px; }
+.policy-dates div { display: flex; flex-wrap: wrap; gap: 12px; }
+.policy-data { display: grid; gap: 20px; }
+.policy-data div { padding: 20px; background: #ffffff04; border: 1px solid #ffffff14; border-radius: 10px; }
+.policy-data dt { font-weight: 650; margin-bottom: 8px; }
+.policy-data dd { margin: 0; }
+.policy-request { padding-block: 12px; }
+.policy-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 20px; }
+.policy-actions [data-slot="button"] { min-height: 48px; height: auto; padding: 12px 18px; font-size: 16px; white-space: normal; text-align: center; line-height: 1.5; }
+.policy-actions a.policy-primary { color: #fff; text-decoration: none; background: var(--accent); }
+.policy-note { font-size: 14px; }
+.policy-document .policy-feedback { font-size: 14px; color: #86e3c1; min-height: 26px; }
+.policy-footer { padding-block: 32px 48px; border-top: 1px solid #ffffff1c; }
+.policy-footer nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; }
+.policy-footer a, .policy-header a { display: inline-flex; align-items: center; min-height: 44px; }
+.cloudboard-policy *, .cloudboard-policy *::before, .cloudboard-policy *::after { animation: none !important; transition: none !important; }
+@media (max-width: 480px) { .policy-header span { display: none; } .policy-document { padding-block: 40px; } .policy-actions { flex-direction: column; } .cloudboard-policy h2 { font-size: 20px; } }

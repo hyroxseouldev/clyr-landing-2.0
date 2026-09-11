@@ -71,7 +71,7 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 .stats-list { margin-top: 60px; }
 .stat-row { margin-bottom: 38px; }
 .stat-head { display: flex; align-items: baseline; justify-content: space-between; }
-.stat-head span { color: rgba(242,243,245,.45); font: 500 10px/1 "JetBrains Mono", monospace; letter-spacing: .16em; }
+.stat-head > span { color: rgba(242,243,245,.45); font: 500 10px/1 "JetBrains Mono", monospace; letter-spacing: .16em; }
 .stat-head strong { font-size: clamp(30px,3.6vw,46px); line-height: 1; letter-spacing: -.03em; }
 .stat-line { height: 4px; margin-top: 18px; background-image: repeating-linear-gradient(90deg,rgba(255,255,255,.08) 0 17px,transparent 17px 21px); }
 .stat-line i { display: block; height: 100%; width: 100%; background: repeating-linear-gradient(90deg,#4a6fd4 0 17px,transparent 17px 21px),linear-gradient(90deg,#4a6fd4,#22d3ee); background-blend-mode: screen; }
@@ -278,11 +278,11 @@ h1, h2, h3, .hero-copy, .section-copy { word-break: keep-all; overflow-wrap: bre
 .project-meta > div { grid-template-columns: 40px minmax(0, 1fr); gap: 8px; }
 .project-meta dd { font-size: 13px; }
 .store-link { min-height: 44px; height: auto; font-size: 12px; }
-.eyebrow, .section-copy, .stat-head span, .service-eyebrow, .service-item p:last-child,
+.eyebrow, .section-copy, .stat-head > span, .service-eyebrow, .service-item p:last-child,
 .project-heading > p, .project-meta dt, .project-description, .store-upcoming,
 .contact-form label, .contact-form legend, .copy-caption, .direct-card > p:not(.eyebrow,.copy-caption),
 .site-footer h3, .site-footer nav a, .copyright { color: rgba(242,243,245,.66); }
-.stat-head span, .service-eyebrow { font-size: 11px; line-height: 1.5; }
+.stat-head > span, .service-eyebrow { font-size: 11px; line-height: 1.5; }
 .desktop-nav > a:not(.contact-pill) { display: flex; align-items: center; min-height: 44px; color: rgba(242,243,245,.66); }
 .contact-pill, .mobile-menu a { min-height: 44px; }
 .footer-layout { min-height: 400px; padding-bottom: 100px; }

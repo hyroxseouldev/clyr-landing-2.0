@@ -10,6 +10,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- CloudBoard app policies live at `/apps/cloudboard/privacy` and `/apps/cloudboard/delete-account`, independent of portfolio content, without animation or login. Use email requests to `vividxxxxx@gmail.com` and clipboard feedback; do not connect them to Resend or claim automatic deletion. Do not publish unverified retention, backup, operator, or international-transfer claims. Current review-only release blockers are recorded in `docs/cloudboard-policy-release.md`.
+
+- Count-up motion must not change the original number typography: preserve off-white color, Pretendard font, and 30px mobile / up to 46px desktop sizing. Scope stat label styles to direct children so they cannot affect animated number spans.
+
 - Include `clyrtraining.ai` as an additional portfolio project: a gym/coach member-management CRM and operational admin, not merely a landing page. Describe member/membership, program, training record, and feedback management. Link to `https://clyrtraining.vercel.app/` (the project name is not a verified custom domain). The current thumbnail is its public landing page; retain it until an admin screenshot is supplied.
 
 - The user welcomes an overall responsive design polish and subtle animation. Preserve portfolio content and the dark blue visual direction; respect reduced-motion preferences.
@@ -21,7 +25,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Content should read as a personal vibe-coding and AI product-builder portfolio. Prefer confident, curious, builder-oriented language without inventing career claims, clients, or performance statistics.
 - Section 01 is `COLLABORATIONS` and presents XON TRAINING, AMOR LAB, and the official 본투윈 / BRN GYM logo from `https://www.brngym.co.kr/`. Do not restore other previous brand logos unless requested.
 - Include `BRN GYM · 본투윈` as a portfolio project: a fitness meetup service plus member-management CRM, with its real public screenshot and `https://www.brngym.co.kr/` link. Only list verified technologies.
-- Section 02 uses the user-approved proof points: 200+ active members, 5 live services, 3 published apps, and 10+ monthly updates.
+- Section 02 uses the latest user-provided proof points: 300+ active members, 7 live services, 4 published apps, and 50+ monthly updates. Do not replace them with portfolio-derived metrics. Keep count-up animation: play once on entering view, preserve plus signs, and show final values immediately with reduced motion.
 - Section 03 contains only three offerings: AI prototype, service build, and AI automation. The former build-log offering has been intentionally removed.
 - Section 04 presents XON Training, Amor Lab, CloudBoard StationD, and KKOL STUDIO as portfolio projects. Use the supplied imagery for XON and Amor, a captured projects-page visual and live link for KKOL STUDIO, include each project's description, role, stack, and real service links, and present CloudBoard as in development until a visual or public URL is supplied. Do not restore the previous book content.
 - Use `vividxxxxx@gmail.com` as the portfolio contact email and `https://github.com/hyroxseouldev` as the only visible social profile. Show GitHub and email under `FIND ME ONLINE` and in the footer; keep all former CodeFactory social links hidden.
