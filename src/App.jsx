@@ -16,6 +16,7 @@ const contactEmail = "vividxxxxx@gmail.com";
 const githubUrl = "https://github.com/hyroxseouldev";
 const partners = [
   ["xon-training.png", "XON TRAINING"], ["amor-lab.png", "AMOR LAB"],
+  ["born-to-win.png", "본투윈 · BRN GYM"],
 ];
 const services = [
   { Icon: Code2, eyebrow: "PROMPT · PROTOTYPE", title: "AI 프로토타입", detail: "아이디어를 대화로 풀어내고, 작동하는 화면까지 빠르게 만듭니다." },
@@ -75,6 +76,17 @@ const projects = [
     tech: ["Next.js", "Supabase", "Vercel"],
     links: [
       { label: "Website", href: "https://clyrtraining.vercel.app/", Icon: Globe2 },
+    ],
+  },
+  {
+    name: "BRN GYM · 본투윈",
+    image: "/assets/projects/brn-gym.png",
+    alt: "본투윈 BRN GYM 피트니스 모임 참여 신청 화면",
+    description: "함께 운동할 사람들을 연결하는 피트니스 모임 서비스입니다. 모임 참여 신청부터 회원관리 CRM까지, 참가자와 운영자의 경험을 연결합니다.",
+    role: "피트니스 모임 서비스 · CRM 개발",
+    tech: ["Next.js"],
+    links: [
+      { label: "Website", href: "https://www.brngym.co.kr/", Icon: Globe2 },
     ],
   },
 ];

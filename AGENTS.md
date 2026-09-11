@@ -19,7 +19,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The portfolio owner name is `클리어데브` (`CLYRDEV`).
 - Preserve the current cards, imagery, interactions, density, and visual styling unless the user explicitly requests otherwise. The former YouTube/build-log section has been intentionally removed.
 - Content should read as a personal vibe-coding and AI product-builder portfolio. Prefer confident, curious, builder-oriented language without inventing career claims, clients, or performance statistics.
-- Section 01 is `COLLABORATIONS` and presents only the supplied XON TRAINING and AMOR LAB logos; do not restore the previous brand logos unless requested.
+- Section 01 is `COLLABORATIONS` and presents XON TRAINING, AMOR LAB, and the official 본투윈 / BRN GYM logo from `https://www.brngym.co.kr/`. Do not restore other previous brand logos unless requested.
+- Include `BRN GYM · 본투윈` as a portfolio project: a fitness meetup service plus member-management CRM, with its real public screenshot and `https://www.brngym.co.kr/` link. Only list verified technologies.
 - Section 02 uses the user-approved proof points: 200+ active members, 5 live services, 3 published apps, and 10+ monthly updates.
 - Section 03 contains only three offerings: AI prototype, service build, and AI automation. The former build-log offering has been intentionally removed.
 - Section 04 presents XON Training, Amor Lab, CloudBoard StationD, and KKOL STUDIO as portfolio projects. Use the supplied imagery for XON and Amor, a captured projects-page visual and live link for KKOL STUDIO, include each project's description, role, stack, and real service links, and present CloudBoard as in development until a visual or public URL is supplied. Do not restore the previous book content.

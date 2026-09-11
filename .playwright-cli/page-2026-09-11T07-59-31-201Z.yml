@@ -1,0 +1,310 @@
+- generic [ref=f1e2]:
+  - link "본문으로 건너뛰기" [ref=f1e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link "클리어데브" [ref=f1e7] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "메인 메뉴" [ref=f1e9]:
+        - link "TOOLS" [ref=f1e10] [cursor=pointer]:
+          - /url: "#work"
+        - link "VIBE" [ref=f1e11] [cursor=pointer]:
+          - /url: "#numbers"
+        - link "BUILD" [ref=f1e12] [cursor=pointer]:
+          - /url: "#services"
+        - link "PROJECTS" [ref=f1e13] [cursor=pointer]:
+          - /url: "#books"
+        - link "CONTACT" [ref=f1e14] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=f1e15]:
+    - generic [ref=f1e18]:
+      - paragraph [ref=f1e19]: VIBE CODER & AI PRODUCT BUILDER
+      - heading "아이디어를 실제 서비스로 만드는 바이브 코더, 클리어데브" [level=1] [ref=f1e21]: 아이디어를 실제 서비스로 만드는바이브 코더, 클리어데브
+      - paragraph [ref=f1e22]: 프롬프트로 시작해, 작동하는 제품으로 끝냅니다.AI와 함께 더 빠르게 만들고 매일 새롭게 배웁니다.
+      - generic [ref=f1e23]:
+        - link "문의하기" [ref=f1e24] [cursor=pointer]:
+          - /url: "#contact"
+        - link "GitHub" [ref=f1e25] [cursor=pointer]:
+          - /url: https://github.com/hyroxseouldev
+    - generic [ref=f1e26]:
+      - generic [ref=f1e28]:
+        - paragraph [ref=f1e29]:
+          - generic [ref=f1e30]: ⌑
+          - text: 01 / COLLABORATIONS
+        - heading "협업 브랜드" [level=2] [ref=f1e31]
+        - paragraph [ref=f1e32]: 프로덕트 개발, 교육과 콘텐츠 협업으로 함께한 브랜드
+      - generic "협업 브랜드 목록" [ref=f1e33]:
+        - generic [ref=f1e34]:
+          - img "XON TRAINING" [ref=f1e36]
+          - img "AMOR LAB" [ref=f1e38]
+          - img "본투윈 · BRN GYM" [ref=f1e40]
+    - generic [ref=f1e41]:
+      - generic [ref=f1e42]:
+        - paragraph [ref=f1e43]:
+          - generic [ref=f1e44]: ⌑
+          - text: 02 / BY THE NUMBERS
+        - heading "실제로 만들고 운영하는 것들" [level=2] [ref=f1e45]
+      - generic [ref=f1e46]:
+        - generic [ref=f1e48]:
+          - generic [ref=f1e49]: ACTIVE MEMBERS
+          - strong [ref=f1e50]: 200+
+        - generic [ref=f1e54]:
+          - generic [ref=f1e55]: LIVE SERVICES
+          - strong [ref=f1e56]: "5"
+        - generic [ref=f1e60]:
+          - generic [ref=f1e61]: PUBLISHED APPS
+          - strong [ref=f1e62]: "3"
+        - generic [ref=f1e66]:
+          - generic [ref=f1e67]: MONTHLY UPDATES
+          - strong [ref=f1e68]: 10+
+    - generic [ref=f1e71]:
+      - generic [ref=f1e72]:
+        - generic [ref=f1e73]:
+          - paragraph [ref=f1e74]:
+            - generic [ref=f1e75]: ⌑
+            - text: 03 / WHAT I BUILD
+          - heading "만드는 것들" [level=2] [ref=f1e76]
+          - paragraph [ref=f1e77]: 프로토타입, 서비스 그리고 자동화
+        - link "같이 만들어보기" [ref=f1e78] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=f1e79]:
+        - link "01 — PROMPT · PROTOTYPE AI 프로토타입 아이디어를 대화로 풀어내고, 작동하는 화면까지 빠르게 만듭니다." [ref=f1e80] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=f1e81]: "01"
+          - generic [ref=f1e87]:
+            - paragraph [ref=f1e88]: — PROMPT · PROTOTYPE
+            - heading "AI 프로토타입" [level=3] [ref=f1e89]
+            - paragraph [ref=f1e90]: 아이디어를 대화로 풀어내고, 작동하는 화면까지 빠르게 만듭니다.
+        - link "02 — WEB · APP · PRODUCT 서비스 빌드 웹사이트부터 앱까지, 필요한 기능을 붙여 실제 제품으로 완성합니다." [ref=f1e94] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=f1e95]: "02"
+          - generic [ref=f1e100]:
+            - paragraph [ref=f1e101]: — WEB · APP · PRODUCT
+            - heading "서비스 빌드" [level=3] [ref=f1e102]
+            - paragraph [ref=f1e103]: 웹사이트부터 앱까지, 필요한 기능을 붙여 실제 제품으로 완성합니다.
+        - link "03 — AUTOMATION · WORKFLOW AI 자동화 반복되는 일을 AI 워크플로우로 연결해 더 가볍게 일합니다." [ref=f1e107] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=f1e108]: "03"
+          - generic [ref=f1e113]:
+            - paragraph [ref=f1e114]: — AUTOMATION · WORKFLOW
+            - heading "AI 자동화" [level=3] [ref=f1e115]
+            - paragraph [ref=f1e116]: 반복되는 일을 AI 워크플로우로 연결해 더 가볍게 일합니다.
+    - generic [ref=f1e120]:
+      - generic [ref=f1e121]:
+        - paragraph [ref=f1e122]:
+          - generic [ref=f1e123]: ⌑
+          - text: 04 / SELECTED PROJECTS
+        - heading "직접 만든 서비스" [level=2] [ref=f1e124]
+        - paragraph [ref=f1e125]: 아이디어부터 운영까지, 실제 사용자와 만나고 있는 제품들
+      - generic [ref=f1e126]:
+        - generic [ref=f1e128]:
+          - figure [ref=f1e129]:
+            - img "XON Training 모바일 앱 화면" [ref=f1e130]
+          - generic [ref=f1e131]:
+            - generic [ref=f1e132]:
+              - paragraph [ref=f1e133]: LIVE PRODUCT
+              - generic [ref=f1e134]: LIVE
+            - heading "XON Training" [level=3] [ref=f1e136]
+            - paragraph [ref=f1e137]: 운동 프로그램과 클래스 일정, 참여 기록을 한곳에서 관리하는 XON 회원 전용 트레이닝 앱입니다.
+            - generic [ref=f1e138]:
+              - generic [ref=f1e139]:
+                - term [ref=f1e140]: ROLE
+                - definition [ref=f1e141]: 기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포
+              - generic [ref=f1e142]:
+                - term [ref=f1e143]: STACK
+                - definition [ref=f1e144]:
+                  - generic [ref=f1e145]: Flutter
+                  - generic [ref=f1e146]: Supabase
+                  - generic [ref=f1e147]: Riverpod
+                  - generic [ref=f1e148]: Firebase
+            - generic [ref=f1e149]:
+              - link "App Store" [ref=f1e150] [cursor=pointer]:
+                - /url: https://apps.apple.com/us/app/xon-training/id6760121153
+              - link "Google Play" [ref=f1e151] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.sunmkim.xontraining
+        - generic [ref=f1e153]:
+          - figure [ref=f1e154]:
+            - img "Amor Lab 모바일 앱 화면" [ref=f1e155]
+          - generic [ref=f1e156]:
+            - generic [ref=f1e157]:
+              - paragraph [ref=f1e158]: LIVE PRODUCT
+              - generic [ref=f1e159]: LIVE
+            - heading "Amor Lab" [level=3] [ref=f1e161]
+            - paragraph [ref=f1e162]: 참여자와 코치를 연결해 프로그램, 세션, 운동 후기와 피드백을 관리하는 트레이닝 앱입니다.
+            - generic [ref=f1e163]:
+              - generic [ref=f1e164]:
+                - term [ref=f1e165]: ROLE
+                - definition [ref=f1e166]: 기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포
+              - generic [ref=f1e167]:
+                - term [ref=f1e168]: STACK
+                - definition [ref=f1e169]:
+                  - generic [ref=f1e170]: Flutter
+                  - generic [ref=f1e171]: Supabase
+                  - generic [ref=f1e172]: Riverpod
+                  - generic [ref=f1e173]: Firebase
+            - generic [ref=f1e174]:
+              - link "App Store" [ref=f1e175] [cursor=pointer]:
+                - /url: https://apps.apple.com/kr/app/amor-lab/id6765614780
+              - link "Google Play" [ref=f1e176] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.sunmkim.amortraining
+        - generic [ref=f1e178]:
+          - figure [ref=f1e179]:
+            - generic "CloudBoard StationD 개발 중" [ref=f1e180]:
+              - generic [ref=f1e181]: "03"
+              - generic [ref=f1e182]:
+                - generic [ref=f1e183]: CLOUD
+                - strong [ref=f1e184]: BOARD
+              - paragraph [ref=f1e185]: STATION D
+              - generic [ref=f1e186]: WOD BOARD SYSTEM
+          - generic [ref=f1e187]:
+            - generic [ref=f1e188]:
+              - paragraph [ref=f1e189]: PRODUCT IN PROGRESS
+              - generic [ref=f1e190]: IN DEVELOPMENT
+            - heading "CloudBoard StationD" [level=3] [ref=f1e192]
+            - paragraph [ref=f1e193]: 오늘의 WOD와 운동 일정을 한 화면에 보여주고 운영 콘텐츠까지 관리하는 디지털 트레이닝 보드입니다.
+            - generic [ref=f1e194]:
+              - generic [ref=f1e195]:
+                - term [ref=f1e196]: ROLE
+                - definition [ref=f1e197]: 기획 · 프로덕트 디자인 · 풀스택 개발
+              - generic [ref=f1e198]:
+                - term [ref=f1e199]: STACK
+                - definition [ref=f1e200]:
+                  - generic [ref=f1e201]: Next.js
+                  - generic [ref=f1e202]: Neon
+                  - generic [ref=f1e203]: Drizzle
+                  - generic [ref=f1e204]: Better Auth
+            - generic [ref=f1e205]: 서비스 링크 준비 중
+        - generic [ref=f1e208]:
+          - figure [ref=f1e209]:
+            - img "KKOL STUDIO 프로젝트 아카이브 웹사이트" [ref=f1e210]
+          - generic [ref=f1e211]:
+            - generic [ref=f1e212]:
+              - paragraph [ref=f1e213]: LIVE PRODUCT
+              - generic [ref=f1e214]: LIVE
+            - heading "KKOL STUDIO" [level=3] [ref=f1e216]
+            - paragraph [ref=f1e217]: 공간과 브랜드의 이야기를 이미지 중심으로 탐색할 수 있도록 구성한 디자인 스튜디오 프로젝트 아카이브입니다.
+            - generic [ref=f1e218]:
+              - generic [ref=f1e219]:
+                - term [ref=f1e220]: ROLE
+                - definition [ref=f1e221]: 웹사이트 개발 · CMS 연동 · 반응형 구현 · 배포
+              - generic [ref=f1e222]:
+                - term [ref=f1e223]: STACK
+                - definition [ref=f1e224]:
+                  - generic [ref=f1e225]: Next.js
+                  - generic [ref=f1e226]: Tailwind CSS
+                  - generic [ref=f1e227]: Cloudinary
+                  - generic [ref=f1e228]: Vercel
+            - link "Website" [ref=f1e230] [cursor=pointer]:
+              - /url: https://www.kkol-studio.com/projects
+        - generic [ref=f1e232]:
+          - figure [ref=f1e233]:
+            - img "clyrtraining.ai 회원관리·코칭 워크스페이스 랜딩페이지" [ref=f1e234]
+          - generic [ref=f1e235]:
+            - generic [ref=f1e236]:
+              - paragraph [ref=f1e237]: LIVE PRODUCT
+              - generic [ref=f1e238]: LIVE
+            - heading "clyrtraining.ai" [level=3] [ref=f1e240]
+            - paragraph [ref=f1e241]: 체육관과 코치를 위한 회원관리 CRM입니다. 회원과 멤버십, 운동 프로그램, 기록과 피드백을 한곳에서 관리하는 운영 어드민입니다.
+            - generic [ref=f1e242]:
+              - generic [ref=f1e243]:
+                - term [ref=f1e244]: ROLE
+                - definition [ref=f1e245]: 회원관리 CRM · 운영 어드민 개발
+              - generic [ref=f1e246]:
+                - term [ref=f1e247]: STACK
+                - definition [ref=f1e248]:
+                  - generic [ref=f1e249]: Next.js
+                  - generic [ref=f1e250]: Supabase
+                  - generic [ref=f1e251]: Vercel
+            - link "Website" [ref=f1e253] [cursor=pointer]:
+              - /url: https://clyrtraining.vercel.app/
+        - generic [ref=f1e255]:
+          - figure [ref=f1e256]:
+            - img "본투윈 BRN GYM 피트니스 모임 참여 신청 화면" [ref=f1e257]
+          - generic [ref=f1e258]:
+            - generic [ref=f1e259]:
+              - paragraph [ref=f1e260]: LIVE PRODUCT
+              - generic [ref=f1e261]: LIVE
+            - heading "BRN GYM · 본투윈" [level=3] [ref=f1e263]
+            - paragraph [ref=f1e264]: 함께 운동할 사람들을 연결하는 피트니스 모임 서비스입니다. 모임 참여 신청부터 회원관리 CRM까지, 참가자와 운영자의 경험을 연결합니다.
+            - generic [ref=f1e265]:
+              - generic [ref=f1e266]:
+                - term [ref=f1e267]: ROLE
+                - definition [ref=f1e268]: 피트니스 모임 서비스 · CRM 개발
+              - generic [ref=f1e269]:
+                - term [ref=f1e270]: STACK
+                - definition [ref=f1e271]:
+                  - generic [ref=f1e272]: Next.js
+            - link "Website" [ref=f1e274] [cursor=pointer]:
+              - /url: https://www.brngym.co.kr/
+    - generic [ref=f1e277]:
+      - generic [ref=f1e279]:
+        - paragraph [ref=f1e280]:
+          - generic [ref=f1e281]: ⌑
+          - text: 05 / LET'S BUILD
+        - heading "같이 만들어볼까요?" [level=2] [ref=f1e282]
+      - generic [ref=f1e283]:
+        - generic [ref=f1e284]:
+          - generic [ref=f1e286]:
+            - text: WEBSITE
+            - textbox [ref=f1e287]
+          - generic [ref=f1e288]:
+            - generic [ref=f1e289]:
+              - text: NAME
+              - textbox "NAME" [ref=f1e290]:
+                - /placeholder: 어떻게 불러드릴까요?
+            - generic [ref=f1e291]:
+              - text: EMAIL
+              - textbox "EMAIL" [ref=f1e292]:
+                - /placeholder: you@company.com
+          - generic [ref=f1e293]:
+            - text: PROJECT
+            - textbox "PROJECT" [ref=f1e294]:
+              - /placeholder: 만들고 싶은 프로젝트 이름
+          - group "BUILD TYPE" [ref=f1e295]:
+            - generic [ref=f1e297]:
+              - button "아이디어 프로토타입" [pressed] [ref=f1e298] [cursor=pointer]
+              - button "웹·앱 만들기" [ref=f1e299] [cursor=pointer]
+              - button "AI 자동화" [ref=f1e300] [cursor=pointer]
+              - button "사이드 프로젝트" [ref=f1e301] [cursor=pointer]
+              - button "커피챗·기타" [ref=f1e302] [cursor=pointer]
+          - generic [ref=f1e303]:
+            - text: YOUR IDEA
+            - textbox "YOUR IDEA" [ref=f1e304]:
+              - /placeholder: 아직 선명하지 않아도 괜찮아요. 만들고 싶은 것을 편하게 들려주세요.
+          - button "아이디어 보내기" [ref=f1e305] [cursor=pointer]
+        - complementary [ref=f1e306]:
+          - paragraph [ref=f1e307]: SAY HELLO
+          - button "vividxxxxx@gmail.com" [ref=f1e308] [cursor=pointer]
+          - paragraph [ref=f1e309]: CLICK TO COPY
+          - paragraph [ref=f1e310]: 완성된 기획도, 한 줄짜리 아이디어도 좋습니다. 클리어데브와 첫 번째 빌드를 시작해보세요.
+          - paragraph [ref=f1e311]: FIND ME ONLINE
+          - generic [ref=f1e312]:
+            - link "GITHUB" [ref=f1e313] [cursor=pointer]:
+              - /url: https://github.com/hyroxseouldev
+            - link "EMAIL" [ref=f1e316] [cursor=pointer]:
+              - /url: mailto:vividxxxxx@gmail.com
+  - contentinfo [ref=f1e320]:
+    - generic [ref=f1e321]:
+      - generic [ref=f1e322]:
+        - generic [ref=f1e323]: 클리어데브
+        - link "vividxxxxx@gmail.com" [ref=f1e324] [cursor=pointer]:
+          - /url: mailto:vividxxxxx@gmail.com
+      - navigation [ref=f1e325]:
+        - heading "EXPLORE" [level=3] [ref=f1e326]
+        - link "TOOLS" [ref=f1e327] [cursor=pointer]:
+          - /url: "#work"
+        - link "VIBE" [ref=f1e328] [cursor=pointer]:
+          - /url: "#numbers"
+        - link "BUILD" [ref=f1e329] [cursor=pointer]:
+          - /url: "#services"
+        - link "PROJECTS" [ref=f1e330] [cursor=pointer]:
+          - /url: "#books"
+        - link "CONTACT" [ref=f1e331] [cursor=pointer]:
+          - /url: "#contact"
+      - navigation [ref=f1e332]:
+        - heading "FIND ME ONLINE" [level=3] [ref=f1e333]
+        - link "GITHUB" [ref=f1e334] [cursor=pointer]:
+          - /url: https://github.com/hyroxseouldev
+        - link "EMAIL" [ref=f1e335] [cursor=pointer]:
+          - /url: mailto:vividxxxxx@gmail.com
+      - paragraph [ref=f1e336]: © 2026 CLYRDEV. BUILT WITH AI, CURIOSITY & GOOD VIBES.

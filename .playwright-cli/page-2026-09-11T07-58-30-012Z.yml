@@ -1,0 +1,95 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "BRN GYM 홈" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "BRN GYM BORN TO WIN" [ref=e5]
+      - generic [ref=e6]:
+        - link "내 신청" [ref=e7] [cursor=pointer]:
+          - /url: /my-registration
+        - generic [ref=e8]: BORN TO WIN. TOGETHER.
+        - button "↗ 초대장 공유" [ref=e9] [cursor=pointer]
+    - main [ref=e10]:
+      - region "OPEN GYM 초대장" [ref=e11]:
+        - generic [ref=e12]:
+          - region "BRN GYM 사진 2장" [ref=e13]:
+            - figure [ref=e14]:
+              - img "샌드백을 어깨에 메고 운동하는 BRN GYM 참가자"
+            - generic [ref=e15]:
+              - button "이전 사진" [ref=e16] [cursor=pointer]: ←
+              - generic [ref=e17]: 01 / 02
+              - button "다음 사진" [ref=e18] [cursor=pointer]: →
+          - generic [ref=e19]:
+            - generic [ref=e20]: BRN GYM / SEOUL
+            - generic [ref=e21]: 2026.09.26
+        - generic [ref=e22]:
+          - generic [ref=e23]: 함께 운동할 20명을 초대합니다
+          - heading "OPEN GYM" [level=1] [ref=e24]: OPENGYM
+          - paragraph [ref=e25]: 같은 공간, 함께 채우는 에너지.
+          - paragraph [ref=e26]:
+            - generic [ref=e27]: 9월 26일 토요일 · 오후 2시
+            - strong [ref=e28]: 1인 20,000원
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]:
+                - term [ref=e32]: 언제
+                - definition [ref=e33]:
+                  - text: 2026년 9월 26일 토요일
+                  - generic [ref=e34]: 오후 2:00 · 한국 시간
+              - generic [ref=e35]:
+                - term [ref=e36]: 어디서
+                - definition [ref=e37]:
+                  - text: BRN GYM B1
+                  - generic [ref=e38]: 서울 강남구 논현로159길 32, 지하 1층
+                  - link "지도에서 위치 보기 ↗" [ref=e39] [cursor=pointer]:
+                    - /url: https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%85%BC%ED%98%84%EB%A1%9C159%EA%B8%B8%2032
+            - generic [ref=e40]:
+              - strong [ref=e41]: 20,000원 / 1인
+              - generic [ref=e42]: 정원 20명
+            - link "참여 신청하기" [ref=e44] [cursor=pointer]:
+              - /url: /register
+              - generic [aria-hidden] [ref=e46]: ↗
+            - paragraph [ref=e47]: 무통장 입금·현장결제 선택 후 신청할 수 있어요.
+            - link "이미 신청하셨나요? 내 신청 확인 →" [ref=e48] [cursor=pointer]:
+              - /url: /my-registration
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - heading "만나는 방법은 간단하게." [level=2] [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: 01정보 입력
+            - generic [ref=e54]: →
+            - generic [ref=e55]: 02번호 인증
+            - generic [ref=e56]: →
+            - generic [ref=e57]: 03신청 접수
+          - paragraph [ref=e58]: 신청이 접수된 순서대로 20명까지 자리를 확보합니다.
+        - generic [ref=e59]:
+          - heading "신청 전 확인해 주세요" [level=2] [ref=e60]
+          - group [ref=e61]:
+            - generic "참여 확정은 언제 되나요?" [ref=e62] [cursor=pointer]
+          - group [ref=e63]:
+            - generic "준비물과 취소·환불 안내" [ref=e64] [cursor=pointer]
+    - contentinfo [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]: BRN GYM
+        - generic [ref=e68]: SEP 26, 2026 · LET’S MEET AT THE GYM.
+      - generic [ref=e69]:
+        - paragraph [ref=e70]:
+          - generic [ref=e71]: "COMPANY: 주식회사 본투윈"
+          - generic [ref=e72]: "CEO: 이태준"
+        - paragraph [ref=e73]: "BUSINESS LICENSE: 275-86-01951"
+        - paragraph [ref=e74]:
+          - text: "MAIL-ORDER SALES REPORT: 2026-서울강남-01973"
+          - link "[사업자정보확인]" [ref=e75] [cursor=pointer]:
+            - /url: https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2758601951
+        - paragraph [ref=e76]:
+          - text: "PRIVACY OFFICER: 주식회사 본투윈("
+          - link "brngym@borntowin.co.kr" [ref=e77] [cursor=pointer]:
+            - /url: mailto:brngym@borntowin.co.kr
+          - text: )
+        - paragraph [ref=e78]:
+          - text: "TEL:"
+          - link "070-4242-4246" [ref=e79] [cursor=pointer]:
+            - /url: tel:07042424246
+        - paragraph [ref=e80]: "ADDRESS: 06029 서울 강남구 논현로159길 32"
+        - paragraph [ref=e81]: COPYRIGHT © BORNTOWIN. All RIGHTS RESERVED.
+  - alert [ref=e82]
