@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- Include `clyrtraining.ai` as an additional portfolio project: a gym/coach member-management CRM and operational admin, not merely a landing page. Describe member/membership, program, training record, and feedback management. Link to `https://clyrtraining.vercel.app/` (the project name is not a verified custom domain). The current thumbnail is its public landing page; retain it until an admin screenshot is supplied.
+
 - The user welcomes an overall responsive design polish and subtle animation. Preserve portfolio content and the dark blue visual direction; respect reduced-motion preferences.
 
 - Use shadcn/ui components in `src/components/ui` with Tailwind CSS; daisyUI has been removed. Preserve the established custom portfolio styling when updating these components.

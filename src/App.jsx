@@ -66,6 +66,17 @@ const projects = [
       { label: "Website", href: "https://www.kkol-studio.com/projects", Icon: Globe2 },
     ],
   },
+  {
+    name: "clyrtraining.ai",
+    image: "/assets/projects/clyrtraining-landing.png",
+    alt: "clyrtraining.ai 회원관리·코칭 워크스페이스 랜딩페이지",
+    description: "체육관과 코치를 위한 회원관리 CRM입니다. 회원과 멤버십, 운동 프로그램, 기록과 피드백을 한곳에서 관리하는 운영 어드민입니다.",
+    role: "회원관리 CRM · 운영 어드민 개발",
+    tech: ["Next.js", "Supabase", "Vercel"],
+    links: [
+      { label: "Website", href: "https://clyrtraining.vercel.app/", Icon: Globe2 },
+    ],
+  },
 ];
 function Reveal({ children, className, delay = 0 }) {
   const reducedMotion = useReducedMotion();

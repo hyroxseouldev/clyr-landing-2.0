@@ -1,0 +1,230 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "본문으로 건너뛰기" [ref=e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "clyrtraining 홈" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - text: clyrtraining.
+        - navigation "메인 메뉴" [ref=e7]:
+          - link "사용 현황" [ref=e8] [cursor=pointer]:
+            - /url: "#numbers"
+          - link "기능" [ref=e9] [cursor=pointer]:
+            - /url: "#feature"
+          - link "운영 브랜드" [ref=e10] [cursor=pointer]:
+            - /url: "#brands"
+          - link "요금" [ref=e11] [cursor=pointer]:
+            - /url: "#pricing"
+        - link "로그인" [ref=e12] [cursor=pointer]:
+          - /url: /login
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: FOR GYMS & COACHES / CLYRTRAINING
+        - heading "코칭에 집중하세요. 운영은 하나로 연결할게요." [level=1] [ref=e19]: 코칭에 집중하세요.운영은 하나로 연결할게요.
+        - paragraph [ref=e20]: 운동 프로그램, 회원 관리, 기록과 피드백까지. 체육관과 코치의 노하우가 오래 이어지도록, clyrtraining이 매일의 운영을 함께합니다.
+        - generic [ref=e21]:
+          - link "우리 팀 도입 상담하기" [ref=e22] [cursor=pointer]:
+            - /url: "#contact"
+          - link "어떻게 달라지나요" [ref=e23] [cursor=pointer]:
+            - /url: "#feature"
+        - paragraph [ref=e24]: 개인 코치부터 체육관, 트레이닝 브랜드까지
+      - generic [ref=e26]:
+        - paragraph [ref=e27]: 이미 현장에서 함께하는 브랜드
+        - generic [ref=e28]:
+          - img "XON Training" [ref=e29]
+          - img "AMOR LAB" [ref=e30]
+      - generic [ref=e31]:
+        - paragraph [ref=e32]: 01 / IN PRACTICE
+        - heading "계획이 아닌, 현장에서 쌓인 기록." [level=2] [ref=e33]
+        - paragraph [ref=e34]: 회원이 운동하고, 코치가 답하고, 다음 프로그램으로 이어지는 중입니다.
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - term [ref=e37]:
+              - generic [ref=e38]: MEMBER ACCOUNTS
+              - text: 함께하는 회원 계정
+            - definition [ref=e39]: 108개
+          - generic [ref=e40]:
+            - term [ref=e41]:
+              - generic [ref=e42]: PROGRAMS CREATED
+              - text: 누적 등록 프로그램
+            - definition [ref=e43]: 19개
+          - generic [ref=e44]:
+            - term [ref=e45]:
+              - generic [ref=e46]: SESSION REVIEWS
+              - text: 회원이 남긴 운동 후기
+            - definition [ref=e47]: 739건
+          - generic [ref=e48]:
+            - term [ref=e49]:
+              - generic [ref=e50]: COACH RESPONSES
+              - text: 코치가 남긴 피드백
+            - definition [ref=e51]: 662건
+        - paragraph [ref=e52]: 2026.09.09 DB 집계 · XON Training / AMOR LAB 합산. 회원 계정은 중복을 제거한 일반 회원 중 탈퇴·비활성 계정을 제외한 수이며, 월간 활성 사용자 수가 아닙니다. 프로그램·후기·답변은 누적 등록 기준입니다.
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: 02 / LESS ADMIN. MORE COACHING.
+          - heading "메신저와 시트 사이, 놓치던 흐름을 하나로." [level=2] [ref=e56]: 메신저와 시트 사이,놓치던 흐름을 하나로.
+          - paragraph [ref=e57]: 프로그램을 보내고, 기록을 찾고, 답변을 남기는 일.따로 하던 일들이 자연스럽게 이어집니다.
+          - link "운영 고민 이야기하기" [ref=e58] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e59]:
+          - article [ref=e60]:
+            - generic [ref=e63]:
+              - paragraph [ref=e64]: 01 / PROGRAM / SESSION
+              - heading "노하우는 프로그램이 되고" [level=3] [ref=e65]
+              - paragraph [ref=e66]: 주차별 운동과 세션을 정리해 전달하세요. 매번 파일을 다시 보내지 않아도, 회원은 앱에서 오늘 할 운동을 확인합니다.
+          - article [ref=e67]:
+            - generic [ref=e70]:
+              - paragraph [ref=e71]: 02 / RECORD / FEEDBACK
+              - heading "기록은 다음 코칭으로 이어지고" [level=3] [ref=e72]
+              - paragraph [ref=e73]: 회원의 운동 후기와 코치 답변을 한곳에 쌓으세요. 미답변 피드백을 확인하고, 이전 기록을 보며 코칭을 이어갑니다.
+          - article [ref=e74]:
+            - generic [ref=e77]:
+              - paragraph [ref=e78]: 03 / MEMBERSHIP / OPERATIONS
+              - heading "운영은 한 화면에서 정리됩니다" [level=3] [ref=e79]
+              - paragraph [ref=e80]: 프로그램 신청, 입금 확인, 멤버십 현황까지. 흩어진 운영 업무를 모아 회원 한 명에게 더 집중할 여유를 만듭니다.
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: 03 / POWERING REAL TEAMS
+        - heading "당신의 코칭을, 당신의 브랜드로." [level=2] [ref=e83]: 당신의 코칭을,당신의 브랜드로.
+        - paragraph [ref=e84]: 회원은 브랜드 앱에서 운동하고, 코치는 워크스페이스에서 운영합니다. 실제 운영 중인 앱을 직접 살펴보세요.
+        - generic [ref=e85]:
+          - article [ref=e86]:
+            - generic [ref=e87]:
+              - img "XON Training 앱 아이콘" [ref=e88]
+              - generic [ref=e89]: LIVE APP
+            - paragraph [ref=e90]: TRAINING / COACHING
+            - heading "XON Training" [level=3] [ref=e91]
+            - paragraph [ref=e92]: 프로그램과 운동 기록, 코치 피드백을 연결하는 트레이닝 앱.
+            - link "App Store에서 보기" [ref=e93] [cursor=pointer]:
+              - /url: https://apps.apple.com/kr/app/xon-training/id6760121153
+          - article [ref=e97]:
+            - generic [ref=e98]:
+              - img "AMOR LAB 앱 아이콘" [ref=e99]
+              - generic [ref=e100]: LIVE APP
+            - paragraph [ref=e101]: BRAND / COACHING
+            - heading "AMOR LAB" [level=3] [ref=e102]
+            - paragraph [ref=e103]: 브랜드의 코칭 프로그램과 회원 경험을 담은 전용 앱.
+            - link "App Store에서 보기" [ref=e104] [cursor=pointer]:
+              - /url: https://apps.apple.com/kr/app/amor-lab/id6765614780
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: 04 / ROOM TO GROW
+        - heading "작게 시작하고, 팀의 속도로 성장하세요." [level=2] [ref=e110]: 작게 시작하고,팀의 속도로 성장하세요.
+        - paragraph [ref=e111]: 월 활성 회원 규모에 맞춰 선택하는 운영 플랜.
+        - generic [ref=e112]:
+          - article [ref=e113]:
+            - heading "Starter" [level=3] [ref=e114]
+            - paragraph [ref=e115]: 첫 프로그램을 시작하는 코치
+            - paragraph [ref=e116]: 무료
+            - list [ref=e117]:
+              - listitem [ref=e118]: 월 활성 회원 최대 3명
+              - listitem [ref=e121]: 프로그램 1개
+              - listitem [ref=e124]: 회원 기록·피드백 확인
+              - listitem [ref=e127]: 마케팅 페이지 제공
+            - link "Starter 문의" [ref=e130] [cursor=pointer]:
+              - /url: "#contact"
+          - article [ref=e134]:
+            - heading "Growth" [level=3] [ref=e135]
+            - paragraph [ref=e136]: 개인 코치와 소규모 팀
+            - paragraph [ref=e137]: 9.9만원/ 월
+            - list [ref=e138]:
+              - listitem [ref=e139]: 월 활성 회원 최대 10명
+              - listitem [ref=e142]: 프로그램 최대 5개
+              - listitem [ref=e145]: 결제·멤버십 관리
+              - listitem [ref=e148]: 코치 계정 추가
+            - link "Growth 문의" [ref=e151] [cursor=pointer]:
+              - /url: "#contact"
+          - article [ref=e155]:
+            - heading "Partner" [level=3] [ref=e156]
+            - paragraph [ref=e157]: 센터와 트레이닝 브랜드
+            - paragraph [ref=e158]: 39.9만원/ 월
+            - list [ref=e159]:
+              - listitem [ref=e160]: 월 활성 회원 11~50명
+              - listitem [ref=e163]: 프로그램 최대 10개
+              - listitem [ref=e166]: 복수 코치·운영자 계정
+              - listitem [ref=e169]: 고급 브랜드 설정·도입 지원
+            - link "Partner 문의" [ref=e172] [cursor=pointer]:
+              - /url: "#contact"
+          - article [ref=e176]:
+            - heading "Enterprise" [level=3] [ref=e177]
+            - paragraph [ref=e178]: 규모에 맞춘 운영이 필요한 팀
+            - paragraph [ref=e179]: 별도 협의
+            - list [ref=e180]:
+              - listitem [ref=e181]: 월 활성 회원 50명 초과
+              - listitem [ref=e184]: 커스텀 앱 제공
+              - listitem [ref=e187]: 운영 구조 맞춤 설계
+              - listitem [ref=e190]: 도입 세팅 지원
+            - link "Enterprise 문의" [ref=e193] [cursor=pointer]:
+              - /url: "#contact"
+        - paragraph [ref=e197]: Starter는 결제·멤버십 고급 관리를 포함하지 않습니다. 세부 운영 범위와 도입 조건은 상담을 통해 확인해 주세요.
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - paragraph [ref=e200]: 05 / GOOD QUESTIONS
+          - heading "시작하기 전에." [level=2] [ref=e201]
+        - generic [ref=e202]:
+          - group [ref=e203]:
+            - generic "개인 코치도 사용할 수 있나요?" [ref=e204] [cursor=pointer]
+          - group [ref=e205]:
+            - generic "기존 프로그램을 옮길 수 있나요?" [ref=e206] [cursor=pointer]
+          - group [ref=e207]:
+            - generic "하이록스 외 운동에도 사용할 수 있나요?" [ref=e208] [cursor=pointer]
+          - group [ref=e209]:
+            - generic "회원 화면과 코치 화면은 다른가요?" [ref=e210] [cursor=pointer]
+      - generic [ref=e211]:
+        - paragraph [ref=e212]: 06 / LET’S BUILD YOUR WORKSPACE
+        - heading "다음 코칭의 시작, 함께 만들어볼까요?" [level=2] [ref=e213]: 다음 코칭의 시작,함께 만들어볼까요?
+        - paragraph [ref=e214]: 지금의 운영 방식을 들려주세요. 우리 팀에 맞는 시작점을 함께 찾겠습니다.
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - generic [ref=e219]: 이름
+                - textbox "이름" [ref=e220]:
+                  - /placeholder: 성함을 알려주세요
+              - generic [ref=e221]:
+                - generic [ref=e222]: 이메일
+                - textbox "이메일" [ref=e223]:
+                  - /placeholder: you@yourgym.com
+            - generic [ref=e224]:
+              - generic [ref=e225]: 체육관 / 브랜드명
+              - textbox "체육관 / 브랜드명" [ref=e226]:
+                - /placeholder: 함께 성장할 팀의 이름
+            - generic [ref=e227]:
+              - generic [ref=e228]: 운영 형태
+              - combobox "운영 형태" [ref=e229]:
+                - option "개인 코칭" [selected]
+                - option "체육관 / 센터"
+                - option "온라인 프로그램"
+                - option "브랜드 / 복수 지점"
+            - generic [ref=e230]:
+              - generic [ref=e231]: 어떤 운영을 만들고 싶으신가요?
+              - textbox "어떤 운영을 만들고 싶으신가요?" [ref=e232]:
+                - /placeholder: 회원 규모, 운영 중인 프로그램, 해결하고 싶은 고민을 편하게 남겨주세요.
+            - button "도입 문의 보내기" [ref=e233]
+            - paragraph [ref=e235]: 입력한 정보는 문의 메일 발송에만 사용됩니다.
+          - complementary [ref=e236]:
+            - paragraph [ref=e237]: SAY HELLO
+            - link "vividxxxxx@gmail.com" [ref=e238] [cursor=pointer]:
+              - /url: mailto:vividxxxxx@gmail.com
+            - paragraph [ref=e239]: 개인 코치의 첫 프로그램도,체육관의 새로운 운영 방식도 환영합니다.
+            - generic [ref=e240]:
+              - link "이메일" [ref=e241] [cursor=pointer]:
+                - /url: mailto:vividxxxxx@gmail.com
+              - link "Instagram" [ref=e245] [cursor=pointer]:
+                - /url: https://www.instagram.com/kxxclear
+    - contentinfo [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - link "clyrtraining." [ref=e252] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e253]: Less admin. More coaching.
+        - navigation "하단 메뉴" [ref=e254]:
+          - link "기능 소개" [ref=e255] [cursor=pointer]:
+            - /url: "#feature"
+          - link "요금 안내" [ref=e256] [cursor=pointer]:
+            - /url: "#pricing"
+          - link "도입 문의" [ref=e257] [cursor=pointer]:
+            - /url: "#contact"
+          - link "로그인" [ref=e258] [cursor=pointer]:
+            - /url: /login
+  - region "Notifications alt+T"
+  - alert [ref=e261]
