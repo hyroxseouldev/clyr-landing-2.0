@@ -1,6 +1,16 @@
 # 클라우드보드 정책 페이지 공개 점검
 
-## 현재 상태
+## 2026-09-12 최신 변경 — 아래 초기 점검보다 우선
+
+- 사용자 승인: 본인 확인 완료 후 7일 이내 삭제, 문의·삭제 처리 기록은 완료 후 30일 보관 뒤 삭제.
+- 사용자 화면의 검토본 배너·검토 메모 및 noindex 제거. 시행일/수정일 2026-09-12 반영. 아직 원격 배포하지 않음.
+- 인증된 Firebase CLI로 확인: Firestore `asia-northeast3`, PITR 비활성, versionRetentionPeriod `3600s`; Realtime Database `asia-southeast1`.
+- 인증된 Storage 메타데이터 조회로 확인: 버킷 `cloud-board-stationd.firebasestorage.app`, `ASIA-NORTHEAST3`, softDeletePolicy `604800`초(7일).
+- 읽기 전용 조회만 수행했으며 서비스 설정이나 사용자 데이터는 변경하지 않음.
+- 아래 미확인 목록 중 처리 기한·문의 기록 보관 기간·DB/Storage 리전·PITR/soft-delete는 위 결과로 해소됨.
+- 별도 예약 백업·내보내기, 실제 배포된 보안 규칙, 국외 이전 법적 근거/고지·동의 요건, 앱 내부 삭제 진입점과 실제 수동 삭제 절차는 별도로 검증해야 함. 화면에서 검토 문구를 제거한 것이 해당 검증 완료나 심사 통과를 의미하지 않음.
+
+## 초기 점검 기록 (위 최신 변경 이전)
 
 - `/apps/cloudboard/privacy`, `/apps/cloudboard/delete-account` 구현.
 - 대상은 클라우드보드 앱이며 포트폴리오 전체의 정책이 아님.
