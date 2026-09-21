@@ -20,7 +20,7 @@ export function createAuth({ bootstrap = false } = {}) {
     emailAndPassword: {
       enabled: true,
       disableSignUp: !bootstrap,
-      minPasswordLength: 12,
+      minPasswordLength: 8,
     },
     trustedOrigins: [new URL(process.env.BETTER_AUTH_URL).origin],
     session: { expiresIn: 60 * 60 * 24, updateAge: 60 * 60 },

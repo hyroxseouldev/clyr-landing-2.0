@@ -209,12 +209,12 @@ function Account({ user }) {
           />
         </label>
         <label className="admin-field">
-          <span>새 비밀번호 · 12자 이상</span>
+          <span>새 비밀번호 · 8자 이상</span>
           <Input
             name="newPassword"
             type="password"
             autoComplete="new-password"
-            minLength={12}
+            minLength={8}
             maxLength={128}
             required
           />
@@ -225,7 +225,7 @@ function Account({ user }) {
             name="confirmPassword"
             type="password"
             autoComplete="new-password"
-            minLength={12}
+            minLength={8}
             maxLength={128}
             required
           />
