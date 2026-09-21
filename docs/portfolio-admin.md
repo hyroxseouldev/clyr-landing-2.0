@@ -41,7 +41,7 @@ The existing Vercel project is `clyr-landing-2.0`, connected to the GitHub repos
 - `UPLOADTHING_TOKEN`: token from the portfolio UploadThing app.
 - Existing `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `CONTACT_TO_EMAIL` remain server-only.
 
-Never prefix secrets with `VITE_`. The deploy uses the same DB and upload app. `/api/auth/[...all].js`, `/api/admin/content.js`, `/api/content.js`, `/api/uploadthing.js` are Vercel Functions. Routing checks filesystem/API routes before the SPA fallback. Signed UploadThing callbacks are validated by its SDK; user session authorization is applied in the upload initiation middleware, not to the callbacks. Upload metadata is idempotent by file key. Vercel `waitUntil` keeps SDK background tasks alive.
+Never prefix secrets with `VITE_`. The deploy uses the same DB and upload app. `/api/auth.js`, `/api/admin/content.js`, `/api/content.js`, `/api/uploadthing.js` are Vercel Functions. Nested `/api/auth/*` URLs are explicitly forwarded to `/api/auth.js`; routing then checks filesystem/API routes before the SPA fallback. Signed UploadThing callbacks are validated by its SDK; user session authorization is applied in the upload initiation middleware, not to the callbacks. Upload metadata is idempotent by file key. Vercel `waitUntil` keeps SDK background tasks alive.
 
 The preserved Sites worker remains a **static** fallback and does not run these Node APIs. Sites packaging and existing tests remain intact, but a Sites deployment alone will display the bundled content snapshot and will not provide a working CMS/auth API. Use Vercel for the full stack implemented here.
 

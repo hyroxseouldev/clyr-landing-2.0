@@ -5,6 +5,10 @@
   "outputDirectory": "dist/client",
   "routes": [
     {
+      "src": "/api/auth/(.*)",
+      "dest": "/api/auth?authPath=$1"
+    },
+    {
       "handle": "filesystem"
     },
     {

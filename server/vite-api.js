@@ -2,7 +2,7 @@ import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import * as content from "../api/content.js";
 import * as admin from "../api/admin/content.js";
-import * as auth from "../api/auth/[...all].js";
+import * as auth from "../api/auth.js";
 import * as uploads from "../api/uploadthing.js";
 import * as contact from "../api/contact.js";
 export function apiPlugin() {
