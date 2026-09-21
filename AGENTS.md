@@ -34,3 +34,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Do not display the former supplied `logo.svg`; it is not the portfolio owner's logo. Use the text-only `클리어데브` brand lockup until the user supplies a replacement logo.
 - Keep the header as a simple responsive flex row: the text-only brand grows on the left and desktop/mobile actions stay content-sized and right-aligned within symmetric shell gutters.
 - The contact form sends validated inquiries to `vividxxxxx@gmail.com` through a Vercel Function and Resend, with loading, success, failure, and honeypot states. Keep `RESEND_API_KEY` server-only.
+
+- The portfolio CMS uses Better Auth, Drizzle ORM, Neon Postgres, and UploadThing. Use one shared database; the user explicitly does not want separate development/production environments. `/admin` edits landing content while preserving the existing public design. Public sign-up is disabled; server-side `ADMIN_EMAIL` authorization protects content writes and image uploads. Keep credentials server-only.

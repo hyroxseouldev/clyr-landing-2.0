@@ -8,10 +8,33 @@ const policyPages = {
   "/apps/cloudboard/delete-account": "delete-account",
 };
 const policyPage = policyPages[window.location.pathname.replace(/\/+$/, "")];
-const CloudboardPolicy = React.lazy(() => import("./cloudboard/PolicyPages.jsx"));
+const Admin = React.lazy(() => import("./admin/Admin.jsx"));
+const isAdmin = /^\/admin(?:\/|$)/.test(window.location.pathname);
+if (isAdmin) {
+  document.title = "관리자 · CLYRDEV Studio";
+  const robots = document.createElement("meta");
+  robots.name = "robots";
+  robots.content = "noindex, nofollow";
+  document.head.appendChild(robots);
+}
+const CloudboardPolicy = React.lazy(
+  () => import("./cloudboard/PolicyPages.jsx"),
+);
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {policyPage ? <React.Suspense fallback={<p role="status">문서를 불러오는 중입니다…</p>}><CloudboardPolicy page={policyPage} /></React.Suspense> : <App />}
+    {isAdmin ? (
+      <React.Suspense
+        fallback={<p role="status">관리자 화면을 불러오는 중입니다…</p>}
+      >
+        <Admin />
+      </React.Suspense>
+    ) : policyPage ? (
+      <React.Suspense fallback={<p role="status">문서를 불러오는 중입니다…</p>}>
+        <CloudboardPolicy page={policyPage} />
+      </React.Suspense>
+    ) : (
+      <App />
+    )}
   </React.StrictMode>,
 );

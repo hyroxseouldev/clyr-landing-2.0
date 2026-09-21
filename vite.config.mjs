@@ -1,3 +1,4 @@
+import { apiPlugin } from "./server/vite-api.js";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
@@ -12,10 +13,13 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
+    port: 5173,
+    strictPort: true,
     allowedHosts: ["terminal.local"],
     warmup: {
       clientFiles: ["./src/main.jsx"],
     },
   },
-  plugins: [react(), tailwindcss()],
+  preview: { host: "0.0.0.0", port: 5173, strictPort: true },
+  plugins: [apiPlugin(), react(), tailwindcss()],
 });

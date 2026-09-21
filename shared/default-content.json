@@ -1,0 +1,250 @@
+{
+  "settings": {
+    "brand": "클리어데브",
+    "contactEmail": "vividxxxxx@gmail.com",
+    "githubUrl": "https://github.com/hyroxseouldev",
+    "heroEyebrow": "VIBE CODER & AI PRODUCT BUILDER",
+    "heroTitle": "아이디어를 실제 서비스로 만드는\n바이브 코더, 클리어데브",
+    "heroDescription": "프롬프트로 시작해, 작동하는 제품으로 끝냅니다.\nAI와 함께 더 빠르게 만들고 매일 새롭게 배웁니다.",
+    "contactDescription": "완성된 기획도, 한 줄짜리 아이디어도 좋습니다. 클리어데브와 첫 번째 빌드를 시작해보세요.",
+    "copyright": "© 2026 CLYRDEV. BUILT WITH AI, CURIOSITY & GOOD VIBES.",
+    "sections": {
+      "work": {
+        "title": "협업 브랜드",
+        "description": "프로덕트 개발, 교육과 콘텐츠 협업으로 함께한 브랜드"
+      },
+      "numbers": {
+        "title": "실제로 만들고 운영하는 것들",
+        "description": ""
+      },
+      "services": {
+        "title": "만드는 것들",
+        "description": "프로토타입, 서비스 그리고 자동화"
+      },
+      "projects": {
+        "title": "직접 만든 서비스",
+        "description": "아이디어부터 운영까지, 실제 사용자와 만나고 있는 제품들"
+      },
+      "contact": {
+        "title": "같이 만들어볼까요?",
+        "description": ""
+      }
+    }
+  },
+  "partners": [
+    {
+      "id": "partner-0",
+      "name": "XON TRAINING",
+      "image": "/assets/logos/xon-training.png",
+      "visible": true
+    },
+    {
+      "id": "partner-1",
+      "name": "AMOR LAB",
+      "image": "/assets/logos/amor-lab.png",
+      "visible": true
+    },
+    {
+      "id": "partner-2",
+      "name": "본투윈 · BRN GYM",
+      "image": "/assets/logos/born-to-win.png",
+      "visible": true
+    }
+  ],
+  "services": [
+    {
+      "id": "service-0",
+      "eyebrow": "PROMPT · PROTOTYPE",
+      "title": "AI 프로토타입",
+      "detail": "아이디어를 대화로 풀어내고, 작동하는 화면까지 빠르게 만듭니다.",
+      "icon": "code",
+      "visible": true
+    },
+    {
+      "id": "service-1",
+      "eyebrow": "WEB · APP · PRODUCT",
+      "title": "서비스 빌드",
+      "detail": "웹사이트부터 앱까지, 필요한 기능을 붙여 실제 제품으로 완성합니다.",
+      "icon": "product",
+      "visible": true
+    },
+    {
+      "id": "service-2",
+      "eyebrow": "AUTOMATION · WORKFLOW",
+      "title": "AI 자동화",
+      "detail": "반복되는 일을 AI 워크플로우로 연결해 더 가볍게 일합니다.",
+      "icon": "automation",
+      "visible": true
+    }
+  ],
+  "projects": [
+    {
+      "name": "XON Training",
+      "image": "/assets/projects/xon-training-app.png",
+      "alt": "XON Training 모바일 앱 화면",
+      "description": "운동 프로그램과 클래스 일정, 참여 기록을 한곳에서 관리하는 XON 회원 전용 트레이닝 앱입니다.",
+      "role": "기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포",
+      "tech": [
+        "Flutter",
+        "Supabase",
+        "Riverpod",
+        "Firebase"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/us/app/xon-training/id6760121153",
+          "icon": "apple"
+        },
+        {
+          "label": "Google Play",
+          "href": "https://play.google.com/store/apps/details?id=com.sunmkim.xontraining",
+          "icon": "play"
+        }
+      ],
+      "id": "project-0",
+      "development": false,
+      "visible": true
+    },
+    {
+      "name": "Amor Lab",
+      "image": "/assets/projects/amor-lab-app.png",
+      "alt": "Amor Lab 모바일 앱 화면",
+      "description": "참여자와 코치를 연결해 프로그램, 세션, 운동 후기와 피드백을 관리하는 트레이닝 앱입니다.",
+      "role": "기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포",
+      "tech": [
+        "Flutter",
+        "Supabase",
+        "Riverpod",
+        "Firebase"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/kr/app/amor-lab/id6765614780",
+          "icon": "apple"
+        },
+        {
+          "label": "Google Play",
+          "href": "https://play.google.com/store/apps/details?id=com.sunmkim.amortraining",
+          "icon": "play"
+        }
+      ],
+      "id": "project-1",
+      "development": false,
+      "visible": true
+    },
+    {
+      "name": "CloudBoard StationD",
+      "description": "오늘의 WOD와 운동 일정을 한 화면에 보여주고 운영 콘텐츠까지 관리하는 디지털 트레이닝 보드입니다.",
+      "role": "기획 · 프로덕트 디자인 · 풀스택 개발",
+      "tech": [
+        "Next.js",
+        "Neon",
+        "Drizzle",
+        "Better Auth"
+      ],
+      "links": [],
+      "development": true,
+      "id": "project-2",
+      "image": "",
+      "alt": "",
+      "visible": true
+    },
+    {
+      "name": "KKOL STUDIO",
+      "image": "/assets/projects/kkol-studio-projects.png",
+      "alt": "KKOL STUDIO 프로젝트 아카이브 웹사이트",
+      "description": "공간과 브랜드의 이야기를 이미지 중심으로 탐색할 수 있도록 구성한 디자인 스튜디오 프로젝트 아카이브입니다.",
+      "role": "웹사이트 개발 · CMS 연동 · 반응형 구현 · 배포",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Cloudinary",
+        "Vercel"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "href": "https://www.kkol-studio.com/projects",
+          "icon": "web"
+        }
+      ],
+      "id": "project-3",
+      "development": false,
+      "visible": true
+    },
+    {
+      "name": "clyrtraining.ai",
+      "image": "/assets/projects/clyrtraining-landing.png",
+      "alt": "clyrtraining.ai 회원관리·코칭 워크스페이스 랜딩페이지",
+      "description": "체육관과 코치를 위한 회원관리 CRM입니다. 회원과 멤버십, 운동 프로그램, 기록과 피드백을 한곳에서 관리하는 운영 어드민입니다.",
+      "role": "회원관리 CRM · 운영 어드민 개발",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Vercel"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "href": "https://clyrtraining.vercel.app/",
+          "icon": "web"
+        }
+      ],
+      "id": "project-4",
+      "development": false,
+      "visible": true
+    },
+    {
+      "name": "BRN GYM · 본투윈",
+      "image": "/assets/projects/brn-gym.png",
+      "alt": "본투윈 BRN GYM 피트니스 모임 참여 신청 화면",
+      "description": "함께 운동할 사람들을 연결하는 피트니스 모임 서비스입니다. 모임 참여 신청부터 회원관리 CRM까지, 참가자와 운영자의 경험을 연결합니다.",
+      "role": "피트니스 모임 서비스 · CRM 개발",
+      "tech": [
+        "Next.js"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "href": "https://www.brngym.co.kr/",
+          "icon": "web"
+        }
+      ],
+      "id": "project-5",
+      "development": false,
+      "visible": true
+    }
+  ],
+  "stats": [
+    {
+      "id": "stat-0",
+      "label": "ACTIVE MEMBERS",
+      "value": "300+",
+      "style": "students",
+      "visible": true
+    },
+    {
+      "id": "stat-1",
+      "label": "LIVE SERVICES",
+      "value": "7",
+      "style": "subscribers",
+      "visible": true
+    },
+    {
+      "id": "stat-2",
+      "label": "PUBLISHED APPS",
+      "value": "4",
+      "style": "brands",
+      "visible": true
+    },
+    {
+      "id": "stat-3",
+      "label": "MONTHLY UPDATES",
+      "value": "50+",
+      "style": "books",
+      "visible": true
+    }
+  ]
+}
