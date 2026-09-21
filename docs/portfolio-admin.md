@@ -50,3 +50,7 @@ The preserved Sites worker remains a **static** fallback and does not run these 
 - [Better Auth Drizzle adapter](https://better-auth.com/docs/adapters/drizzle)
 - [UploadThing Fetch adapter](https://docs.uploadthing.com/backend-adapters/fetch)
 - [Vercel Node runtime](https://vercel.com/docs/functions/runtimes/node-js)
+
+## Fast landing rendering
+
+`npm run build` first refreshes `shared/public-snapshot.json` from the five validated public content sections. Auth/session data and hidden items are excluded. The landing renders this snapshot immediately, including an unfaded hero, and revalidates against `/api/content` in the background. A failed or slow API leaves the usable snapshot visible. Consequently, edits made after a deployment may briefly show their previous published values until revalidation completes; during an outage, the last deployed snapshot remains visible. The next build refreshes that snapshot. Offline builds without `DATABASE_URL` use the checked-in snapshot; configured DB failures stop the build. The CMS itself continues to load fresh authenticated data before editing.

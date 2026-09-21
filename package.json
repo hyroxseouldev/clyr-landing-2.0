@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prepare-sites-build.mjs",
+    "build": "node scripts/snapshot-content.mjs && vite build && node scripts/prepare-sites-build.mjs",
     "preview": "vite preview",
     "test:contact": "node --test tests/contact-api.test.mjs",
     "test:sites": "node --test tests/sites-worker.test.mjs",
@@ -13,7 +13,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:seed": "node scripts/seed-content.mjs",
     "admin:create": "node scripts/create-admin.mjs",
-    "test:admin": "node --test tests/admin.test.mjs"
+    "test:admin": "node --test tests/admin.test.mjs",
+    "test:landing": "node --test tests/landing-render.test.mjs"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "^1.7.5",

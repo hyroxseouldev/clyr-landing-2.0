@@ -1,14 +1,9 @@
+import { requireAdmin } from "../../server/admin.js";
 import { and, eq, sql } from "drizzle-orm";
 import { getDb } from "../../server/db/index.js";
 import { contentSection } from "../../server/db/schema.js";
 import { contentSchemas } from "../../shared/content-schema.js";
-import {
-  handle,
-  json,
-  readJson,
-  requireAdmin,
-  HttpError,
-} from "../../server/http.js";
+import { handle, json, readJson, HttpError } from "../../server/http.js";
 export const GET = handle(async (request) => {
   const session = await requireAdmin(request);
   return json({

@@ -1,50 +1,37 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import defaults from "../../shared/default-content.json";
-const Context = createContext(null);
+import snapshot from "../../shared/public-snapshot.json";
+
+const Context = createContext(snapshot);
 export const useContent = () => useContext(Context);
+
 export function ContentProvider({ children }) {
-  const [content, setContent] = useState(null);
-  const [error, setError] = useState(false);
-  const [retry, setRetry] = useState(0);
+  // Render the full landing immediately: the first paint never waits for the DB.
+  const [content, setContent] = useState(snapshot);
   useEffect(() => {
     const controller = new AbortController();
-    setError(false);
+    const timeout = window.setTimeout(() => controller.abort(), 15000);
     fetch("/api/content", { signal: controller.signal })
-      .then(async (r) => {
-        // Sites' preserved static worker has no CMS API; use the bundled public snapshot there.
-        if (r.status === 404) return defaults;
-        if (!r.ok) throw new Error("Content unavailable");
-        const data = await r.json();
-        if (!data.settings || !Array.isArray(data.projects))
-          throw new Error("Content incomplete");
-        return data;
+      .then(async (response) => {
+        if (!response.ok) return;
+        const data = await response.json();
+        if (
+          !data.settings?.sections ||
+          !["projects", "partners", "services", "stats"].every((key) =>
+            Array.isArray(data[key]),
+          )
+        )
+          return;
+        setContent((previous) =>
+          JSON.stringify(previous) === JSON.stringify(data) ? previous : data,
+        );
       })
-      .then(setContent)
-      .catch((err) => {
-        if (err.name !== "AbortError") setError(true);
-      });
-    return () => controller.abort();
-  }, [retry]);
-  if (!content)
-    return (
-      <main
-        style={{
-          minHeight: "100vh",
-          display: "grid",
-          placeContent: "center",
-          textAlign: "center",
-          gap: 16,
-        }}
-      >
-        {error ? (
-          <>
-            <p role="alert">콘텐츠를 불러오지 못했습니다.</p>
-            <button onClick={() => setRetry((v) => v + 1)}>다시 시도</button>
-          </>
-        ) : (
-          <p role="status">클리어데브 포트폴리오를 불러오는 중입니다…</p>
-        )}
-      </main>
-    );
+      // A slow/offline API must never replace a usable landing with an error screen.
+      .catch(() => {})
+      .finally(() => window.clearTimeout(timeout));
+    return () => {
+      window.clearTimeout(timeout);
+      controller.abort();
+    };
+  }, []);
   return <Context.Provider value={content}>{children}</Context.Provider>;
 }

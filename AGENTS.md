@@ -36,3 +36,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The contact form sends validated inquiries to `vividxxxxx@gmail.com` through a Vercel Function and Resend, with loading, success, failure, and honeypot states. Keep `RESEND_API_KEY` server-only.
 
 - The portfolio CMS uses Better Auth, Drizzle ORM, Neon Postgres, and UploadThing. Use one shared database; the user explicitly does not want separate development/production environments. `/admin` edits landing content while preserving the existing public design. Public sign-up is disabled; server-side `ADMIN_EMAIL` authorization protects content writes and image uploads. Keep credentials server-only.
+
+- Prioritize first-screen speed on `/`: render the build-time public content snapshot immediately, revalidate from Neon in the background, and keep usable content on API failure. Do not restore a full-page loading/error text gate. Show the hero immediately without an entrance fade; retain lower-section motion and reduced-motion support.

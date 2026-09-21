@@ -47,12 +47,12 @@ function ServiceIcon({ name, ...props }) {
   const Icon = serviceIcons[name] || Code2;
   return <Icon {...props} />;
 }
-function Reveal({ children, className, delay = 0 }) {
+function Reveal({ children, className, delay = 0, immediate = false }) {
   const reducedMotion = useReducedMotion();
   return (
     <m.div
       className={className}
-      initial={reducedMotion ? false : { opacity: 0, y: 18 }}
+      initial={reducedMotion || immediate ? false : { opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.12 }}
       transition={{
@@ -158,7 +158,7 @@ function Hero() {
       <div className="orb orb-a" />
       <div className="orb orb-b" />
       <div className="shell hero-inner">
-        <Reveal className="hero-reveal">
+        <Reveal className="hero-reveal" immediate>
           <p className="eyebrow hero-eyebrow">
             <span className="cyan-dot" /> {settings.heroEyebrow}
           </p>

@@ -1,0 +1,234 @@
+{
+  "settings": {
+    "brand": "클리어데브",
+    "sections": {
+      "work": {
+        "title": "협업 브랜드",
+        "description": "프로덕트 개발, 교육과 콘텐츠 협업으로 함께한 브랜드"
+      },
+      "contact": {
+        "title": "같이 만들어볼까요?",
+        "description": ""
+      },
+      "numbers": {
+        "title": "실제로 만들고 운영하는 것들",
+        "description": ""
+      },
+      "projects": {
+        "title": "직접 만든 서비스",
+        "description": "아이디어부터 운영까지, 실제 사용자와 만나고 있는 제품들"
+      },
+      "services": {
+        "title": "만드는 것들",
+        "description": "프로토타입, 서비스 그리고 자동화"
+      }
+    },
+    "copyright": "© 2026 CLYRDEV. BUILT WITH AI, CURIOSITY & GOOD VIBES.",
+    "githubUrl": "https://github.com/hyroxseouldev",
+    "heroTitle": "아이디어를 실제 서비스로 만드는\n바이브 코더, 클리어데브",
+    "heroEyebrow": "VIBE CODER & AI PRODUCT BUILDER",
+    "contactEmail": "vividxxxxx@gmail.com",
+    "heroDescription": "프롬프트로 시작해, 작동하는 제품으로 끝냅니다.\nAI와 함께 더 빠르게 만들고 매일 새롭게 배웁니다.",
+    "contactDescription": "완성된 기획도, 한 줄짜리 아이디어도 좋습니다. 클리어데브와 첫 번째 빌드를 시작해보세요."
+  },
+  "partners": [
+    {
+      "id": "partner-0",
+      "name": "XON TRAINING",
+      "image": "/assets/logos/xon-training.png"
+    },
+    {
+      "id": "partner-1",
+      "name": "AMOR LAB",
+      "image": "/assets/logos/amor-lab.png"
+    },
+    {
+      "id": "partner-2",
+      "name": "본투윈 · BRN GYM",
+      "image": "/assets/logos/born-to-win.png"
+    }
+  ],
+  "services": [
+    {
+      "id": "service-0",
+      "icon": "code",
+      "title": "AI 프로토타입",
+      "detail": "아이디어를 대화로 풀어내고, 작동하는 화면까지 빠르게 만듭니다.",
+      "eyebrow": "PROMPT · PROTOTYPE"
+    },
+    {
+      "id": "service-1",
+      "icon": "product",
+      "title": "서비스 빌드",
+      "detail": "웹사이트부터 앱까지, 필요한 기능을 붙여 실제 제품으로 완성합니다.",
+      "eyebrow": "WEB · APP · PRODUCT"
+    },
+    {
+      "id": "service-2",
+      "icon": "automation",
+      "title": "AI 자동화",
+      "detail": "반복되는 일을 AI 워크플로우로 연결해 더 가볍게 일합니다.",
+      "eyebrow": "AUTOMATION · WORKFLOW"
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-0",
+      "alt": "XON Training 모바일 앱 화면",
+      "name": "XON Training",
+      "role": "기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포",
+      "tech": [
+        "Flutter",
+        "Supabase",
+        "Riverpod",
+        "Firebase"
+      ],
+      "image": "https://jkx7bcn77z.ufs.sh/f/UGoVxORJiwQrFAsdY5nIfuGJCX4DOP0ldSncLpogABkHE2Me",
+      "links": [
+        {
+          "href": "https://apps.apple.com/us/app/xon-training/id6760121153",
+          "icon": "apple",
+          "label": "App Store"
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.sunmkim.xontraining",
+          "icon": "play",
+          "label": "Google Play"
+        }
+      ],
+      "description": "운동 프로그램과 클래스 일정, 참여 기록을 한곳에서 관리하는 XON 회원 전용 트레이닝 앱입니다.",
+      "development": false
+    },
+    {
+      "id": "project-1",
+      "alt": "Amor Lab 모바일 앱 화면",
+      "name": "Amor Lab",
+      "role": "기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포",
+      "tech": [
+        "Flutter",
+        "Supabase",
+        "Riverpod",
+        "Firebase"
+      ],
+      "image": "/assets/projects/amor-lab-app.png",
+      "links": [
+        {
+          "href": "https://apps.apple.com/kr/app/amor-lab/id6765614780",
+          "icon": "apple",
+          "label": "App Store"
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.sunmkim.amortraining",
+          "icon": "play",
+          "label": "Google Play"
+        }
+      ],
+      "description": "참여자와 코치를 연결해 프로그램, 세션, 운동 후기와 피드백을 관리하는 트레이닝 앱입니다.",
+      "development": false
+    },
+    {
+      "id": "project-2",
+      "alt": "",
+      "name": "CloudBoard StationD",
+      "role": "기획 · 프로덕트 디자인 · 풀스택 개발",
+      "tech": [
+        "Next.js",
+        "Neon",
+        "Drizzle",
+        "Better Auth"
+      ],
+      "image": "",
+      "links": [],
+      "description": "오늘의 WOD와 운동 일정을 한 화면에 보여주고 운영 콘텐츠까지 관리하는 디지털 트레이닝 보드입니다.",
+      "development": true
+    },
+    {
+      "id": "project-3",
+      "alt": "KKOL STUDIO 프로젝트 아카이브 웹사이트",
+      "name": "KKOL STUDIO",
+      "role": "웹사이트 개발 · CMS 연동 · 반응형 구현 · 배포",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Cloudinary",
+        "Vercel"
+      ],
+      "image": "/assets/projects/kkol-studio-projects.png",
+      "links": [
+        {
+          "href": "https://www.kkol-studio.com/projects",
+          "icon": "web",
+          "label": "Website"
+        }
+      ],
+      "description": "공간과 브랜드의 이야기를 이미지 중심으로 탐색할 수 있도록 구성한 디자인 스튜디오 프로젝트 아카이브입니다.",
+      "development": false
+    },
+    {
+      "id": "project-4",
+      "alt": "clyrtraining.ai 회원관리·코칭 워크스페이스 랜딩페이지",
+      "name": "clyrtraining.ai",
+      "role": "회원관리 CRM · 운영 어드민 개발",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Vercel"
+      ],
+      "image": "/assets/projects/clyrtraining-landing.png",
+      "links": [
+        {
+          "href": "https://clyrtraining.vercel.app/",
+          "icon": "web",
+          "label": "Website"
+        }
+      ],
+      "description": "체육관과 코치를 위한 회원관리 CRM입니다. 회원과 멤버십, 운동 프로그램, 기록과 피드백을 한곳에서 관리하는 운영 어드민입니다.",
+      "development": false
+    },
+    {
+      "id": "project-5",
+      "alt": "본투윈 BRN GYM 피트니스 모임 참여 신청 화면",
+      "name": "BRN GYM · 본투윈",
+      "role": "피트니스 모임 서비스 · CRM 개발",
+      "tech": [
+        "Next.js"
+      ],
+      "image": "/assets/projects/brn-gym.png",
+      "links": [
+        {
+          "href": "https://www.brngym.co.kr/",
+          "icon": "web",
+          "label": "Website"
+        }
+      ],
+      "description": "함께 운동할 사람들을 연결하는 피트니스 모임 서비스입니다. 모임 참여 신청부터 회원관리 CRM까지, 참가자와 운영자의 경험을 연결합니다.",
+      "development": false
+    }
+  ],
+  "stats": [
+    {
+      "id": "stat-0",
+      "label": "ACTIVE MEMBERS",
+      "style": "students",
+      "value": "300+"
+    },
+    {
+      "id": "stat-1",
+      "label": "LIVE SERVICES",
+      "style": "subscribers",
+      "value": "7"
+    },
+    {
+      "id": "stat-2",
+      "label": "PUBLISHED APPS",
+      "style": "brands",
+      "value": "4"
+    },
+    {
+      "id": "stat-3",
+      "label": "MONTHLY UPDATES",
+      "style": "books",
+      "value": "50+"
+    }
+  ]
+}

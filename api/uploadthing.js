@@ -4,7 +4,8 @@ import {
   UploadThingError,
 } from "uploadthing/server";
 import { waitUntil } from "@vercel/functions";
-import { requireAdmin, json } from "../server/http.js";
+import { json } from "../server/http.js";
+import { requireAdmin } from "../server/admin.js";
 import { getDb } from "../server/db/index.js";
 import { media } from "../server/db/schema.js";
 const f = createUploadthing();
