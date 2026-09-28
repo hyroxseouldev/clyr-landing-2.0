@@ -5,6 +5,7 @@ import "./policies.css";
 export const contactEmail = "vividxxxxx@gmail.com";
 export const privacyPath = "/apps/cloudboard/privacy";
 export const deletionPath = "/apps/cloudboard/delete-account";
+export const supportPath = "/apps/cloudboard/support";
 export const deletionEmail = `mailto:${contactEmail}?subject=${encodeURIComponent("[클라우드보드] 계정 삭제 요청")}&body=${encodeURIComponent("클라우드보드 계정과 연결된 데이터의 삭제를 요청합니다.\n\n가입 이메일:")}`;
 
 function Section({ title, children }) {
@@ -37,16 +38,19 @@ function DeleteAccount() {
   return <>
     <p className="policy-lead">클라우드보드 계정과 연결된 데이터의 삭제를 요청할 수 있습니다. 앱을 삭제했거나 로그인할 수 없는 경우에도 아래 이메일로 문의해 주세요.</p>
     <EmailActions />
+    <Section title="앱에서 계정 삭제하기">
+      <p>앱의 메뉴 → 프로필 및 설정 → 계정 삭제에서 진행할 수 있습니다. Apple 또는 Google 계정으로 본인 확인을 마치면 계정과 연결 데이터의 삭제 처리가 시작됩니다. 로그인할 수 없다면 아래 이메일 요청 절차를 이용해 주세요.</p>
+    </Section>
     <Section title="1. 삭제되는 정보">
-      <ul><li>클라우드보드 인증 계정과 프로필: 사용자 ID, 이메일, 표시 이름, 프로필 이미지</li><li>계정에 연결된 워크아웃, 운동 설명, 업로드 이미지와 매장 설정</li><li>연결 디스플레이의 등록·접근 정보와 계정에 연결된 재생·운영 데이터</li></ul>
+      <ul><li>클라우드보드 인증 계정과 프로필: 사용자 ID, 이메일, 표시 이름, 프로필 이미지</li><li>센터 정보, 온보딩 진행 상태, 휴대폰 인증 연결 정보와 앱 무료 체험 정보</li><li>계정에 연결된 워크아웃, 운동 설명, 업로드 이미지와 매장 설정</li><li>연결 디스플레이의 등록·접근 정보와 계정에 연결된 재생·운영 데이터</li></ul>
       <p>계정 비활성화만으로 처리하지 않고 연결된 데이터와 파일도 삭제 대상으로 확인합니다.</p>
     </Section>
     <Section title="2. 삭제 전 확인해 주세요">
       <p>삭제한 계정과 콘텐츠는 복구할 수 없습니다. 필요한 콘텐츠는 요청 전에 별도로 보관해 주세요. 연결된 디스플레이는 삭제된 계정의 콘텐츠에 더 이상 접근할 수 없으며, 이용을 계속하려면 새 계정으로 다시 연결해야 합니다.</p>
-      <p>클라우드보드 계정을 삭제해도 Google 계정 자체나 다른 앱의 계정은 삭제되지 않습니다. 앱을 기기에서 제거하는 것만으로 클라우드보드 계정이 삭제되지는 않습니다.</p>
+      <p>클라우드보드 계정을 삭제해도 Apple·Google 계정 자체나 다른 앱의 계정은 삭제되지 않습니다. 앱을 기기에서 제거하는 것만으로 클라우드보드 계정이 삭제되지는 않습니다.</p>
     </Section>
     <Section title="3. 요청 방법과 본인 확인">
-      <p>가입한 Google 계정의 이메일 주소에서 요청을 보내고, 메일 본문에 가입 이메일을 적어 주세요. 해당 이메일을 사용할 수 없다면 먼저 문의해 주세요. 계정 소유 확인이 어려운 경우 확인 가능한 방법을 별도로 안내합니다.</p>
+      <p>가입한 Apple 또는 Google 계정의 이메일 주소에서 요청을 보내고, 메일 본문에 앱에 표시되는 가입 이메일을 적어 주세요. Apple의 이메일 가리기를 사용했거나 해당 이메일을 사용할 수 없다면 먼저 문의해 주세요. 계정 소유 확인이 어려운 경우 확인 가능한 방법을 별도로 안내합니다.</p>
       <p>삭제 사유는 필수가 아닙니다. 비밀번호, 인증번호, 신분증을 보내지 마세요. 삭제 요청을 위해 앱을 다시 설치하거나 로그인할 필요는 없습니다.</p>
     </Section>
     <Section title="4. 처리 절차와 기간">
@@ -63,13 +67,15 @@ function DeleteAccount() {
 function Privacy() {
   return <>
     <p className="policy-lead">클라우드보드 앱의 계정, 콘텐츠, 연결 디스플레이와 관련된 개인정보 처리 내용을 안내합니다. 이 방침은 클라우드보드 앱에 관한 것으로, 포트폴리오의 다른 서비스에는 적용되지 않습니다.</p>
-    <dl className="policy-dates"><div><dt>시행일</dt><dd>2026년 9월 12일</dd></div><div><dt>최종 작성일</dt><dd><time dateTime="2026-09-12">2026년 9월 12일</time></dd></div></dl>
+    <dl className="policy-dates"><div><dt>시행일</dt><dd>2026년 9월 12일</dd></div><div><dt>최종 작성일</dt><dd><time dateTime="2026-09-28">2026년 9월 28일</time></dd></div></dl>
     <Section title="1. 운영자와 문의처">
       <p>앱 이름: 클라우드보드 (CloudBoard)<br />운영자: 클리어데브 (CLYRDEV)<br />개인정보 문의 및 권리 행사: <a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
     </Section>
     <Section title="2. 처리 목적과 개인정보 항목">
       <dl className="policy-data">
         <div><dt>계정·프로필</dt><dd>Firebase 사용자 ID, 이메일, 표시 이름, 프로필 사진 URL 및 업로드한 프로필 이미지. 로그인, 사용자 식별, 프로필 관리에 사용합니다.</dd></div>
+        <div><dt>휴대폰 인증</dt><dd>휴대폰 번호, 인증번호 검증용 암호화 값, 인증 시각·결과, 재전송·오입력 횟수와 전화번호를 변환한 계정 연결 값. 문자 인증, 중복 계정 연결 방지와 부정 이용 방지에 사용합니다. 인증번호 원문은 데이터베이스에 저장하지 않습니다.</dd></div>
+        <div><dt>센터·온보딩</dt><dd>운영·준비 여부, 담당자 역할, 센터명·유형·지역, 사용자가 선택한 센터 규모·수업 환경·기기·이용 목적, 온보딩 진행 상태. 센터 설정과 초기 서비스 안내에 사용합니다. 무료 체험을 시작하면 시작일·종료일과 이용 권한을 저장합니다.</dd></div>
         <div><dt>서비스 이용 설정</dt><dd>파트너 등급, 이용 플랜·상태, 시범 이용 종료일, 디스플레이 한도. 계정의 서비스 이용 범위를 관리합니다.</dd></div>
         <div><dt>사용자 콘텐츠</dt><dd>워크아웃, 운동 설명, 업로드 이미지, 매장 설정과 브랜드 이미지. 콘텐츠 저장·동기화 및 디스플레이 표시를 위해 처리합니다.</dd></div>
         <div><dt>기기 연결·운영</dt><dd>페어링 코드, 기기 식별·연결 정보, 소유 계정 연결 정보, 활성 재생 세션과 운영 이벤트. 디스플레이 연결과 재생 상태 동기화에 사용합니다.</dd></div>
@@ -78,15 +84,17 @@ function Privacy() {
       </dl>
     </Section>
     <Section title="3. 수집 방법">
-      <p>Google 로그인 과정, 사용자의 입력·업로드, 기기 연결과 앱 이용, Firebase SDK의 작동, 사용자가 보낸 이메일을 통해 정보를 처리합니다. Google 계정의 비밀번호를 클라우드보드에 제출할 필요가 없습니다.</p>
+      <p>Apple·Google 로그인 과정, 휴대폰 문자 인증, 사용자의 입력·업로드, 기기 연결과 앱 이용, Firebase SDK의 작동, 사용자가 보낸 이메일을 통해 정보를 처리합니다. Apple·Google 계정 비밀번호는 각 인증 제공자의 로그인 화면에서만 입력하며 클라우드보드가 직접 수집하지 않습니다.</p>
     </Section>
     <Section title="4. 보유·이용 기간">
+      <p>문자 인증번호는 5분 동안 유효합니다. 임시 인증 요청과 발송 제한 기록은 만료 후 정기 정리 대상이며, 인증 완료 여부와 전화번호를 변환한 계정 연결 값은 계정 이용 중 인증 상태 유지와 중복 연결 방지에 사용합니다. 센터·온보딩·앱 무료 체험 정보는 계정 삭제 시 함께 삭제합니다.</p>
       <p>계정·콘텐츠·연결 정보는 계정 이용 중 서비스 제공에 필요한 동안 보관합니다. 계정 삭제 요청은 본인 확인 완료일부터 7일 이내에 처리합니다. 문의 및 삭제 요청 이메일과 처리 기록(이메일 주소, 요청 내용, 접수·완료일, 처리 결과)은 요청 이행 확인과 후속 문의 대응을 위해 처리 완료 후 30일간 보관한 뒤 삭제합니다.</p>
       <p>업로드 이미지 삭제 후 Storage의 복구용 보관(soft delete)에는 7일의 보관 기간이 적용됩니다. Firestore는 현재 시점 복구(PITR)가 비활성화되어 있고 최근 버전 보관 기간은 1시간입니다. 이 설정은 Google 서비스 내부의 모든 백업·삭제 절차가 같은 시간 안에 끝난다는 뜻은 아닙니다.</p>
       <p>Google의 공식 안내에 따르면 Firebase Authentication의 계정 정보는 운영자가 삭제를 시작한 후 서비스·백업 시스템에서 제거되기까지 최대 180일이 걸릴 수 있습니다. Crashlytics는 오류 기록과 관련 식별자를 90일 동안 보관한 뒤 서비스·백업 시스템에서 제거하는 절차를 시작합니다. 이 기간은 운영자의 삭제 요청 처리 기간과 다릅니다.</p>
     </Section>
     <Section title="5. 외부 서비스 이용">
-      <p>클라우드보드는 Google의 Firebase Authentication(로그인·계정), Cloud Firestore(프로필·워크아웃), Realtime Database(기기 연결·재생·운영 상태), Cloud Storage for Firebase(이미지), Crashlytics(장애 진단)를 사용합니다. Google 로그인은 Google 계정 인증에 사용됩니다.</p>
+      <p>클라우드보드는 Google의 Firebase Authentication(로그인·계정), Cloud Firestore(프로필·워크아웃·센터·인증 상태), Realtime Database(기기 연결·재생·운영 상태), Cloud Storage for Firebase(이미지), Cloud Functions(인증·계정 삭제·이용 권한 처리), Crashlytics(장애 진단)를 사용합니다. 계정 로그인에는 Apple 또는 Google의 인증 서비스를 사용합니다.</p>
+      <p>인증 문자 발송에는 SOLAPI를 사용하며, 수신 휴대폰 번호와 인증번호가 포함된 문자 내용을 전달합니다. 발송 서비스의 처리 기준은 <a href="https://solapi.com/privacy">SOLAPI 개인정보처리방침</a>에서 확인할 수 있습니다.</p>
       <p>개인정보 처리 업무에는 Google의 Firebase 서비스를 이용하며, 계정 인증·데이터 저장·파일 보관·오류 분석에 필요한 정보를 전달합니다.</p>
       <p>Firebase는 서비스별 약관과 데이터 처리 조건에 따라 정보를 처리합니다. <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 및 보안 안내</a>와 <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>에서 관련 내용을 확인할 수 있습니다.</p>
       <p>이 페이지의 삭제 요청은 사용자의 메일 앱에서 직접 발송하는 방식입니다. 포트폴리오 문의 폼의 Resend를 통해 접수하지 않습니다.</p>
@@ -96,7 +104,7 @@ function Privacy() {
       <p>Firebase Authentication의 계정 인증 정보는 미국에서 처리되며, 기기 연결·재생·운영 정보는 싱가포르(asia-southeast1)의 Realtime Database에 저장됩니다. Firestore와 이미지 Storage의 저장 리전은 대한민국 서울(asia-northeast3)입니다. Crashlytics 등 글로벌 서비스는 Google의 처리 인프라를 사용하므로 저장 리전과 모든 처리 위치가 동일한 것은 아닙니다.</p>
     </Section>
     <Section title="7. 삭제 요청과 파기 절차">
-      <p><a href={deletionPath}>계정 삭제 요청 안내</a>에서 이메일로 요청할 수 있습니다. 계정 소유를 확인한 후 인증 계정뿐 아니라 연결된 DB 데이터, 업로드 파일과 기기 접근 정보를 함께 삭제하고 완료를 안내합니다. 전자 정보는 해당 서비스의 삭제 기능을 사용해 처리하며, 백업·서비스 로그는 제4항의 별도 기준을 확인해야 합니다.</p>
+      <p>앱의 프로필 및 설정 → 계정 삭제에서 본인 확인 후 삭제를 진행하거나, <a href={deletionPath}>계정 삭제 요청 안내</a>에서 이메일로 요청할 수 있습니다. 인증 계정뿐 아니라 연결된 DB 데이터, 업로드 파일과 기기 접근 정보도 삭제 대상입니다. 전자 정보는 해당 서비스의 삭제 기능을 사용해 처리하며, 백업·서비스 로그는 제4항의 별도 기준을 확인해야 합니다.</p>
     </Section>
     <Section title="8. 사용자의 권리">
       <p>개인정보 열람·정정·삭제·처리 정지에 관한 요청은 문의 이메일로 보내실 수 있습니다. 요청자 본인 여부를 확인하는 데 필요한 최소한의 정보를 확인할 수 있으며, 처리 결과 또는 제한 사유를 안내합니다. 계정 삭제 사유는 필수가 아니며 비밀번호·인증번호·신분증을 요구하지 않습니다.</p>
@@ -110,9 +118,29 @@ function Privacy() {
   </>;
 }
 
+function Support() {
+  return <>
+    <p className="policy-lead">워크아웃 구성부터 수업 타이머와 디스플레이 연결까지, 클라우드보드 이용을 도와드립니다.</p>
+    <Section title="문의하기">
+      <p><a href={`mailto:${contactEmail}`}>{contactEmail}</a>로 문의해 주세요. 사용 기기, 앱 버전, 문제가 발생한 순서와 오류 메시지를 알려주시면 확인에 도움이 됩니다. 비밀번호나 문자 인증번호는 보내지 마세요.</p>
+    </Section>
+    <Section title="로그인과 시작하기">
+      <p>기존 워크아웃을 이용하려면 가입할 때 사용한 Apple 또는 Google 로그인 방법을 선택해 주세요. 신규 계정은 휴대폰 문자 인증과 센터 정보 입력을 거쳐 서비스를 시작할 수 있습니다.</p>
+      <p>앱에서 1개월 무료 체험 시작을 선택하면 제공되는 기간과 이용 권한을 확인할 수 있습니다. 현재 앱 무료 체험에는 카드 등록이나 자동 결제가 없습니다.</p>
+    </Section>
+    <Section title="디스플레이 연결">
+      <p>디스플레이 기기에서 앱을 열어 표시되는 연결 코드를 컨트롤러의 디스플레이 관리 화면에 입력하세요. 두 기기 모두 인터넷 연결이 필요합니다. 연결 상태를 확인한 뒤 워크아웃을 선택해 재생할 수 있습니다.</p>
+    </Section>
+    <Section title="개인정보와 계정 삭제">
+      <p><a href={privacyPath}>개인정보처리방침</a>과 <a href={deletionPath}>계정 삭제 안내</a>를 확인해 주세요. 앱에서는 프로필 및 설정 → 계정 삭제에서 본인 확인 후 삭제를 진행할 수 있습니다.</p>
+    </Section>
+  </>;
+}
+
 export default function PolicyPages({ page }) {
   const deletion = page === "delete-account";
-  const title = deletion ? "클라우드보드 계정 삭제 요청" : "클라우드보드 개인정보처리방침";
+  const support = page === "support";
+  const title = support ? "클라우드보드 고객 지원" : deletion ? "클라우드보드 계정 삭제 요청" : "클라우드보드 개인정보처리방침";
   useEffect(() => {
     const previousTitle = document.title;
     const description = document.querySelector('meta[name="description"]');
@@ -128,10 +156,10 @@ export default function PolicyPages({ page }) {
     <a className="skip-link" href="#policy-content">본문으로 건너뛰기</a>
     <header className="policy-header"><a href={privacyPath}>클라우드보드 <span>CloudBoard</span></a><a href="/">포트폴리오</a></header>
     <main id="policy-content" className="policy-document" tabIndex={-1}>
-      <p className="policy-kicker">CLOUDBOARD / {deletion ? "ACCOUNT DELETION" : "PRIVACY"}</p>
+      <p className="policy-kicker">CLOUDBOARD / {support ? "SUPPORT" : deletion ? "ACCOUNT DELETION" : "PRIVACY"}</p>
       <h1>{title}</h1>
-      {deletion ? <DeleteAccount /> : <Privacy />}
+      {support ? <Support /> : deletion ? <DeleteAccount /> : <Privacy />}
     </main>
-    <footer className="policy-footer"><a href={`mailto:${contactEmail}`}>{contactEmail}</a><nav aria-label="클라우드보드 정책"><a href={privacyPath} aria-current={!deletion ? "page" : undefined}>개인정보처리방침</a><a href={deletionPath} aria-current={deletion ? "page" : undefined}>계정 삭제 요청</a><a href="/">포트폴리오로 돌아가기</a></nav></footer>
+    <footer className="policy-footer"><a href={`mailto:${contactEmail}`}>{contactEmail}</a><nav aria-label="클라우드보드 정책"><a href={supportPath} aria-current={support ? "page" : undefined}>고객 지원</a><a href={privacyPath} aria-current={!deletion && !support ? "page" : undefined}>개인정보처리방침</a><a href={deletionPath} aria-current={deletion ? "page" : undefined}>계정 삭제 요청</a><a href="/">포트폴리오로 돌아가기</a></nav></footer>
   </div>;
 }

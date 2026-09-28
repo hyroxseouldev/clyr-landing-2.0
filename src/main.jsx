@@ -4,6 +4,7 @@ import { App } from "./App.jsx";
 import "./styles.css";
 
 const policyPages = {
+  "/apps/cloudboard/support": "support",
   "/apps/cloudboard/privacy": "privacy",
   "/apps/cloudboard/delete-account": "delete-account",
 };
