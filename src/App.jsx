@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert } from "@/components/ui/alert";
 import { useEffect, useRef, useState } from "react";
+import { BuildingScene } from "./components/BuildingScene";
+import "./landing.css";
 import {
   LazyMotion,
   animate,
@@ -14,7 +16,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import {
-  ArrowRight,
+  ArrowDown,
   ArrowUpRight,
   Check,
   Code2,
@@ -31,9 +33,8 @@ import {
 import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa6";
 
 const navItems = [
-  ["TOOLS", "work"],
-  ["VIBE", "numbers"],
-  ["BUILD", "services"],
+  ["ABOUT", "numbers"],
+  ["SERVICES", "services"],
   ["PROJECTS", "books"],
   ["CONTACT", "contact"],
 ];
@@ -69,8 +70,8 @@ function SectionIntro({ number, label, title, description }) {
   return (
     <Reveal className="section-intro">
       <p className="eyebrow">
-        <span className="section-glyph">⌑</span>
-        {number} / {label}
+        <span className="section-number">{number}</span>
+        {label}
       </p>
       <h2>{title}</h2>
       {description ? <p className="section-copy">{description}</p> : null}
@@ -79,7 +80,7 @@ function SectionIntro({ number, label, title, description }) {
 }
 function Logo() {
   const { settings } = useContent();
-  return <span className="brand-lockup">{settings.brand}</span>;
+  return <span className="brand-lockup">{settings.brand}<span className="brand-period">.</span></span>;
 }
 
 function Header() {
@@ -110,7 +111,7 @@ function Header() {
             </a>
           ))}
           <a className="contact-pill" href="#contact">
-            CONTACT
+            LET’S TALK <ArrowUpRight size={14} />
           </a>
         </nav>
         <div className="mobile-actions">
@@ -119,7 +120,7 @@ function Header() {
             href="#contact"
             onClick={() => setOpen(false)}
           >
-            CONTACT
+            LET’S TALK <ArrowUpRight size={14} />
           </a>
           <Button
             className="menu-button"
@@ -154,22 +155,23 @@ function Hero() {
   const { githubUrl } = settings;
   return (
     <section id="top" className="hero-section">
-      <div className="grid-overlay" />
-      <div className="orb orb-a" />
-      <div className="orb orb-b" />
       <div className="shell hero-inner">
         <Reveal className="hero-reveal" immediate>
           <p className="eyebrow hero-eyebrow">
             <span className="cyan-dot" /> {settings.heroEyebrow}
           </p>
-          <h1 style={{ whiteSpace: "pre-line" }}>{settings.heroTitle}</h1>
+          <h1 className="hero-title">
+            {settings.heroTitle.split("\n").map((line, index) => (
+              <span key={index}>{line}</span>
+            ))}
+          </h1>
           <p className="hero-copy" style={{ whiteSpace: "pre-line" }}>
             {settings.heroDescription}
           </p>
           <div className="hero-actions">
             <Button asChild>
-              <a href="#contact" className="primary-btn">
-                문의하기 <ArrowRight size={17} />
+              <a href="#books" className="primary-btn">
+                만든 것들 보기 <ArrowUpRight size={18} />
               </a>
             </Button>
             <Button asChild>
@@ -183,7 +185,13 @@ function Hero() {
               </a>
             </Button>
           </div>
+          <p className="hero-footnote"><span /> FROM FIRST IDEA TO REAL PRODUCT</p>
         </Reveal>
+        <BuildingScene />
+      </div>
+      <div className="shell hero-baseline">
+        <span>THINK CLEAR. BUILD REAL.</span>
+        <a href="#work">조금 더 알아보기 <ArrowDown size={14} /></a>
       </div>
     </section>
   );
@@ -648,6 +656,7 @@ export function App() {
   return (
     <ContentProvider>
       <LazyMotion features={domAnimation}>
+        <div className="landing-page">
         <a className="skip-link" href="#main">
           본문으로 건너뛰기
         </a>
@@ -661,6 +670,7 @@ export function App() {
           <Contact />
         </main>
         <Footer />
+        </div>
       </LazyMotion>
     </ContentProvider>
   );

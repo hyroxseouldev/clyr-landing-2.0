@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- Main website redesign (2026-10-03): the user requests a bright visual direction and a 3D building-under-construction object in the hero. This supersedes the earlier dark-blue landing direction. Use an off-white/white canvas, dark typography and a clear blue accent; retain Pretendard, CMS-backed content, real project imagery and the working contact form. Keep the hero fast with an optimized 3D-rendered illustration and lightweight motion, plus reduced-motion support. These website changes do not change either PDF's separate design preferences.
+
 - CloudBoard policy copy uses user-approved 7-day deletion after identity verification and 30-day retention of completed support/deletion-request records. Keep internal review notes out of public page copy. Verified Firebase settings: Firestore/Storage Seoul, Realtime Database Singapore, Storage soft delete 7 days, Firestore PITR disabled with 1-hour version retention. Do not confuse these with all provider backup deletion times.
 
 - CloudBoard app policies live at `/apps/cloudboard/privacy` and `/apps/cloudboard/delete-account`, independent of portfolio content, without animation or login. Use email requests to `vividxxxxx@gmail.com` and clipboard feedback; do not connect them to Resend or claim automatic deletion. Do not publish unverified retention, backup, operator, or international-transfer claims. Current review-only release blockers are recorded in `docs/cloudboard-policy-release.md`.
