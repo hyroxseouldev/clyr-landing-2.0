@@ -8,7 +8,7 @@
       },
       "contact": {
         "title": "같이 만들어볼까요?",
-        "description": ""
+        "description": "새로운 서비스도, 매일 반복하는 업무 하나도 좋습니다."
       },
       "numbers": {
         "title": "실제로 만들고 운영하는 것들",
@@ -20,7 +20,7 @@
       },
       "services": {
         "title": "만드는 것들",
-        "description": "프로토타입, 서비스 그리고 자동화"
+        "description": "새 서비스 개발부터 웹사이트 오류 수정, 엑셀 정리와 문서 자동 생성까지"
       }
     },
     "copyright": "© 2026 CLYRDEV. BUILT WITH AI, CURIOSITY & GOOD VIBES.",
@@ -29,7 +29,7 @@
     "heroEyebrow": "VIBE CODER & AI PRODUCT BUILDER",
     "contactEmail": "vividxxxxx@gmail.com",
     "heroDescription": "프롬프트로 시작해, 작동하는 제품으로 끝냅니다.\nAI와 함께 더 빠르게 만들고 매일 새롭게 배웁니다.",
-    "contactDescription": "완성된 기획도, 한 줄짜리 아이디어도 좋습니다. 클리어데브와 첫 번째 빌드를 시작해보세요."
+    "contactDescription": "반복되는 엑셀 작업, 불편한 사이트 기능, 만들고 싶은 서비스가 있다면 편하게 알려주세요. 샘플 파일이나 오류 증상을 확인한 뒤 작업 범위와 고정 견적을 안내합니다."
   },
   "partners": [
     {
@@ -60,14 +60,14 @@
       "id": "service-1",
       "icon": "product",
       "title": "서비스 빌드",
-      "detail": "웹사이트부터 앱까지, 필요한 기능을 붙여 실제 제품으로 완성합니다.",
+      "detail": "웹·앱을 만들고, 운영 중인 사이트의 문의 폼·결제 오류·모바일 화면 문제도 필요한 범위부터 고칩니다.",
       "eyebrow": "WEB · APP · PRODUCT"
     },
     {
       "id": "service-2",
       "icon": "automation",
       "title": "AI 자동화",
-      "detail": "반복되는 일을 AI 워크플로우로 연결해 더 가볍게 일합니다.",
+      "detail": "주문 엑셀 정리, 거래처별 발주서 생성과 누락·중복 확인을 자동화합니다. 견적서·보고서도 기존 양식에 맞춰 생성합니다.",
       "eyebrow": "AUTOMATION · WORKFLOW"
     }
   ],

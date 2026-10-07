@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- Service copy (2026-10-07): include small paid tasks within the existing three offerings: website/contact/payment/mobile error fixes under service builds; order Excel cleanup, supplier-specific purchase-order files, missing/duplicate checks, and estimates/reports in existing document templates under automation. Invite inquiries for one small recurring task and quote after reviewing sample files or symptoms. The suggested prices and third-party demand examples in the conversation are not approved public pricing or portfolio claims.
+
 - Package management (2026-10-07): use pnpm, with the version pinned in `package.json` and `pnpm-lock.yaml` committed. Use `pnpm install --frozen-lockfile` for reproducible installs and `pnpm run <script>` for project commands. Do not add npm or Yarn lockfiles.
 
 - Creative refresh request (2026-10-07): the user wants the main portfolio website to feel more creative. Explore more distinctive composition and typography while retaining the latest bright palette, blue accent, construction-themed hero, real portfolio content, and working CMS/contact behavior; apply a specific new visual direction once selected.
