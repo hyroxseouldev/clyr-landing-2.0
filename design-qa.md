@@ -57,3 +57,11 @@ No browser comparison iterations yet. The previous QA report concerned an older,
 - [ ] Verify primary interactions and browser console; fix any visual findings.
 
 final result: blocked
+
+## Rotating building enhancement — 2026-10-07
+
+- User requested actual 3D rotation. The original building image is retained for immediate first paint and as the fallback; a complete white building/cobalt crane model loads separately after the image is ready and the scene enters view.
+- Implemented slow automatic rotation, horizontal pointer drag, left/right arrow keys, Home/reset, pause, reduced-motion handling, off-screen/hidden-tab suspension, and GPU resource cleanup.
+- The model contains 766 instanced parts in 10 batches and 10,212 triangles. Geometry checks cover every five degrees of a full revolution and verify camera margins, finite transforms and positive-volume parts.
+- A clean checkout containing only this change passes the production build and 19 tests. Initial JavaScript is 116.48 KB gzip; the deferred 3D chunk is 134.35 KB gzip. Vite reports its standard 500 KB uncompressed-chunk warning for that deferred chunk.
+- Browser/GPU rendering, visual fidelity, mobile gestures and real interaction checks remain unverified. The previously saved localhost browser permission still blocks browser access; the user has been asked whether to allow verification or inspect after deployment. No alternate capture was attempted.

@@ -39,6 +39,9 @@ test("first render contains real content without waiting for a content request",
       assert.ok(landing.includes(renderToString(React.createElement("span", null, line))));
     }
     assert.match(landing, /blueprint-underlay-mobile\.webp/);
+    assert.match(landing, /building-studio-mobile\.webp/);
+    assert.match(landing, /fetchpriority="high"/i);
+    assert.doesNotMatch(landing, /<canvas/, "The first render must not depend on WebGL");
     assert.match(landing, /href="#books"/);
     assert.match(landing, /aria-label="제공 서비스 바로가기"/);
     for (const service of snapshot.services) assert.ok(landing.includes(service.title));

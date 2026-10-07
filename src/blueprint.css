@@ -1,4 +1,4 @@
-/* Selected concept 2: an open architectural drawing, with a real 3D render. */
+/* Selected concept 2: an open architectural drawing with a rotating 3D model. */
 .landing-page .site-header { height: 86px; }
 .landing-page .header-inner { min-height: 86px; max-width: 1440px; padding-inline: 52px; }
 .landing-page .blueprint-hero { padding-top: 86px; background: var(--bg); }
@@ -58,19 +58,23 @@
   left: 27%;
   width: 49%;
   aspect-ratio: 1;
-  perspective: 1400px;
   isolation: isolate;
 }
 .landing-page .blueprint-underlay { position: absolute; inset: -10%; width: 120%; height: 120%; object-fit: contain; pointer-events: none; }
 .landing-page .blueprint-underlay img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.landing-page .building-art { position: absolute; inset: 0; transform-style: preserve-3d; }
-.landing-page .building-float { display: block; width: 100%; height: 100%; animation: blueprint-float 8s ease-in-out infinite; animation-play-state: paused; }
-.landing-page .building-scene[data-animated="true"] .building-float { animation-play-state: running; }
-.landing-page .building-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.landing-page .scene-controls { position: absolute; z-index: 3; right: -4%; bottom: 5%; }
-.landing-page .scene-motion-toggle { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: #657184; cursor: pointer; }
+.landing-page .building-poster, .landing-page .building-canvas { position: absolute; inset: 0; }
+.landing-page .building-poster { display: block; pointer-events: none; }
+.landing-page .building-poster img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.landing-page .building-canvas { visibility: hidden; }
+.landing-page .building-scene[data-ready="true"] .building-poster { visibility: hidden; }
+.landing-page .building-scene[data-ready="true"] .building-canvas { visibility: visible; }
+.landing-page .building-webgl { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; user-select: none; }
+.landing-page .building-webgl[data-dragging="true"] { cursor: grabbing; }
+.landing-page .building-webgl:focus-visible { outline-offset: -12px; border-radius: 16px; }
+.landing-page .scene-controls { position: absolute; z-index: 3; right: -4%; bottom: 0; display: flex; align-items: center; gap: 7px; }
+.landing-page .scene-hint { margin-right: 5px; color: #657184; font-size: 11px; }
+.landing-page .scene-motion-toggle { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: #657184; cursor: pointer; }
 .landing-page .scene-motion-toggle:hover { color: var(--accent); border-color: var(--accent); }
-@keyframes blueprint-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 
 .landing-page .blueprint-baseline { display: flex; align-items: center; gap: 28px; min-height: 92px; max-width: 1440px; padding-inline: 52px; color: #748199; font: 400 9px/1.6 "JetBrains Mono", monospace; letter-spacing: .1em; }
 .landing-page .blueprint-baseline > span { flex: 0 0 auto; }
@@ -154,6 +158,5 @@
   .landing-page .blueprint-service-arrow { top: 30px; right: 2px; opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .landing-page .building-float { animation: none; }
   .landing-page .blueprint-service-arrow { transition: none; }
 }

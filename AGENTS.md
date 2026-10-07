@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- Rotating hero building (2026-10-07): the user wants the construction building to rotate in 3D. Retain the selected white building, cobalt glass/crane and blueprint composition. Use real geometry with slow automatic rotation, drag/keyboard rotation, pause and reset; show the existing optimized image immediately while loading the 3D enhancement. Disable automatic motion with reduced motion and stop rendering off-screen or in hidden tabs.
+
 - Service copy (2026-10-07): include small paid tasks within the existing three offerings: website/contact/payment/mobile error fixes under service builds; order Excel cleanup, supplier-specific purchase-order files, missing/duplicate checks, and estimates/reports in existing document templates under automation. Invite inquiries for one small recurring task and quote after reviewing sample files or symptoms. The suggested prices and third-party demand examples in the conversation are not approved public pricing or portfolio claims.
 
 - Package management (2026-10-07): use pnpm, with the version pinned in `package.json` and `pnpm-lock.yaml` committed. Use `pnpm install --frozen-lockfile` for reproducible installs and `pnpm run <script>` for project commands. Do not add npm or Yarn lockfiles.
