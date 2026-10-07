@@ -2,12 +2,35 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { contentSchemas, publicContent } from "../shared/content-schema.js";
+import { getBlueprintHero } from "../shared/blueprint-content.js";
 const seed = JSON.parse(
   await readFile(new URL("../shared/default-content.json", import.meta.url)),
 );
 test("existing landing content validates without changing copy", () => {
   for (const [key, data] of Object.entries(seed))
     assert.deepEqual(contentSchemas[key].parse(data), data);
+});
+test("blueprint hero preserves legacy settings and round-trips edited CMS copy", () => {
+  const legacy = structuredClone(seed.settings);
+  assert.equal(getBlueprintHero(legacy).title, "생각을 짓고,\n서비스를 만듭니다.");
+  assert.deepEqual(legacy, seed.settings);
+  const edited = {
+    ...legacy,
+    heroBlueprint: {
+      title: "새로운 아이디어를\n함께 만듭니다.",
+      introduction: "직접 수정한 소개 문구",
+      asideTitle: "함께 시작해요.",
+    },
+  };
+  const validated = contentSchemas.settings.parse(edited);
+  const published = publicContent([{ key: "settings", data: validated }]);
+  assert.deepEqual(getBlueprintHero(published.settings), edited.heroBlueprint);
+  assert.equal(contentSchemas.settings.safeParse({
+    ...edited, heroBlueprint: { ...edited.heroBlueprint, title: "" },
+  }).success, false);
+  assert.equal(contentSchemas.settings.safeParse({
+    ...edited, heroBlueprint: { ...edited.heroBlueprint, unknown: true },
+  }).success, false);
 });
 test("project links reject script and insecure URLs", () => {
   for (const href of [

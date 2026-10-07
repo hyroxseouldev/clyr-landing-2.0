@@ -14,17 +14,21 @@ Open `/admin`, sign in, select a section and edit its fields. Project/brand imag
 
 Changes remain in memory while switching sections. Leaving the page with unsaved changes triggers a warning. Concurrent saves from a second tab fail with a conflict instead of overwriting newer content. Successful saves appear on the next public page load. Account settings support password changes and revoke other sessions.
 
+The selected blueprint hero uses optional `settings.heroBlueprint` (`title`, `introduction`, `asideTitle`). Until these fields are saved, the public page and editor use the same defaults from `shared/blueprint-content.js`. The right-hand description still uses `heroDescription`; existing `heroTitle` is retained for compatibility with older content documents. No shared-database migration is needed for this design change.
+
 The contact form continues to use Resend. Editing the display contact email does not change the server's `CONTACT_TO_EMAIL` recipient. CloudBoard policy pages are independent of this CMS.
 
 ## Local setup and commands
 
-`npm run dev` starts Vite and the actual API on port 5173. `npm run preview` uses that same port and API after a build; stop the dev process first. Both use `.env.local`, then `.env`. Only one server should run on port 5173. The account bootstrap script writes the generated initial password to ignored `.local/admin-credentials.txt` with mode 0600, never to source control. It will not reset an existing account. The initial password should be changed in the account page.
+Use pnpm 10.32.1, as pinned in `package.json`. Install dependencies with `pnpm install --frozen-lockfile`; commit `pnpm-lock.yaml` when adding or updating dependencies. `pnpm-workspace.yaml` allows the existing esbuild and msgpackr-extract dependency build scripts.
 
-- `npm run db:generate`: generate migrations from the Drizzle schema.
-- `npm run db:migrate`: apply committed migrations with the direct DB URL.
-- `npm run db:seed`: insert missing content sections without overwriting edits.
-- `npm run admin:create`: bootstrap only the configured admin email through Better Auth.
-- `npm run test:admin`: data validation and public visibility tests.
+`pnpm run dev` starts Vite and the actual API on port 5173. `pnpm run preview` uses that same port and API after a build; stop the dev process first. Both use `.env.local`, then `.env`. Only one server should run on port 5173. The account bootstrap script writes the generated initial password to ignored `.local/admin-credentials.txt` with mode 0600, never to source control. It will not reset an existing account. The initial password should be changed in the account page.
+
+- `pnpm run db:generate`: generate migrations from the Drizzle schema.
+- `pnpm run db:migrate`: apply committed migrations with the direct DB URL.
+- `pnpm run db:seed`: insert missing content sections without overwriting edits.
+- `pnpm run admin:create`: bootstrap only the configured admin email through Better Auth.
+- `pnpm run test:admin`: data validation and public visibility tests.
 - `node scripts/check-admin.mjs`: integration checks against the running localhost server. Uses the initial credential file; after changing the password, pass `ADMIN_TEST_PASSWORD` in the shell environment. Re-saves unchanged stats to test locking; increments their version without changing copy.
 
 Content is stored in five validated, versioned JSONB section documents (`settings`, `projects`, `partners`, `stats`, `services`), supporting atomic section saves. Auth tables and upload metadata are separate tables. Drizzle handles all reads/writes and migrations.
@@ -53,4 +57,4 @@ The preserved Sites worker remains a **static** fallback and does not run these 
 
 ## Fast landing rendering
 
-`npm run build` first refreshes `shared/public-snapshot.json` from the five validated public content sections. Auth/session data and hidden items are excluded. The landing renders this snapshot immediately, including an unfaded hero, and revalidates against `/api/content` in the background. A failed or slow API leaves the usable snapshot visible. Consequently, edits made after a deployment may briefly show their previous published values until revalidation completes; during an outage, the last deployed snapshot remains visible. The next build refreshes that snapshot. Offline builds without `DATABASE_URL` use the checked-in snapshot; configured DB failures stop the build. The CMS itself continues to load fresh authenticated data before editing.
+`pnpm run build` first refreshes `shared/public-snapshot.json` from the five validated public content sections. Auth/session data and hidden items are excluded. The landing renders this snapshot immediately, including an unfaded hero, and revalidates against `/api/content` in the background. A failed or slow API leaves the usable snapshot visible. Consequently, edits made after a deployment may briefly show their previous published values until revalidation completes; during an outage, the last deployed snapshot remains visible. The next build refreshes that snapshot. Offline builds without `DATABASE_URL` use the checked-in snapshot; configured DB failures stop the build. The CMS itself continues to load fresh authenticated data before editing.

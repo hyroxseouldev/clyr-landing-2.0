@@ -1,96 +1,59 @@
-# Design QA
+# Design QA — selected blueprint concept
 
 ## Comparison target
 
-- Source visual truth: `/Users/sunmkim/Downloads/screencapture-codefactory-ai-2026-09-07-16_51_12.png`
-- Desktop implementation: `/Users/sunmkim/Dev2026/clyrtraining/clyr-landing-2.0/implementation-desktop.png`
-- Mobile source capture: `/Users/sunmkim/Dev2026/clyrtraining/clyr-landing-2.0/qa/source-mobile.png`
-- Mobile implementation: `/Users/sunmkim/Dev2026/clyrtraining/clyr-landing-2.0/implementation-mobile.png`
-- Desktop combined comparison: `http://localhost:4173/qa-compare.html`
-- Mobile combined comparison: `http://localhost:4173/qa-mobile-compare.html`
-
-## Viewport and normalization
-
-- Desktop source pixels: 2560×6464.
-- Desktop implementation pixels: 2560×6464.
-- Source CSS viewport observed from the live page: 2560×1318, device pixel ratio 2.
-- Implementation browser content viewport: 2560×1262. The reference Hero height was preserved at 1318px for 1600px-and-wider viewports so the normalized full-page capture matches the source's exact 2560×6464 output.
-- Mobile source pixels: 390×8294.
-- Mobile implementation pixels: 390×8296.
-- Mobile CSS viewport: 390×844, device pixel ratio 1 for both captures.
-- The 2px mobile full-page difference is cumulative fractional pixel rounding in the footer and is not visually actionable.
-- State: dark theme, landing page, menu closed, default inquiry type selected, all reveal sections activated before final full-page capture.
-
-## Full-view comparison evidence
-
-- Desktop source and implementation were loaded side by side in `qa-compare.html` at equal width and equal full-page dimensions.
-- Hero, collaboration marquee, numbers, services, books, YouTube, contact, and footer landmarks align at matching vertical positions.
-- Mobile source and implementation were loaded side by side in `qa-mobile-compare.html`. The final section-height totals match within 2px.
-- Desktop browser console contained no application errors. Chrome extension warnings were excluded because they originated from an unrelated extension content script.
-- Mobile browser console contained no errors.
-
-## Focused region comparison evidence
-
-- Hero: title wrap, 1160px shell alignment, button dimensions, grid, and blue glow were checked in a focused viewport capture.
-- Books: cover crops, card width, border radius, text hierarchy, and vertical stacking were compared in the combined mobile view.
-- Contact: two-column desktop form/card structure and the mobile form-only treatment were checked against the source.
-- Numbers and services: value alignment, cyan/blue divider treatment, two-column desktop structure, and mobile service row density were compared.
-
-## Comparison history
-
-### Iteration 1
-
-- [P1] Hero content rendered horizontally because the custom `hero-content` class collided with daisyUI's component class.
-- Fix: renamed the custom wrapper to `hero-inner`, restoring the source's vertical title/copy/actions stack.
-- Post-fix evidence: focused Hero capture aligns the title at the same shell position and preserves the original two-line desktop wrap.
-
-- [P2] Header and footer lockups showed only an oversized symbol.
-- Fix: reconstructed the lockup from the real source symbol asset plus the visible Korean wordmark text, with measured desktop/mobile dimensions.
-- Post-fix evidence: desktop side-by-side comparison shows the lockups at matching scale and alignment.
-
-### Iteration 2
-
-- [P2] Mobile total height was 104px taller and book cards had excess body height.
-- Fix: changed the mobile book-body minimum from 142px to 108px.
-- Post-fix evidence: first two book cards are 543.84px and the third is 571.39px, matching the source's compact stacked rhythm.
-
-- [P2] Mobile collaborations was 31px short while services was 77px tall.
-- Fix: set collaborations to 405px and removed the artificial 184px minimum from mobile service rows.
-- Post-fix evidence: final mobile sections measure Hero 844px, Collaborations 405px, Numbers 699px, Services 1083px, Books 2056px, YouTube 1060px, Contact 1546px, and Footer 603px.
-
-## Required fidelity surfaces
-
-- Fonts and typography: passed. Real Pretendard and JetBrains Mono WOFF2 files are local; sizes, weights, line heights, tracking, and desktop/mobile wrapping match the measured source.
-- Spacing and layout rhythm: passed. Desktop is exactly 2560×6464; mobile differs by only 2px across the full 8294px source height. Shell, section, card, and control measurements match.
-- Colors and visual tokens: passed. Source palette and opacity values are mapped to local CSS/daisyUI theme variables; background grid and blue/cyan glows are present.
-- Image quality and asset fidelity: passed. Original SVG logos, WebP book covers, and WebP YouTube thumbnails are stored locally without hotlinking or placeholder substitution.
-- Copy and content: passed. Visible Korean/English section copy, values, titles, links, labels, and footer content match the live source.
-
-## Interactions tested
-
-- Desktop anchor navigation across all six sections.
-- Mobile menu open and close state.
-- Inquiry type selection and `aria-pressed` state.
-- Local-only contact submit success state.
-- Email copy interaction implementation.
-- External destination URLs and mail link verified from the DOM.
+- Source visual truth: `output/design/creative-concepts-2026-10-07/concept-2.png` (user selected concept 2 on 2026-10-07).
+- Implementation: `http://localhost:5173/`, running through pnpm/Vite.
+- Source pixels: 1422 × 1106. Planned desktop comparison: 1422 × 1106 CSS pixels at device scale factor 1.
+- Planned responsive checks: 1280, 1024, 768, 390, and 320 CSS pixel widths.
+- State: light theme, top of landing page, menu closed, default content, then reduced-motion and navigation states.
+- Implementation screenshot path: unavailable; a saved browser permission setting blocks access.
+- Density normalization: not performed because no implementation capture is available.
 
 ## Findings
 
-- No actionable P0, P1, or P2 mismatch remains.
+- [P1 / verification gap] Browser access to localhost:5173 was initially rejected because the user declined permission. After the user indicated completion of the permission step, the retry was rejected because a saved user permission setting still blocks the URL. The in-app browser was also unavailable. No alternate browser automation or indirect capture has been attempted to bypass that refusal. The user subsequently explicitly requested publishing the changes to `main`; this proceeds with the visual verification gap recorded.
+- No visual fidelity verdict has been made from code, asset inspection, the source mock, or build success alone.
 
-## Follow-up polish
+## Full-view and focused comparison evidence
 
-- [P3] The segmented number rules use a CSS repeating gradient rather than the source's exact generated dash cadence; the visible result is materially equivalent.
-- [P3] Full-page screenshots can place the fixed mobile header at a browser-dependent capture boundary; normal scrolling behavior remains correct.
+The selected source image was opened. The implementation could not yet be captured. Neither a combined full-view comparison nor focused comparisons of the heading, construction model, right-hand copy, and service strip are available.
+
+## Required fidelity surfaces
+
+- Fonts and typography: local Pretendard and JetBrains Mono retained; visual sizes, wrapping, and weights await browser comparison.
+- Spacing and layout rhythm: three-part desktop hero and responsive stacking implemented; viewport measurements and overflow checks await browser access.
+- Colors and visual tokens: existing off-white, dark typography, and cobalt tokens retained; rendered comparison pending.
+- Image quality and asset fidelity: original construction illustration retained; generated transparent blueprint underlay inspected as an asset and delivered as 196 KB desktop / 79 KB mobile WebP. Its placement behind the building awaits rendered verification.
+- Copy and content: selected headline and side heading are shared CMS-compatible defaults. Actual service descriptions, project content, partners, proof points, and contact behavior are retained. Rendered copy comparison pending.
+
+## Automated validation
+
+- pnpm production build passed; required Sites build artifacts emitted.
+- 16 tests passed: 7 CMS/schema checks, 1 first-render test including the actual landing, 4 contact API tests, and 4 Sites worker tests.
+- CMS compatibility test covers legacy documents, edited blueprint copy round-trip, and rejected invalid/unknown fields.
+- Actual landing renders the selected headline, project content, service navigation, and contact section before any content fetch completes.
+- Existing contact API tests use a mocked transport; no inquiry was sent.
+- Git whitespace check passed.
+
+## Interactions and console
+
+Browser checks pending: desktop anchors, service links, mobile menu/Escape behavior, animation pause/reduced motion, contact validation/loading/error states, and console errors. Live email submission and CMS content writes are not needed for visual QA.
+
+## Comparison history
+
+No browser comparison iterations yet. The previous QA report concerned an older, superseded design and is not evidence for this implementation.
 
 ## Implementation checklist
 
-- [x] Original assets localized.
-- [x] Desktop and mobile responsive structures implemented.
-- [x] Core interactions tested.
-- [x] Build and Sites packaging tests passed.
-- [x] Browser console checked.
-- [x] Equal-size desktop and mobile comparison completed.
+- [x] Selected visual target recorded in AGENTS.md.
+- [x] Central construction composition and service strip implemented.
+- [x] Native copy, links, controls, and CMS editability retained.
+- [x] Desktop and mobile raster assets included.
+- [x] Responsive and reduced-motion styles implemented.
+- [x] Production build and 16 automated tests passed.
+- [ ] Obtain permission for localhost browser verification.
+- [ ] Capture and compare desktop/mobile implementation with source.
+- [ ] Verify primary interactions and browser console; fix any visual findings.
 
-final result: passed
+final result: blocked

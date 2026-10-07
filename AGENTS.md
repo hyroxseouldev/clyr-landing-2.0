@@ -6,9 +6,15 @@ Before making substantial visual changes, use the Product Design plugin's `get-c
 
 When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.
 
-Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
+Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `pnpm run build` and `pnpm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
 
 ## Durable prototype decisions
+
+- Package management (2026-10-07): use pnpm, with the version pinned in `package.json` and `pnpm-lock.yaml` committed. Use `pnpm install --frozen-lockfile` for reproducible installs and `pnpm run <script>` for project commands. Do not add npm or Yarn lockfiles.
+
+- Creative refresh request (2026-10-07): the user wants the main portfolio website to feel more creative. Explore more distinctive composition and typography while retaining the latest bright palette, blue accent, construction-themed hero, real portfolio content, and working CMS/contact behavior; apply a specific new visual direction once selected.
+
+- Selected creative direction (2026-10-07): the user chose concept 2, `output/design/creative-concepts-2026-10-07/concept-2.png`. Use its architectural drafting composition as the visual source: off-white canvas, cobalt accents, large Korean headline on the left, central white building/blue crane with fine blueprint annotations, small right-hand explanation, and a three-column service strip under the hero. Keep the actual portfolio/CMS/contact functionality. Hero blueprint copy uses optional `settings.heroBlueprint` with shared defaults so existing content documents remain valid without rewriting the shared database.
 
 - Main website redesign (2026-10-03): the user requests a bright visual direction and a 3D building-under-construction object in the hero. This supersedes the earlier dark-blue landing direction. Use an off-white/white canvas, dark typography and a clear blue accent; retain Pretendard, CMS-backed content, real project imagery and the working contact form. Keep the hero fast with an optimized 3D-rendered illustration and lightweight motion, plus reduced-motion support. These website changes do not change either PDF's separate design preferences.
 

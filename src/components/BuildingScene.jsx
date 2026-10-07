@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { m, useInView, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
-import { ArrowUpRight, Layers3, Pause, Play } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 
 export function BuildingScene() {
   const sceneRef = useRef(null);
@@ -17,19 +17,19 @@ export function BuildingScene() {
   const followPointer = (event) => {
     if (!motionEnabled || event.pointerType !== "mouse") return;
     const bounds = event.currentTarget.getBoundingClientRect();
-    x.set(-((event.clientY - bounds.top) / bounds.height - 0.5) * 5);
-    y.set(((event.clientX - bounds.left) / bounds.width - 0.5) * 6);
+    x.set(-((event.clientY - bounds.top) / bounds.height - 0.5) * 2);
+    y.set(((event.clientX - bounds.left) / bounds.width - 0.5) * 2);
   };
 
   return (
     <div className="building-scene" ref={sceneRef}
       data-animated={motionEnabled && inView}
       onPointerMove={followPointer} onPointerLeave={resetTilt}>
-      <div className="scene-topline" aria-hidden="true">
-        <span><span className="scene-live-dot" /> ALWAYS BUILDING</span>
-        <span>CLYRDEV / STUDIO</span>
-      </div>
-      <div className="scene-grid" aria-hidden="true" />
+      <picture className="blueprint-underlay" aria-hidden="true">
+        <source media="(max-width: 767px)" srcSet="/assets/hero/blueprint-underlay-mobile.webp" />
+        <img src="/assets/hero/blueprint-underlay.webp" alt=""
+          width="1200" height="1200" decoding="async" />
+      </picture>
       <m.div className="building-art" style={{
         rotateX: motionEnabled ? rotateX : 0,
         rotateY: motionEnabled ? rotateY : 0,
@@ -41,19 +41,13 @@ export function BuildingScene() {
             width="1000" height="1000" fetchPriority="high" decoding="async" />
         </picture>
       </m.div>
-      <div className="scene-note" aria-hidden="true">
-        <span className="scene-note-icon"><Layers3 size={18} strokeWidth={1.5} /></span>
-        <span><strong>한 층씩, 현실로.</strong><small>IDEA → BUILD → LAUNCH</small></span>
-        <ArrowUpRight size={16} />
-      </div>
-      <div className="scene-bottomline">
-        <span>GOOD THINGS ARE BUILT, NOT BORN.</span>
+      <div className="scene-controls">
         {!reducedMotion ? (
           <button type="button" className="scene-motion-toggle"
             aria-label={paused ? "오브젝트 움직임 재생" : "오브젝트 움직임 일시정지"}
             aria-pressed={paused}
             onClick={() => { setPaused(!paused); resetTilt(); }}>
-            {paused ? <Play size={12} /> : <Pause size={12} />}
+            {paused ? <Play size={13} /> : <Pause size={13} />}
           </button>
         ) : null}
       </div>

@@ -1,0 +1,68 @@
+{
+  "asset": "blueprint-underlay.webp",
+  "mobileAsset": "blueprint-underlay-mobile.webp",
+  "createdAt": "2026-10-07",
+  "method": "Built-in image_gen.imagegen with transparent_background=true",
+  "useCase": "compositing",
+  "purpose": "Decorative transparent architectural drafting underlay for the user-selected creative concept 2. Existing building-studio.webp is overlaid separately.",
+  "referenceImages": [
+    {
+      "path": "output/design/creative-concepts-2026-10-07/concept-2.png",
+      "role": "Selected composition and drafting-style reference"
+    },
+    {
+      "path": "public/assets/hero/building-studio.webp",
+      "role": "Supporting alignment reference, excluded from output"
+    }
+  ],
+  "originalGeneratedFile": "/Users/sunmkim/.codex/generated_images/01a113f5-5bb4-7a73-8ab9-969085f39508/exec-1c0da2b6-f025-4cc3-83c5-150be5ff0f6f.png",
+  "preservedSource": "output/design/creative-concepts-2026-10-07/blueprint-underlay-source.png",
+  "sourceDimensions": [
+    1254,
+    1254
+  ],
+  "webDimensions": [
+    1200,
+    1200
+  ],
+  "mobileDimensions": [
+    720,
+    720
+  ],
+  "conversion": "Pillow LANCZOS resize and WebP quality 60, method 6. Original alpha preserved. No added or manually redrawn graphics.",
+  "alignment": {
+    "buildLabel": [
+      0.17,
+      0.15
+    ],
+    "buildEndpoint": [
+      0.315,
+      0.208
+    ],
+    "ideaLabel": [
+      0.064,
+      0.513
+    ],
+    "ideaEndpoint": [
+      0.188,
+      0.565
+    ],
+    "launchLabel": [
+      0.89,
+      0.76
+    ],
+    "launchEndpoint": [
+      0.833,
+      0.81
+    ],
+    "elevationRulerX": 0.885,
+    "groundGridRegionY": [
+      0.75,
+      0.99
+    ],
+    "note": "Use as aria-hidden / empty-alt decoration. Place behind building; preserve square aspect ratio. Grid is deliberately nearly invisible on a bright background. Existing building may be narrower/shorter than this canvas to let outer annotations remain exposed."
+  },
+  "prompt": "Use case: compositing. Asset type: one architectural drafting UNDERLAY asset for a bright portfolio hero, output a single square transparent 1200 x 1200 image. Image 1 is the selected full-page composition reference: reproduce the delicate technical drafting graphics around its construction building, but ONLY the drafting graphics. Image 2 is the existing transparent building asset used separately by the website; it is a supporting alignment reference only and must NOT appear in your output. Create a transparent background layer, with an extremely faint gray-blue orthographic square drafting grid across the whole canvas, and a slightly stronger isometric/perspective ground grid confined to the bottom 30% of the canvas. Include a subtle fine gray-blue vertical elevation dimension ruler at x 90%, spanning y 10%-80%, delicate floor tick marks with tiny monospaced exact labels 'RF', '5F', '3F', '1F' and rotated dimension label '24000'. Include restrained cobalt thin angular leader lines and tiny dot endpoints, with the exact small monospaced annotations '02 BUILD' around x18%, y15%, '01 IDEA' around x7%, y55%, and '03 LAUNCH' around x89%, y77%. Keep the center x25%-80%, y10%-85% otherwise empty transparent except for the extremely faint regular grid, so the existing building illustration can later be overlaid. The ground grid may include tiny '9600' dimension notes as in reference 1. Delicate, nearly hairline linework, absolutely minimal. Most pixels truly transparent. Grid must be softly translucent gray-blue, never a solid background. Only the annotation leader lines use cobalt. No building, no crane, no architectural silhouettes, no floors, no shadows of missing objects, no UI, no cards, no button, no logo, no headline, no text except the specified tiny drafting labels. Not a mockup or website screenshot: solely the transparent raster decorative underlay.",
+  "webBytes": 196214,
+  "mobileBytes": 78908
+}

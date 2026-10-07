@@ -24,6 +24,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { authClient } from "./auth-client";
 import UploadField from "./UploadField";
+import { getBlueprintHero } from "../../shared/blueprint-content.js";
 import "./admin.css";
 const tabs = [
   ["projects", "프로젝트", BriefcaseBusiness],
@@ -240,6 +241,8 @@ function Account({ user }) {
 }
 function SettingsEditor({ value, onChange }) {
   const set = (key, v) => onChange({ ...value, [key]: v });
+  const hero = getBlueprintHero(value);
+  const setHero = (key, v) => set("heroBlueprint", { ...hero, [key]: v });
   return (
     <Card className="admin-editor">
       <div className="admin-editor-title">
@@ -274,11 +277,23 @@ function SettingsEditor({ value, onChange }) {
         label="메인 제목"
         multiline
         rows={3}
-        value={value.heroTitle}
-        onChange={(v) => set("heroTitle", v)}
+        value={hero.title}
+        onChange={(v) => setHero("title", v)}
       />
       <Field
-        label="메인 소개"
+        label="메인 왼쪽 소개"
+        multiline
+        rows={3}
+        value={hero.introduction}
+        onChange={(v) => setHero("introduction", v)}
+      />
+      <Field
+        label="메인 오른쪽 제목"
+        value={hero.asideTitle}
+        onChange={(v) => setHero("asideTitle", v)}
+      />
+      <Field
+        label="메인 오른쪽 소개"
         multiline
         rows={3}
         value={value.heroDescription}

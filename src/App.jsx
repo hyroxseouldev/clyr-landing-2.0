@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert } from "@/components/ui/alert";
 import { useEffect, useRef, useState } from "react";
-import { BuildingScene } from "./components/BuildingScene";
+import { BlueprintHero } from "./components/BlueprintHero";
 import "./landing.css";
+import "./blueprint.css";
 import {
   LazyMotion,
   animate,
@@ -16,7 +17,6 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import {
-  ArrowDown,
   ArrowUpRight,
   Check,
   Code2,
@@ -147,53 +147,6 @@ function Header() {
         </nav>
       ) : null}
     </header>
-  );
-}
-
-function Hero() {
-  const { settings } = useContent();
-  const { githubUrl } = settings;
-  return (
-    <section id="top" className="hero-section">
-      <div className="shell hero-inner">
-        <Reveal className="hero-reveal" immediate>
-          <p className="eyebrow hero-eyebrow">
-            <span className="cyan-dot" /> {settings.heroEyebrow}
-          </p>
-          <h1 className="hero-title">
-            {settings.heroTitle.split("\n").map((line, index) => (
-              <span key={index}>{line}</span>
-            ))}
-          </h1>
-          <p className="hero-copy" style={{ whiteSpace: "pre-line" }}>
-            {settings.heroDescription}
-          </p>
-          <div className="hero-actions">
-            <Button asChild>
-              <a href="#books" className="primary-btn">
-                만든 것들 보기 <ArrowUpRight size={18} />
-              </a>
-            </Button>
-            <Button asChild>
-              <a
-                href={githubUrl}
-                className="ghost-btn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaGithub size={17} /> GitHub
-              </a>
-            </Button>
-          </div>
-          <p className="hero-footnote"><span /> FROM FIRST IDEA TO REAL PRODUCT</p>
-        </Reveal>
-        <BuildingScene />
-      </div>
-      <div className="shell hero-baseline">
-        <span>THINK CLEAR. BUILD REAL.</span>
-        <a href="#work">조금 더 알아보기 <ArrowDown size={14} /></a>
-      </div>
-    </section>
   );
 }
 
@@ -662,7 +615,7 @@ export function App() {
         </a>
         <Header />
         <main id="main" tabIndex={-1}>
-          <Hero />
+          <BlueprintHero />
           <Work />
           <Numbers />
           <Services />

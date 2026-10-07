@@ -4,6 +4,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { createServer } from "vite";
 import { readFile } from "node:fs/promises";
+import { getBlueprintHero } from "../shared/blueprint-content.js";
 
 test("first render contains real content without waiting for a content request", async () => {
   const vite = await createServer({
@@ -31,6 +32,18 @@ test("first render contains real content without waiting for a content request",
     const expected = renderToString(React.createElement("h1", null, snapshot.settings.heroTitle, ` / ${snapshot.projects.length} projects`));
     assert.equal(html, expected);
     assert.doesNotMatch(html, /불러오는 중|불러오지 못했습니다/);
+
+    const { App } = await vite.ssrLoadModule("/src/App.jsx");
+    const landing = renderToString(React.createElement(App));
+    for (const line of getBlueprintHero(snapshot.settings).title.split("\n")) {
+      assert.ok(landing.includes(renderToString(React.createElement("span", null, line))));
+    }
+    assert.match(landing, /blueprint-underlay-mobile\.webp/);
+    assert.match(landing, /href="#books"/);
+    assert.match(landing, /aria-label="제공 서비스 바로가기"/);
+    for (const service of snapshot.services) assert.ok(landing.includes(service.title));
+    for (const project of snapshot.projects) assert.ok(landing.includes(project.name));
+    assert.match(landing, /id="contact"/);
   } finally {
     await vite.close();
   }

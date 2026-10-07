@@ -38,6 +38,11 @@ export const contentSchemas = {
       heroEyebrow: text,
       heroTitle: paragraph,
       heroDescription: paragraph,
+      heroBlueprint: z.object({
+        title: text,
+        introduction: paragraph,
+        asideTitle: text,
+      }).strict().optional(),
       contactDescription: paragraph,
       copyright: text,
       sections: z
