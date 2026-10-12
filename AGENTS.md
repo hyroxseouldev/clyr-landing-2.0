@@ -10,9 +10,17 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Durable prototype decisions
 
+- Small-site and sports-event focus (2026-10-12): the user wants to start with smaller website projects and especially showcase running/sports event pages, plus simple pages with database-backed features. Emphasize the existing BRN GYM fitness meetup, participation application, and member-management CRM as relevant proof. Explain database-backed work through concrete tasks such as receiving applications and managing participant lists. Do not infer additional event features, event-organizing experience, or market-demand claims from this preference.
+
+- Website positioning implementation (2026-10-12): the user approved applying this direction to the website. Keep the architectural hero and existing functionality, but lead with small websites, running/sports event pages, and application/operations management. These three offerings supersede the earlier AI prototype/service build/AI automation labels. Order projects BRN GYM, KKOL STUDIO, clyrtraining.ai, XON Training, Amor Lab, then CloudBoard; keep all real assets, links, roles, stacks, and development status. Use creation-inquiry language in CTAs and the contact form. CMS copy remains editable in the existing shared database.
+
+- Refero redesign exploration (2026-10-09): the user requests a new website direction inspired by `https://styles.refero.design/` and specifically asks to also explore references whose names include `Studio`. Inspect actual Studio references when developing concepts; this is an exploration preference, with the final visual direction still awaiting selection. Preserve the existing real portfolio content, interactive construction building, CMS and contact behavior.
+
 - Rotating hero building (2026-10-07): the user wants the construction building to rotate in 3D. Retain the selected white building, cobalt glass/crane and blueprint composition. Use real geometry with slow automatic rotation, drag/keyboard rotation, pause and reset; show the existing optimized image immediately while loading the 3D enhancement. Disable automatic motion with reduced motion and stop rendering off-screen or in hidden tabs.
 
 - Service copy (2026-10-07): include small paid tasks within the existing three offerings: website/contact/payment/mobile error fixes under service builds; order Excel cleanup, supplier-specific purchase-order files, missing/duplicate checks, and estimates/reports in existing document templates under automation. Invite inquiries for one small recurring task and quote after reviewing sample files or symptoms. The suggested prices and third-party demand examples in the conversation are not approved public pricing or portfolio claims.
+
+- Motion portfolio planning (2026-10-07): the user is interested in making outputs with Remotion/HyperFrames, but does not want promotional videos of their existing services as the proposed direction. Choose the motion-work concept before implementing a new portfolio section.
 
 - Package management (2026-10-07): use pnpm, with the version pinned in `package.json` and `pnpm-lock.yaml` committed. Use `pnpm install --frozen-lockfile` for reproducible installs and `pnpm run <script>` for project commands. Do not add npm or Yarn lockfiles.
 
@@ -50,3 +58,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The portfolio CMS uses Better Auth, Drizzle ORM, Neon Postgres, and UploadThing. Use one shared database; the user explicitly does not want separate development/production environments. `/admin` edits landing content while preserving the existing public design. Public sign-up is disabled; server-side `ADMIN_EMAIL` authorization protects content writes and image uploads. Keep credentials server-only.
 
 - Prioritize first-screen speed on `/`: render the build-time public content snapshot immediately, revalidate from Neon in the background, and keep usable content on API failure. Do not restore a full-page loading/error text gate. Show the hero immediately without an entrance fade; retain lower-section motion and reduced-motion support.
+
+- For the separate portfolio PDF, use the user-selected STACKER reference (https://notefolio.net/sungseung/383412): large real product visuals and feature-by-feature storytelling. The latest user preference for neutral white/gray/black with rounded corners supersedes previous palette choices. Keep it separate from the resume and public landing design; do not invent research, performance outcomes, or unavailable product screens.
+
+- Visual portfolio PDF preference (user clarified the target): use embedded Pretendard Regular/Bold, rounded cards and image corners, a neutral white/gray/black palette without pastel accents. The no-pastel preference applies to both the resume and visual portfolio PDFs. Apply this to the 11-page visual portfolio; the earlier interpretation as a resume change was incorrect. Preserve project facts and real product imagery.
+
+- Latest PDF correction: restore the visual portfolio to the original dark charcoal/mint presentation with square-edged cards and images; retain only the embedded Pretendard font change. The resume remains neutral without pastel colors. This supersedes earlier rounded/pastel visual-portfolio preferences.
+
+- Resume PDF latest correction: retain embedded Pretendard and the latest supplied portrait, remove all rounded cards, pills, and photo corners, and use the original plain layout with thin dividers. Keep its neutral no-pastel palette.

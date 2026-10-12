@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { contentSchemas, publicContent } from "../shared/content-schema.js";
-import { getBlueprintHero } from "../shared/blueprint-content.js";
+import { blueprintHeroDefaults, getBlueprintHero } from "../shared/blueprint-content.js";
 const seed = JSON.parse(
   await readFile(new URL("../shared/default-content.json", import.meta.url)),
 );
@@ -12,7 +12,7 @@ test("existing landing content validates without changing copy", () => {
 });
 test("blueprint hero preserves legacy settings and round-trips edited CMS copy", () => {
   const legacy = structuredClone(seed.settings);
-  assert.equal(getBlueprintHero(legacy).title, "생각을 짓고,\n서비스를 만듭니다.");
+  assert.equal(getBlueprintHero(legacy).title, blueprintHeroDefaults.title);
   assert.deepEqual(legacy, seed.settings);
   const edited = {
     ...legacy,

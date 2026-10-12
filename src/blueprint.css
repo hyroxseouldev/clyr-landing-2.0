@@ -9,7 +9,7 @@
   padding-inline: 52px;
   isolation: isolate;
 }
-.landing-page .blueprint-intro { position: relative; z-index: 2; width: 40%; padding-top: 124px; }
+.landing-page .blueprint-intro { position: relative; z-index: 2; width: 40%; padding-top: 96px; }
 .landing-page .blueprint-intro .hero-eyebrow { font-size: 10px; letter-spacing: .08em; line-height: 1.6; }
 .landing-page .blueprint-title {
   margin: 43px 0 0;
@@ -48,8 +48,8 @@
 .landing-page .blueprint-aside-copy p { margin: 25px 0 0; color: var(--muted); font-size: 13px; line-height: 2; letter-spacing: -.035em; white-space: pre-line; }
 .landing-page .blueprint-actions { position: absolute; z-index: 3; left: 52px; bottom: 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 30px; }
 .landing-page .blueprint-actions .primary-btn { min-height: 54px; padding: 17px 24px; gap: 22px; font-size: 14px; }
-.landing-page .blueprint-github { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--fg); font-size: 16px; font-weight: 650; }
-.landing-page .blueprint-github:hover { color: var(--accent); }
+.landing-page .blueprint-work-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--fg); font-size: 16px; font-weight: 650; }
+.landing-page .blueprint-work-link:hover { color: var(--accent); }
 
 .landing-page .building-scene {
   position: absolute;
@@ -139,7 +139,7 @@
   .landing-page .scene-motion-toggle { width: 44px; height: 44px; }
   .landing-page .blueprint-actions { position: static; order: 2; gap: 25px; margin-top: 14px; }
   .landing-page .blueprint-actions .primary-btn { min-height: 50px; padding: 15px 21px; gap: 18px; font-size: 13px; }
-  .landing-page .blueprint-github { font-size: 14px; }
+  .landing-page .blueprint-work-link { font-size: 14px; }
   .landing-page .blueprint-aside { position: static; order: 3; width: 100%; margin-top: 40px; }
   .landing-page .blueprint-studio { display: none; }
   .landing-page .blueprint-aside-copy { margin: 0; }

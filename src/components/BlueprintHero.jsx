@@ -1,5 +1,4 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { useContent } from "../lib/content";
 import { getBlueprintHero } from "../../shared/blueprint-content.js";
@@ -39,13 +38,12 @@ export function BlueprintHero() {
 
         <div className="blueprint-actions">
           <Button asChild>
-            <a href="#books" className="primary-btn">
-              만든 것들 보기 <ArrowUpRight size={17} />
+            <a href="#contact" className="primary-btn">
+              제작 문의하기 <ArrowUpRight size={17} />
             </a>
           </Button>
-          <a href={settings.githubUrl} className="blueprint-github"
-            target="_blank" rel="noreferrer">
-            <FaGithub size={21} /> GitHub
+          <a href="#books" className="blueprint-work-link">
+            제작 사례 보기 <ArrowRight size={18} />
           </a>
         </div>
       </div>

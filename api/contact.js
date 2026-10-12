@@ -1,11 +1,7 @@
+import { inquiryTypes, legacyInquiryTypes, CONTACT_DELIVERY_TIMEOUT_MS } from "../shared/contact.js";
+
 const CONTACT_EMAIL = "vividxxxxx@gmail.com";
-const INQUIRY_TYPES = new Set([
-  "아이디어 프로토타입",
-  "웹·앱 만들기",
-  "AI 자동화",
-  "사이드 프로젝트",
-  "커피챗·기타",
-]);
+const INQUIRY_TYPES = new Set([...inquiryTypes, ...legacyInquiryTypes]);
 
 function json(data, status = 200) {
   return Response.json(data, {
@@ -38,6 +34,9 @@ export async function POST(request) {
   } catch {
     return json({ message: "올바른 문의 내용을 입력해주세요." }, 400);
   }
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
+    return json({ message: "올바른 문의 내용을 입력해주세요." }, 400);
+  }
 
   // Bots commonly fill hidden fields. Return success without sending so they do not retry.
   if (clean(body.website, 200)) {
@@ -52,7 +51,7 @@ export async function POST(request) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!name || !emailPattern.test(email) || !INQUIRY_TYPES.has(inquiry) || message.length < 10) {
-    return json({ message: "이름, 이메일과 아이디어를 확인해주세요." }, 400);
+    return json({ message: "이름, 이메일과 문의 내용을 확인해주세요." }, 400);
   }
 
   const recipient = process.env.CONTACT_TO_EMAIL || CONTACT_EMAIL;
@@ -62,17 +61,19 @@ export async function POST(request) {
     "",
     `이름: ${name}`,
     `이메일: ${email}`,
-    `프로젝트: ${project}`,
+    `페이지·행사 이름: ${project}`,
     `문의 유형: ${inquiry}`,
     "",
-    "아이디어",
+    "제작 문의 내용",
     message,
   ].join("\n");
 
-  let resendResponse;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), CONTACT_DELIVERY_TIMEOUT_MS);
   try {
-    resendResponse = await fetch("https://api.resend.com/emails", {
+    const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
+      signal: controller.signal,
       headers: {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
         "Content-Type": "application/json",
@@ -86,18 +87,17 @@ export async function POST(request) {
         text: emailText,
       }),
     });
+    if (!resendResponse.ok) {
+      console.error("Resend contact delivery failed", resendResponse.status);
+      return json({ message: "전송하지 못했습니다. 잠시 후 다시 시도해주세요." }, 502);
+    }
+    return json({ ok: true });
   } catch (error) {
-    console.error("Resend contact request failed", error);
+    console.error("Resend contact request failed", error.name);
     return json({ message: "전송하지 못했습니다. 잠시 후 다시 시도해주세요." }, 502);
+  } finally {
+    clearTimeout(timeout);
   }
-
-  if (!resendResponse.ok) {
-    const detail = await resendResponse.text();
-    console.error("Resend contact delivery failed", resendResponse.status, detail);
-    return json({ message: "전송하지 못했습니다. 잠시 후 다시 시도해주세요." }, 502);
-  }
-
-  return json({ ok: true });
 }
 
 export function GET() {

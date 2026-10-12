@@ -1,10 +1,10 @@
 import { ContentProvider, useContent } from "./lib/content";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Alert } from "@/components/ui/alert";
 import { useEffect, useRef, useState } from "react";
+import { Reveal, SectionIntro } from "./components/SectionIntro";
+import { Contact } from "./components/Contact";
+import { getProjectImageProps } from "./lib/project-images";
 import { BlueprintHero } from "./components/BlueprintHero";
 import "./landing.css";
 import "./blueprint.css";
@@ -18,19 +18,14 @@ import {
 } from "framer-motion";
 import {
   ArrowUpRight,
-  Check,
-  Code2,
-  Copy,
-  LoaderCircle,
+  CalendarDays,
+  ClipboardList,
   Globe2,
-  GraduationCap,
   Mail,
   Menu,
-  Send,
-  Video,
   X,
 } from "lucide-react";
-import { FaApple, FaGithub, FaGooglePlay } from "react-icons/fa6";
+import { FaApple, FaGooglePlay } from "react-icons/fa6";
 
 const navItems = [
   ["ABOUT", "numbers"],
@@ -38,45 +33,15 @@ const navItems = [
   ["PROJECTS", "books"],
   ["CONTACT", "contact"],
 ];
-const serviceIcons = { code: Code2, product: GraduationCap, automation: Video };
+const serviceIcons = { code: Globe2, product: CalendarDays, automation: ClipboardList };
 const linkIcons = { apple: FaApple, play: FaGooglePlay, web: Globe2 };
 function ProjectIcon({ name, ...props }) {
   const Icon = linkIcons[name] || Globe2;
   return <Icon {...props} />;
 }
 function ServiceIcon({ name, ...props }) {
-  const Icon = serviceIcons[name] || Code2;
+  const Icon = serviceIcons[name] || Globe2;
   return <Icon {...props} />;
-}
-function Reveal({ children, className, delay = 0, immediate = false }) {
-  const reducedMotion = useReducedMotion();
-  return (
-    <m.div
-      className={className}
-      initial={reducedMotion || immediate ? false : { opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.12 }}
-      transition={{
-        duration: reducedMotion ? 0 : 0.55,
-        delay: reducedMotion ? 0 : delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-    >
-      {children}
-    </m.div>
-  );
-}
-function SectionIntro({ number, label, title, description }) {
-  return (
-    <Reveal className="section-intro">
-      <p className="eyebrow">
-        <span className="section-number">{number}</span>
-        {label}
-      </p>
-      <h2>{title}</h2>
-      {description ? <p className="section-copy">{description}</p> : null}
-    </Reveal>
-  );
 }
 function Logo() {
   const { settings } = useContent();
@@ -111,7 +76,7 @@ function Header() {
             </a>
           ))}
           <a className="contact-pill" href="#contact">
-            LET’S TALK <ArrowUpRight size={14} />
+            제작 문의 <ArrowUpRight size={14} />
           </a>
         </nav>
         <div className="mobile-actions">
@@ -120,7 +85,7 @@ function Header() {
             href="#contact"
             onClick={() => setOpen(false)}
           >
-            LET’S TALK <ArrowUpRight size={14} />
+            제작 문의 <ArrowUpRight size={14} />
           </a>
           <Button
             className="menu-button"
@@ -246,7 +211,7 @@ function Services() {
         />
         <Button asChild>
           <a href="#contact" className="ghost-btn compact">
-            <Mail size={16} /> 같이 만들어보기
+            <Mail size={16} /> 필요한 페이지 상담하기
           </a>
         </Button>
       </div>
@@ -294,7 +259,7 @@ function Projects() {
               <figure className="project-visual">
                 {project.image ? (
                   <img
-                    src={project.image}
+                    {...getProjectImageProps(project.image)}
                     alt={project.alt}
                     loading="lazy"
                     decoding="async"
@@ -377,198 +342,6 @@ function Projects() {
             </Card>
           </Reveal>
         ))}
-      </div>
-    </section>
-  );
-}
-
-const inquiryTypes = [
-  "아이디어 프로토타입",
-  "웹·앱 만들기",
-  "AI 자동화",
-  "사이드 프로젝트",
-  "커피챗·기타",
-];
-function Contact() {
-  const { settings } = useContent();
-  const { contactEmail, githubUrl } = settings;
-  const [inquiry, setInquiry] = useState(inquiryTypes[0]);
-  const [copied, setCopied] = useState(false);
-  const [formState, setFormState] = useState({ status: "idle", message: "" });
-  const copyEmail = async () => {
-    await navigator.clipboard?.writeText(contactEmail);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1600);
-  };
-  const submitContact = async (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const values = Object.fromEntries(new FormData(form));
-    setFormState({ status: "submitting", message: "" });
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...values,
-          inquiry,
-          submissionId: crypto.randomUUID(),
-        }),
-      });
-      const result = await response.json().catch(() => ({}));
-      if (!response.ok)
-        throw new Error(
-          result.message || "전송하지 못했습니다. 잠시 후 다시 시도해주세요.",
-        );
-
-      form.reset();
-      setInquiry(inquiryTypes[0]);
-      setFormState({
-        status: "success",
-        message: "문의가 전송되었습니다. 곧 확인할게요!",
-      });
-    } catch (error) {
-      setFormState({ status: "error", message: error.message });
-    }
-  };
-
-  const isSubmitting = formState.status === "submitting";
-  return (
-    <section id="contact" className="contact-section">
-      <div className="contact-orb" />
-      <div className="shell contact-shell">
-        <div className="contact-heading">
-          <SectionIntro
-            number="05"
-            label="LET'S BUILD"
-            title={settings.sections.contact.title}
-            description={settings.sections.contact.description}
-          />
-        </div>
-        <div className="contact-grid">
-          <form className="contact-form" onSubmit={submitContact}>
-            <div className="form-honeypot" aria-hidden="true">
-              <label>
-                WEBSITE
-                <input name="website" tabIndex="-1" autoComplete="off" />
-              </label>
-            </div>
-            <div className="form-row">
-              <label>
-                NAME
-                <Input
-                  className="contact-input"
-                  name="name"
-                  autoComplete="name"
-                  placeholder="어떻게 불러드릴까요?"
-                  required
-                  maxLength="80"
-                />
-              </label>
-              <label>
-                EMAIL
-                <Input
-                  className="contact-input"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  spellCheck={false}
-                  placeholder="you@company.com"
-                  required
-                  maxLength="254"
-                />
-              </label>
-            </div>
-            <label>
-              PROJECT
-              <Input
-                className="contact-input"
-                name="project"
-                placeholder="만들고 싶은 프로젝트 이름"
-                maxLength="120"
-              />
-            </label>
-            <fieldset>
-              <legend>BUILD TYPE</legend>
-              <div className="inquiry-pills">
-                {inquiryTypes.map((type) => (
-                  <Button
-                    type="button"
-                    className={`inquiry-pill ${inquiry === type ? "selected" : ""}`}
-                    aria-pressed={inquiry === type}
-                    onClick={() => setInquiry(type)}
-                    key={type}
-                  >
-                    {type}
-                  </Button>
-                ))}
-              </div>
-            </fieldset>
-            <label>
-              YOUR IDEA
-              <Textarea
-                className="contact-textarea"
-                name="message"
-                rows="5"
-                placeholder="아직 선명하지 않아도 괜찮아요. 만들고 싶은 것을 편하게 들려주세요."
-                required
-                minLength="10"
-                maxLength="3000"
-              />
-            </label>
-            <Button
-              className="submit-btn"
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? (
-                <LoaderCircle
-                  className="animate-spin"
-                  size={16}
-                  aria-hidden="true"
-                />
-              ) : (
-                <Send size={16} />
-              )}{" "}
-              {isSubmitting ? "전송 중..." : "아이디어 보내기"}
-            </Button>
-            {formState.message ? (
-              <Alert
-                className={`form-status ${formState.status === "success" ? "is-success" : "is-error"}`}
-                role="alert"
-              >
-                {formState.status === "success" ? (
-                  <Check size={17} />
-                ) : (
-                  <X size={17} />
-                )}
-                <span>{formState.message}</span>
-              </Alert>
-            ) : null}
-          </form>
-          <aside className="direct-card">
-            <p className="eyebrow">SAY HELLO</p>
-            <Button className="email-copy" onClick={copyEmail}>
-              {contactEmail} {copied ? <Check size={18} /> : <Copy size={18} />}
-            </Button>
-            <p className="copy-caption">
-              {copied ? "COPIED" : "CLICK TO COPY"}
-            </p>
-            <p>{settings.contactDescription}</p>
-            <p className="eyebrow channel-title">FIND ME ONLINE</p>
-            <div className="channel-links">
-              <a href={githubUrl} target="_blank" rel="noreferrer">
-                <FaGithub />
-                GITHUB
-              </a>
-              <a href={`mailto:${contactEmail}`}>
-                <Mail />
-                EMAIL
-              </a>
-            </div>
-          </aside>
-        </div>
       </div>
     </section>
   );

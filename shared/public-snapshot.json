@@ -1,36 +1,4 @@
 {
-  "settings": {
-    "brand": "클리어데브",
-    "sections": {
-      "work": {
-        "title": "협업 브랜드",
-        "description": "프로덕트 개발, 교육과 콘텐츠 협업으로 함께한 브랜드"
-      },
-      "contact": {
-        "title": "같이 만들어볼까요?",
-        "description": "새로운 서비스도, 매일 반복하는 업무 하나도 좋습니다."
-      },
-      "numbers": {
-        "title": "실제로 만들고 운영하는 것들",
-        "description": ""
-      },
-      "projects": {
-        "title": "직접 만든 서비스",
-        "description": "아이디어부터 운영까지, 실제 사용자와 만나고 있는 제품들"
-      },
-      "services": {
-        "title": "만드는 것들",
-        "description": "새 서비스 개발부터 웹사이트 오류 수정, 엑셀 정리와 문서 자동 생성까지"
-      }
-    },
-    "copyright": "© 2026 CLYRDEV. BUILT WITH AI, CURIOSITY & GOOD VIBES.",
-    "githubUrl": "https://github.com/hyroxseouldev",
-    "heroTitle": "아이디어를 실제 서비스로 만드는\n바이브 코더, 클리어데브",
-    "heroEyebrow": "VIBE CODER & AI PRODUCT BUILDER",
-    "contactEmail": "vividxxxxx@gmail.com",
-    "heroDescription": "프롬프트로 시작해, 작동하는 제품으로 끝냅니다.\nAI와 함께 더 빠르게 만들고 매일 새롭게 배웁니다.",
-    "contactDescription": "반복되는 엑셀 작업, 불편한 사이트 기능, 만들고 싶은 서비스가 있다면 편하게 알려주세요. 샘플 파일이나 오류 증상을 확인한 뒤 작업 범위와 고정 견적을 안내합니다."
-  },
   "partners": [
     {
       "id": "partner-0",
@@ -48,30 +16,155 @@
       "image": "/assets/logos/born-to-win.png"
     }
   ],
+  "settings": {
+    "brand": "클리어데브",
+    "sections": {
+      "work": {
+        "title": "협업 브랜드",
+        "description": "프로덕트 개발, 교육과 콘텐츠 협업으로 함께한 브랜드"
+      },
+      "contact": {
+        "title": "어떤 페이지가 필요하세요?",
+        "description": "홈페이지 한 개, 이벤트 한 번부터 이야기해주세요. 제작사의 부분 개발 의뢰도 가능합니다."
+      },
+      "numbers": {
+        "title": "실제로 만들고 운영하는 것들",
+        "description": ""
+      },
+      "projects": {
+        "title": "실제로 만든 웹사이트와 서비스",
+        "description": "스포츠 모임의 참가 신청부터 브랜드 홈페이지, 회원관리와 앱까지"
+      },
+      "services": {
+        "title": "이런 페이지를 만듭니다",
+        "description": "소규모 홈페이지, 러닝·스포츠 이벤트, 신청과 운영에 필요한 관리 화면까지"
+      }
+    },
+    "copyright": "© 2026 CLYRDEV. WEBSITES, EVENTS & EVERYDAY TOOLS.",
+    "githubUrl": "https://github.com/hyroxseouldev",
+    "heroTitle": "작은 홈페이지부터,\n러닝·스포츠\n이벤트 페이지까지.",
+    "heroEyebrow": "WEBSITES · SPORTS EVENTS",
+    "contactEmail": "vividxxxxx@gmail.com",
+    "heroBlueprint": {
+      "title": "작은 홈페이지부터,\n러닝·스포츠\n이벤트 페이지까지.",
+      "asideTitle": "소개부터 신청·관리까지.",
+      "introduction": "브랜드와 공간을 소개하는 홈페이지,\n러닝·스포츠 이벤트의 참가 신청 페이지를 만듭니다."
+    },
+    "heroDescription": "참가 신청을 받고, 명단을 확인하는 관리 화면까지.\n필요한 기능을 정해 작은 범위부터 시작합니다.",
+    "contactDescription": "참고 사이트나 행사 일정, 필요한 기능을 알려주세요. 자료를 확인한 뒤 작업 범위와 일정, 고정 견적을 안내합니다. 기존 사이트의 작은 수정도 문의해주세요."
+  },
   "services": [
     {
       "id": "service-0",
       "icon": "code",
-      "title": "AI 프로토타입",
-      "detail": "아이디어를 대화로 풀어내고, 작동하는 화면까지 빠르게 만듭니다.",
-      "eyebrow": "PROMPT · PROTOTYPE"
+      "title": "소규모 홈페이지",
+      "detail": "브랜드·매장·스튜디오를 소개하고 문의를 받는 반응형 홈페이지를 만듭니다. 기존 사이트의 문의 폼과 모바일 화면 수정도 함께합니다.",
+      "eyebrow": "BRAND · SPACE · WEBSITE"
     },
     {
       "id": "service-1",
       "icon": "product",
-      "title": "서비스 빌드",
-      "detail": "웹·앱을 만들고, 운영 중인 사이트의 문의 폼·결제 오류·모바일 화면 문제도 필요한 범위부터 고칩니다.",
-      "eyebrow": "WEB · APP · PRODUCT"
+      "title": "러닝·스포츠 이벤트",
+      "detail": "러닝 모임, 운동 클래스, 스포츠 행사의 일정·장소·참가 안내와 신청 페이지를 만듭니다.",
+      "eyebrow": "RUNNING · SPORTS · EVENT"
     },
     {
       "id": "service-2",
       "icon": "automation",
-      "title": "AI 자동화",
-      "detail": "주문 엑셀 정리, 거래처별 발주서 생성과 누락·중복 확인을 자동화합니다. 견적서·보고서도 기존 양식에 맞춰 생성합니다.",
-      "eyebrow": "AUTOMATION · WORKFLOW"
+      "title": "신청·운영 관리",
+      "detail": "신청 내용을 저장하고 참가자 명단·회원 정보를 확인하는 관리 화면을 만듭니다. 운영에 필요한 기능부터 연결합니다.",
+      "eyebrow": "APPLICATION · MEMBER · ADMIN"
+    }
+  ],
+  "stats": [
+    {
+      "id": "stat-0",
+      "label": "ACTIVE MEMBERS",
+      "style": "students",
+      "value": "300+"
+    },
+    {
+      "id": "stat-1",
+      "label": "LIVE SERVICES",
+      "style": "subscribers",
+      "value": "7"
+    },
+    {
+      "id": "stat-2",
+      "label": "PUBLISHED APPS",
+      "style": "brands",
+      "value": "4"
+    },
+    {
+      "id": "stat-3",
+      "label": "MONTHLY UPDATES",
+      "style": "books",
+      "value": "50+"
     }
   ],
   "projects": [
+    {
+      "id": "project-5",
+      "alt": "본투윈 BRN GYM 피트니스 모임 참여 신청 화면",
+      "name": "BRN GYM · 본투윈",
+      "role": "피트니스 모임 서비스 · CRM 개발",
+      "tech": [
+        "Next.js"
+      ],
+      "image": "/assets/projects/brn-gym.png",
+      "links": [
+        {
+          "href": "https://www.brngym.co.kr/",
+          "icon": "web",
+          "label": "Website"
+        }
+      ],
+      "description": "함께 운동할 사람들을 연결하는 피트니스 모임 서비스입니다. 모임 참여 신청부터 회원관리 CRM까지, 참가자와 운영자의 경험을 연결합니다.",
+      "development": false
+    },
+    {
+      "id": "project-3",
+      "alt": "KKOL STUDIO 프로젝트 아카이브 웹사이트",
+      "name": "KKOL STUDIO",
+      "role": "웹사이트 개발 · CMS 연동 · 반응형 구현 · 배포",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Cloudinary",
+        "Vercel"
+      ],
+      "image": "/assets/projects/kkol-studio-projects.png",
+      "links": [
+        {
+          "href": "https://www.kkol-studio.com/projects",
+          "icon": "web",
+          "label": "Website"
+        }
+      ],
+      "description": "공간과 브랜드의 이야기를 이미지 중심으로 탐색할 수 있도록 구성한 디자인 스튜디오 프로젝트 아카이브입니다.",
+      "development": false
+    },
+    {
+      "id": "project-4",
+      "alt": "clyrtraining.ai 회원관리·코칭 워크스페이스 랜딩페이지",
+      "name": "clyrtraining.ai",
+      "role": "회원관리 CRM · 운영 어드민 개발",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Vercel"
+      ],
+      "image": "/assets/projects/clyrtraining-landing.png",
+      "links": [
+        {
+          "href": "https://clyrtraining.vercel.app/",
+          "icon": "web",
+          "label": "Website"
+        }
+      ],
+      "description": "체육관과 코치를 위한 회원관리 CRM입니다. 회원과 멤버십, 운동 프로그램, 기록과 피드백을 한곳에서 관리하는 운영 어드민입니다.",
+      "development": false
+    },
     {
       "id": "project-0",
       "alt": "XON Training 모바일 앱 화면",
@@ -141,94 +234,6 @@
       "links": [],
       "description": "오늘의 WOD와 운동 일정을 한 화면에 보여주고 운영 콘텐츠까지 관리하는 디지털 트레이닝 보드입니다.",
       "development": true
-    },
-    {
-      "id": "project-3",
-      "alt": "KKOL STUDIO 프로젝트 아카이브 웹사이트",
-      "name": "KKOL STUDIO",
-      "role": "웹사이트 개발 · CMS 연동 · 반응형 구현 · 배포",
-      "tech": [
-        "Next.js",
-        "Tailwind CSS",
-        "Cloudinary",
-        "Vercel"
-      ],
-      "image": "/assets/projects/kkol-studio-projects.png",
-      "links": [
-        {
-          "href": "https://www.kkol-studio.com/projects",
-          "icon": "web",
-          "label": "Website"
-        }
-      ],
-      "description": "공간과 브랜드의 이야기를 이미지 중심으로 탐색할 수 있도록 구성한 디자인 스튜디오 프로젝트 아카이브입니다.",
-      "development": false
-    },
-    {
-      "id": "project-4",
-      "alt": "clyrtraining.ai 회원관리·코칭 워크스페이스 랜딩페이지",
-      "name": "clyrtraining.ai",
-      "role": "회원관리 CRM · 운영 어드민 개발",
-      "tech": [
-        "Next.js",
-        "Supabase",
-        "Vercel"
-      ],
-      "image": "/assets/projects/clyrtraining-landing.png",
-      "links": [
-        {
-          "href": "https://clyrtraining.vercel.app/",
-          "icon": "web",
-          "label": "Website"
-        }
-      ],
-      "description": "체육관과 코치를 위한 회원관리 CRM입니다. 회원과 멤버십, 운동 프로그램, 기록과 피드백을 한곳에서 관리하는 운영 어드민입니다.",
-      "development": false
-    },
-    {
-      "id": "project-5",
-      "alt": "본투윈 BRN GYM 피트니스 모임 참여 신청 화면",
-      "name": "BRN GYM · 본투윈",
-      "role": "피트니스 모임 서비스 · CRM 개발",
-      "tech": [
-        "Next.js"
-      ],
-      "image": "/assets/projects/brn-gym.png",
-      "links": [
-        {
-          "href": "https://www.brngym.co.kr/",
-          "icon": "web",
-          "label": "Website"
-        }
-      ],
-      "description": "함께 운동할 사람들을 연결하는 피트니스 모임 서비스입니다. 모임 참여 신청부터 회원관리 CRM까지, 참가자와 운영자의 경험을 연결합니다.",
-      "development": false
-    }
-  ],
-  "stats": [
-    {
-      "id": "stat-0",
-      "label": "ACTIVE MEMBERS",
-      "style": "students",
-      "value": "300+"
-    },
-    {
-      "id": "stat-1",
-      "label": "LIVE SERVICES",
-      "style": "subscribers",
-      "value": "7"
-    },
-    {
-      "id": "stat-2",
-      "label": "PUBLISHED APPS",
-      "style": "brands",
-      "value": "4"
-    },
-    {
-      "id": "stat-3",
-      "label": "MONTHLY UPDATES",
-      "style": "books",
-      "value": "50+"
     }
   ]
 }
