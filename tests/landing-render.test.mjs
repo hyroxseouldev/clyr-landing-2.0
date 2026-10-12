@@ -38,8 +38,10 @@ test("first render contains real content without waiting for a content request",
     for (const line of getBlueprintHero(snapshot.settings).title.split("\n")) {
       assert.ok(landing.includes(renderToString(React.createElement("span", null, line))));
     }
-    assert.match(landing, /blueprint-underlay-mobile\.webp/);
-    assert.match(landing, /building-studio-mobile\.webp/);
+    assert.match(landing, /SMALL WEBSITES\.<\/span><span>BIG ENERGY\./);
+    assert.doesNotMatch(landing, /blueprint-underlay-mobile\.webp/);
+    assert.doesNotMatch(landing, /building-studio-mobile\.webp/);
+    assert.match(landing, /aria-label="직접 만든 웹사이트"/);
     assert.match(landing, /fetchpriority="high"/i);
     assert.doesNotMatch(landing, /<canvas/, "The first render must not depend on WebGL");
     assert.match(landing, /href="#books"/);

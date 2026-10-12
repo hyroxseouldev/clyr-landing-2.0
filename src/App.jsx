@@ -5,9 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import { Reveal, SectionIntro } from "./components/SectionIntro";
 import { Contact } from "./components/Contact";
 import { getProjectImageProps } from "./lib/project-images";
-import { BlueprintHero } from "./components/BlueprintHero";
+import { StudioHero, StudioInvitation } from "./components/StudioHero";
 import "./landing.css";
 import "./blueprint.css";
+import "./studio.css";
+import "./studio-sections.css";
 import {
   LazyMotion,
   animate,
@@ -28,9 +30,8 @@ import {
 import { FaApple, FaGooglePlay } from "react-icons/fa6";
 
 const navItems = [
-  ["ABOUT", "numbers"],
+  ["WORK", "books"],
   ["SERVICES", "services"],
-  ["PROJECTS", "books"],
   ["CONTACT", "contact"],
 ];
 const serviceIcons = { code: Globe2, product: CalendarDays, automation: ClipboardList };
@@ -215,7 +216,7 @@ function Services() {
           </a>
         </Button>
       </div>
-      <div className="service-list">
+      <nav className="service-list" aria-label="제공 서비스 바로가기">
         {services.map(({ id, icon, eyebrow, title, detail }, index) => (
           <a className="service-item" href="#contact" key={id}>
             <div className="service-index">
@@ -230,7 +231,7 @@ function Services() {
             <ArrowUpRight className="service-arrow" size={17} />
           </a>
         ))}
-      </div>
+      </nav>
     </section>
   );
 }
@@ -382,17 +383,18 @@ export function App() {
   return (
     <ContentProvider>
       <LazyMotion features={domAnimation}>
-        <div className="landing-page">
+        <div className="landing-page studio-page">
         <a className="skip-link" href="#main">
           본문으로 건너뛰기
         </a>
         <Header />
         <main id="main" tabIndex={-1}>
-          <BlueprintHero />
+          <StudioHero />
+          <Services />
+          <StudioInvitation />
+          <Projects />
           <Work />
           <Numbers />
-          <Services />
-          <Projects />
           <Contact />
         </main>
         <Footer />
