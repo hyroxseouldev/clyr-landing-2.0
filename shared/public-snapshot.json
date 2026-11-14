@@ -6,11 +6,6 @@
       "image": "/assets/logos/xon-training.png"
     },
     {
-      "id": "partner-1",
-      "name": "AMOR LAB",
-      "image": "/assets/logos/amor-lab.png"
-    },
-    {
       "id": "partner-2",
       "name": "본투윈 · BRN GYM",
       "image": "/assets/logos/born-to-win.png"
@@ -190,33 +185,6 @@
         }
       ],
       "description": "운동 프로그램과 클래스 일정, 참여 기록을 한곳에서 관리하는 XON 회원 전용 트레이닝 앱입니다.",
-      "development": false
-    },
-    {
-      "id": "project-1",
-      "alt": "Amor Lab 모바일 앱 화면",
-      "name": "Amor Lab",
-      "role": "기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포",
-      "tech": [
-        "Flutter",
-        "Supabase",
-        "Riverpod",
-        "Firebase"
-      ],
-      "image": "/assets/projects/amor-lab-app.png",
-      "links": [
-        {
-          "href": "https://apps.apple.com/kr/app/amor-lab/id6765614780",
-          "icon": "apple",
-          "label": "App Store"
-        },
-        {
-          "href": "https://play.google.com/store/apps/details?id=com.sunmkim.amortraining",
-          "icon": "play",
-          "label": "Google Play"
-        }
-      ],
-      "description": "참여자와 코치를 연결해 프로그램, 세션, 운동 후기와 피드백을 관리하는 트레이닝 앱입니다.",
       "development": false
     },
     {
