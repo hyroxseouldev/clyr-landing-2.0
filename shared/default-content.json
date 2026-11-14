@@ -39,12 +39,6 @@
       "visible": true
     },
     {
-      "id": "partner-1",
-      "name": "AMOR LAB",
-      "image": "/assets/logos/amor-lab.png",
-      "visible": true
-    },
-    {
       "id": "partner-2",
       "name": "본투윈 · BRN GYM",
       "image": "/assets/logos/born-to-win.png",
@@ -103,34 +97,6 @@
         }
       ],
       "id": "project-0",
-      "development": false,
-      "visible": true
-    },
-    {
-      "name": "Amor Lab",
-      "image": "/assets/projects/amor-lab-app.png",
-      "alt": "Amor Lab 모바일 앱 화면",
-      "description": "참여자와 코치를 연결해 프로그램, 세션, 운동 후기와 피드백을 관리하는 트레이닝 앱입니다.",
-      "role": "기획 · UX/UI · 앱 개발 · 백엔드 · 스토어 배포",
-      "tech": [
-        "Flutter",
-        "Supabase",
-        "Riverpod",
-        "Firebase"
-      ],
-      "links": [
-        {
-          "label": "App Store",
-          "href": "https://apps.apple.com/kr/app/amor-lab/id6765614780",
-          "icon": "apple"
-        },
-        {
-          "label": "Google Play",
-          "href": "https://play.google.com/store/apps/details?id=com.sunmkim.amortraining",
-          "icon": "play"
-        }
-      ],
-      "id": "project-1",
       "development": false,
       "visible": true
     },

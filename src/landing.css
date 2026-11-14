@@ -46,7 +46,7 @@ html:has(.landing-page), body:has(.landing-page) { background: #f9fafb; color-sc
 .landing-page .marquee-track { flex-wrap: nowrap; justify-content: space-between; gap: 35px; }
 .landing-page .partner { min-width: 0; height: 76px; padding: 0; color: #434d5e; }
 .landing-page .partner img { filter: none !important; opacity: .85 !important; }
-.landing-page .partner:has(img[src*="xon-training"]) img, .landing-page .partner:has(img[src*="amor-lab"]) img { width: 128px; height: 38px; }
+.landing-page .partner:has(img[src*="xon-training"]) img { width: 128px; height: 38px; }
 .landing-page .partner:has(img[src*="born-to-win"]) img { width: 130px; height: 40px; filter: invert(1) !important; mix-blend-mode: multiply; }
 .landing-page .content-section { padding-top: 105px; padding-bottom: 70px; }
 .landing-page .section-intro h2 { margin-top: 22px; font-size: clamp(28px, 3.1vw, 40px); font-weight: 700; line-height: 1.3; letter-spacing: -.045em; }

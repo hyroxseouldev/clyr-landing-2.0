@@ -58,8 +58,8 @@ h1 { margin: 50px 0 0; max-width: 1160px; font-size: clamp(38px,5.4vw,72px); fon
 .partner img { width: 28px; height: 28px; object-fit: contain; }
 .partner:has(img[src*="hyundai"]) img, .partner:has(img[src*="creao"]) img { width: 85px; }
 .partner:has(img[src*="hyundai"]) span, .partner:has(img[src*="creao"]) span { display: none; }
-.partner:has(img[src*="xon-training"]) img, .partner:has(img[src*="amor-lab"]) img { width: 112px; height: 30px; filter: invert(1); opacity: .72; }
-.partner:has(img[src*="xon-training"]) span, .partner:has(img[src*="amor-lab"]) span { display: none; }
+.partner:has(img[src*="xon-training"]) img { width: 112px; height: 30px; filter: invert(1); opacity: .72; }
+.partner:has(img[src*="xon-training"]) span { display: none; }
 .partner:has(img[src*="born-to-win"]) img { width: 112px; height: 36px; object-fit: cover; object-position: center; opacity: .72; }
 .partner:has(img[src*="born-to-win"]) span { display: none; }
 
